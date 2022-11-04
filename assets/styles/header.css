@@ -1,0 +1,233 @@
+.header {
+  background: #ffffff;
+  box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 38px 0;
+}
+@media (max-width: 1200px) {
+  .headerWrapper {
+    gap: 10px;
+  }
+}
+@media (max-width: 1100px) {
+  .headerWrapper {
+    padding-top: 31px;
+    padding-bottom: 21px;
+  }
+}
+.header .nav {
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .header .nav {
+    display: none;
+  }
+}
+.header .nav .menuDesktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.header .nav .menuDesktopItem--Title {
+  display: flex;
+  font-family: "Gabriola";
+  font-size: var(--SizeText__HeaderText);
+  line-height: var(--LineHeight__HeaderText);
+  font-weight: 400;
+  color: var(--Color__Black);
+  letter-spacing: 0.055em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.header .nav .menuDesktopItem--Title:hover {
+  color: var(--Color__Decor);
+}
+.header .nav .dropList:hover .navServices {
+  display: flex;
+}
+.header .nav .dropListBefor {
+  position: relative;
+}
+.header .nav .dropListBefor::before {
+  content: "";
+  width: 10px;
+  height: 7px;
+  background-image: url(../images/decor/arrowBottom.webp);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--Color__Decor);
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  transform: translateY(-50%);
+}
+.header .navServices {
+  position: absolute;
+  top: 217px;
+  left: 0;
+  padding: 60px 56px 56px;
+  background-color: var(--Color__White);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 74px;
+  z-index: 999;
+  display: none;
+}
+.header .navServicesBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 29px;
+}
+.header .navServices--Title {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__SubMainText);
+  line-height: var(--LineHeight__SubMainText);
+  font-weight: 600;
+  color: var(--Color__Black);
+}
+.header .navServices--hr {
+  width: 50px;
+  border-bottom: 2px solid var(--Color__Decor);
+}
+.header .navServicesList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 23px;
+}
+.header .navServicesItem {
+  display: flex;
+}
+.header .navServicesItem--Title {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__ThinTextContent);
+  line-height: var(--LineHeight__ThinTextContent);
+  font-weight: 400;
+}
+.header .navServicesItem--Title:hover {
+  color: var(--Color__Decor);
+}
+.header .navModile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 82px;
+  left: 0;
+  background-color: var(--Color__White);
+  text-align: left;
+}
+.header .navModileItem {
+  padding: 10px 55px 10px 20px;
+  width: 100%;
+  color: var(--Color__Black);
+  position: relative;
+}
+.header .navModileItem:hover.navModileItem::before {
+  color: var(--Color__White);
+  background-image: url(../images/decor/plusEmpty.svg);
+}
+.header .navModileItem::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-image: url(../images/decor/plus.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 11px;
+}
+.header .navModileItem--Title {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__SubMainText);
+  line-height: var(--LineHeight__SubMainText);
+  font-weight: 600;
+}
+.header .navModileItem--List {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 23px;
+  display: none;
+  width: 100%;
+  padding: 20px 20px 44px;
+  font-family: "Montserrat";
+  font-size: var(--SizeText__ThinTextContent);
+  line-height: var(--LineHeight__ThinTextContent);
+  font-weight: 400;
+  color: var(--Color__TextMenu);
+}
+.header .navModileItem--Item:hover {
+  color: var(--Color__Decor);
+}
+.header .burger {
+  width: 19px;
+  height: 6.75px;
+  display: none;
+}
+@media (max-width: 1100px) {
+  .header .burger {
+    display: block;
+  }
+}
+.header .burger > span {
+  width: 19px;
+  height: 6.75px;
+  display: block;
+  position: relative;
+}
+.header .burger > span::before, .header .burger > span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  border-bottom: 2px solid #1d2b38;
+  transition: all linear 0.2s;
+}
+.header .burger > span::before {
+  width: 19px;
+  top: 0;
+}
+.header .burger > span::after {
+  width: 9.5px;
+  bottom: 0;
+}
+.header .burger:hover .navModile {
+  display: flex;
+}
+.header .burger:hover.burger span::before, .header .burger:hover.burger span::after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .burger:hover.burger span::before {
+  rotate: 45deg;
+  right: 1px;
+}
+.header .burger:hover.burger span::after {
+  width: 19px;
+  rotate: -45deg;
+  bottom: auto;
+}
+
+/*# sourceMappingURL=header.css.map */
