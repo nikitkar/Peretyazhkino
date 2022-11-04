@@ -1,0 +1,294 @@
+@import "mixin.scss";
+
+.header {
+    background: #ffffff;
+    box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.08);
+
+    width: 100%;
+
+    &Wrapper {
+        @include displayFlex(center, space-between);
+        gap: 60px;
+
+        padding: 38px 0;
+
+        @media (max-width: 1200px) {
+            gap: 10px;
+        }
+        @media (max-width: 1100px) {
+            padding-top: 31px;
+            padding-bottom: 21px;
+        }
+    }
+
+    .nav {
+        width: 100%;
+
+        @media (max-width: 1100px) {
+            display: none;
+        }
+
+        .menuDesktop {
+            @include displayFlex(center, space-between);
+            gap: 15px;
+
+            &Item {
+                &--Title {
+                    display: flex;
+
+                    @include font(
+                        var(--SizeText__HeaderText),
+                        400,
+                        "Gabriola",
+                        var(--LineHeight__HeaderText)
+                    );
+                    color: var(--Color__Black);
+
+                    letter-spacing: 0.055em;
+                    cursor: pointer;
+
+                    white-space: nowrap;
+
+                    &:hover {
+                        color: var(--Color__Decor);
+                    }
+                }
+            }
+        }
+
+        .dropList:hover {
+            & .navServices {
+                display: flex;
+            }
+        }
+
+        .dropListBefor {
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 10px;
+                height: 7px;
+
+                background-image: url(../images/decor/arrowBottom.webp);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                color: var(--Color__Decor);
+
+                position: absolute;
+                top: 50%;
+                right: -11px;
+
+                transform: translateY(-50%);
+            }
+        }
+
+        &Services {
+            position: absolute;
+            top: 217px;
+            left: 0;
+
+            padding: 60px 56px 56px;
+            background-color: var(--Color__White);
+
+            @include displayFlex(flex-start, space-between);
+            gap: 74px;
+
+            z-index: 999;
+
+            display: none;
+
+            &Block {
+                @include displayFlex(flex-start, center, column);
+                gap: 29px;
+            }
+
+            &--Title {
+                @include font(
+                    var(--SizeText__SubMainText),
+                    600,
+                    "Montserrat",
+                    var(--LineHeight__SubMainText)
+                );
+                color: var(--Color__Black);
+            }
+
+            &--hr {
+                width: 50px;
+                border-bottom: 2px solid var(--Color__Decor);
+            }
+
+            &List {
+                @include displayFlex(flex-start, center, column);
+                gap: 23px;
+            }
+
+            &Item {
+                display: flex;
+
+                &--Title {
+                    @include font(
+                        var(--SizeText__ThinTextContent),
+                        400,
+                        "Montserrat",
+                        var(--LineHeight__ThinTextContent)
+                    );
+
+                    &:hover {
+                        color: var(--Color__Decor);
+                    }
+                }
+            }
+        }
+
+        &Modile {
+            @include displayFlex(flex-start, center, column);
+            display: none;
+
+            width: 100%;
+
+            position: absolute;
+            top: 82px;
+            left: 0;
+            background-color: var(--Color__White);
+
+            text-align: left;
+
+            &Item {
+                padding: 10px 55px 10px 20px;
+                width: 100%;
+
+                color: var(--Color__Black);
+
+                position: relative;
+
+                &:hover {
+                    &.navModileItem::before {
+                        color: var(--Color__White);
+                        background-image: url(../images/decor/plusEmpty.svg);
+                    }
+                }
+
+                &::before {
+                    content: "";
+
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+
+                    background-image: url(../images/decor/plus.svg);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    width: 12px;
+                    height: 11px;
+                }
+
+                &--Title {
+                    @include font(
+                        var(--SizeText__SubMainText),
+                        600,
+                        "Montserrat",
+                        var(--LineHeight__SubMainText)
+                    );
+                }
+
+                &--List {
+                    @include displayFlex(flex-start, center, column);
+                    gap: 23px;
+
+                    display: none;
+
+                    width: 100%;
+                    padding: 20px 20px 44px;
+
+                    @include font(
+                        var(--SizeText__ThinTextContent),
+                        400,
+                        "Montserrat",
+                        var(--LineHeight__ThinTextContent)
+                    );
+                    color: var(--Color__TextMenu);
+                }
+
+                &--Item {
+                    &:hover {
+                        color: var(--Color__Decor);
+                    }
+
+                    &Content {
+                    }
+                }
+            }
+        }
+    }
+
+    .burger {
+        width: 19px;
+        height: 6.75px;
+
+        display: none;
+
+        @media (max-width: 1100px) {
+            display: block;
+        }
+
+        & > span {
+            width: 19px;
+            height: 6.75px;
+
+            display: block;
+
+            position: relative;
+        }
+
+        & > span::before,
+        & > span::after {
+            content: "";
+            position: absolute;
+
+            right: 0;
+
+            border-bottom: 2px solid #1d2b38;
+
+            transition: all linear 0.2s;
+        }
+
+        & > span::before {
+            width: 19px;
+            top: 0;
+        }
+
+        & > span::after {
+            width: 9.5px;
+            bottom: 0;
+        }
+
+        &:hover {
+            & .navModile {
+                display: flex;
+            }
+            &.burger span::before,
+            &.burger span::after {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &.burger span::before {
+                rotate: 45deg;
+                right: 1px;
+            }
+
+            &.burger span::after {
+                width: 19px;
+
+                rotate: -45deg;
+                bottom: auto;
+            }
+        }
+    }
+}
