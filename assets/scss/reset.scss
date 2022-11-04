@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: "Raleway1";
+    font-family: "Raleway";
     src: url("../fonts/Raleway/Raleway-Bold.ttf")
         format("truetype");
     font-weight: 700;
@@ -505,7 +505,7 @@ hr {
             color: var(--Color__Black);
 
             @media (max-width: 1100px) {
-                @include font(var(--SizeText__TelephoneModile), 700, "Raleway1", var(--LineHeight__TelephoneModile));
+                @include font(var(--SizeText__TelephoneModile), 700, "Montserrat", var(--LineHeight__TelephoneModile));
             }
         }
 
