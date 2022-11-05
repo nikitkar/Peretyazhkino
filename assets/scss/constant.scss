@@ -1,0 +1,297 @@
+@import "./mixin.scss";
+
+.buttonContent {
+    padding: 19px 64px 15px;
+
+    border-radius: 50%;
+    border: 1px solid var(--Color__Active);
+
+    color: var(--Color__Active);
+    @include font(
+        var(--SizeText__TextButton),
+        400,
+        "RasfirePersonal",
+        var(--LineHeight__TextButton)
+    );
+
+    letter-spacing: 0.05em;
+    background: transparent;
+
+    transition: all linear 0.2s;
+
+    &:hover {
+        background: var(--Color__Active);
+        color: var(--Color__White);
+    }
+}
+
+.logo {
+    max-width: 310px;
+    max-height: 66px;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    @media (max-width: 1100px) {
+        height: 30px;
+        width: auto;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.buttonArrow {
+    padding: 26px 17px 25px;
+}
+
+.numbers {
+    &List {
+        @include displayFlex(flex-start, center, column);
+        gap: 17px;
+
+        max-width: 260px;
+        width: 100%;
+
+        @media (max-width: 1100px) {
+            display: none;
+            gap: 0;
+        }
+
+        &Modile {
+            position: absolute;
+            top: 82px;
+            left: 0;
+
+            background-color: var(--Color__White);
+
+            max-width: 245px;
+
+            gap: 16px;
+
+            &--Img {
+                width: 10px;
+                height: 7px;
+
+                background-image: url(../images/decor/arrowBottomTelephone.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                color: var(--Color__Black);
+            }
+        }
+    }
+
+    &Item {
+        @include displayFlex(center, space-between);
+        gap: 14px;
+
+        &--Img {
+            max-width: 30px;
+            max-height: 30px;
+
+            min-width: 24px;
+            min-height: 24px;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        &--Tel {
+            font-weight: 600;
+
+            color: var(--Color__Black);
+
+            @media (max-width: 1100px) {
+                @include font(
+                    var(--SizeText__TelephoneModile),
+                    700,
+                    "Montserrat",
+                    var(--LineHeight__TelephoneModile)
+                );
+            }
+        }
+
+        &Modile {
+            width: 100%;
+            justify-content: flex-start;
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: var(--Color__Decor);
+
+                & .numbersItem--Tel {
+                    color: var(--Color__White);
+                }
+            }
+        }
+    }
+
+    &Modile {
+        @include displayFlex(center, center);
+        gap: 8px;
+
+        display: none;
+
+        z-index: 9999;
+
+        @media (max-width: 1100px) {
+            display: flex;
+        }
+
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            & .numbersListModile {
+                display: flex;
+            }
+
+            & .numbersListModile--Img {
+                rotate: 180deg;
+            }
+        }
+    }
+}
+
+.feedBack {
+    background-color: var(--Color__DarkGreen);
+
+    max-width: 846px;
+    width: 100%;
+
+    @media (max-width: 1100px) {
+        max-width: 500px;
+    }
+
+    &Wrapper {
+        padding: 96px 56px;
+
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 45px;
+
+        position: relative;
+
+        @media (max-width: 1100px) {
+            gap: 30px;
+            padding: 60px 20px 72px;
+            align-items: center;
+        }
+
+        &::before {
+            content: "";
+
+            width: 26px;
+            height: 26px;
+
+            position: absolute;
+            top: 74px;
+            right: 30px;
+
+            background-image: url(../images/decor/onlineCircleGreen.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1100px) {
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
+
+    &--Title {
+        @include font(
+            var(--SizeText__FeedBackBlock),
+            400,
+            "RasfirePersonal",
+            var(--LineHeight__FeedBackBlock)
+        );
+        letter-spacing: 0.07em;
+
+        width: 100%;
+
+        color: var(--Color__White);
+        text-align: left;
+
+        @media (max-width: 1100px) {
+            @include font(
+                var(--SizeText__FeedBackBlockModile),
+                400,
+                "RasfirePersonal",
+                var(--LineHeight__FeedBackBlockModile)
+            );
+        }
+    }
+
+    &--subTitle {
+        letter-spacing: -0.03em;
+        color: #e3e3e3;
+
+        @media (max-width: 1100px) {
+            @include font(
+                var(--SizeText__FeedBackBlockSubTitleModile),
+                400,
+                "Montserrat",
+                var(--LineHeight__FeedBackBlockSubTitleModile)
+            );
+        }
+    }
+
+    &List {
+        @include displayFlex(flex-start, space-around);
+        gap: 84px;
+
+        @media (max-width: 1100px) {
+            gap: 50px;
+        }
+    }
+
+    &Item {
+        background-color: rgba(255, 255, 255, 0.32);
+
+        height: 132px;
+        width: 177px;
+
+        transition: all linear .2s;
+
+        @media (max-width: 1100px) {
+            width: 60px;
+            height: 54px;
+        }
+
+        @include displayFlex(center, center);
+
+        &:hover{
+            transform: translateY(-20px);
+        }
+
+        &--Link {
+            padding: 17px 40px;
+
+            width: 100%;
+            height: 100%;
+
+            cursor: pointer;
+
+            @media (max-width: 1100px) {
+                padding: 4px 7px;
+            }
+        }
+
+        &--Img {
+            max-width: 98px;
+            max-height: 98px;
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
