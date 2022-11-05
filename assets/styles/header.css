@@ -134,6 +134,7 @@
   left: 0;
   background-color: var(--Color__White);
   text-align: left;
+  z-index: 9999;
 }
 .header .navModileItem {
   padding: 10px 55px 10px 20px;

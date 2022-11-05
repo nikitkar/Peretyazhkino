@@ -389,166 +389,18 @@ body {
     padding: 0 20px;
 }
 
+.container1700{
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 hr {
     margin: 0;
     border-width: 0;
     box-sizing: content-box;
     height: 0;
     overflow: visible;
-}
-
-.buttonContent {
-    padding: 19px 64px 15px;
-
-    border-radius: 50%;
-    border: 1px solid var(--Color__Active);
-
-    color: var(--Color__Active);
-    @include font(
-        var(--SizeText__TextButton),
-        400,
-        "RasfirePersonal",
-        var(--LineHeight__TextButton)
-    );
-
-    letter-spacing: 0.05em;
-    background: transparent;
-
-    transition: all linear 0.2s;
-
-    &:hover {
-        background: var(--Color__Active);
-        color: var(--Color__White);
-    }
-}
-
-.logo {
-    max-width: 310px;
-    max-height: 66px;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
-
-    @media (max-width: 1100px) {
-        height: 30px;
-        width: auto;
-    }
-
-    & img {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.buttonArrow {
-    padding: 26px 17px 25px;
-}
-
-.numbers {
-    &List {
-        @include displayFlex(flex-start, center, column);
-        gap: 17px;
-
-        max-width: 260px;
-        width: 100%;
-
-        @media (max-width: 1100px) {
-            display: none;
-            gap: 0;
-        }
-
-        &Modile {
-            position: absolute;
-            top: 82px;
-            left: 0;
-
-            background-color: var(--Color__White);
-
-            max-width: 245px;
-
-            gap: 16px;
-            
-            &--Img {
-                width: 10px;
-                height: 7px;
-
-                background-image: url(../images/decor/arrowBottomTelephone.png);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-
-                color: var(--Color__Black);
-            }
-        }
-    }
-
-    &Item {
-        @include displayFlex(center, space-between);
-        gap: 14px;
-
-        &--Img {
-            max-width: 30px;
-            max-height: 30px;
-
-            min-width: 24px;
-            min-height: 24px;
-
-            width: 100%;
-            height: 100%;
-        }
-
-        &--Tel {
-            font-weight: 600;
-
-            color: var(--Color__Black);
-
-            @media (max-width: 1100px) {
-                @include font(var(--SizeText__TelephoneModile), 700, "Montserrat", var(--LineHeight__TelephoneModile));
-            }
-        }
-
-        &Modile {
-            width: 100%;
-            justify-content: flex-start;
-            padding: 10px 20px;
-
-            &:hover {
-                background-color: var(--Color__Decor);
-                
-                & .numbersItem--Tel{
-                    color: var(--Color__White);
-                }
-            }
-        }
-    }
-
-    &Modile {
-        @include displayFlex(center, center);
-        gap: 8px;
-
-        display: none;
-
-        @media (max-width: 1100px) {
-            display: flex;
-        }
-
-        & svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        &:hover {
-            & .numbersListModile {
-                display: flex;
-            }
-
-            & .numbersListModile--Img {
-                rotate: 180deg;
-            }
-        }
-    }
 }
 
 :root {
@@ -572,6 +424,10 @@ hr {
     --SizeText__FooterTitle: 18px;
     --SizeText__ThinTextContent: 15px;
     
+    --SizeText__TitleMainScreenModile: 35px;
+    --SizeText__FeedBackBlockModile: 24px;
+    --SizeText__FeedBackBlockSubTitleModile: 17px;
+    --SizeText__MainTextModile: 16px;
     --SizeText__TelephoneModile: 16px;
     --SizeText__SubMainText: 16px;
 
@@ -595,6 +451,10 @@ hr {
     --LineHeight__FooterTitle: 22px;
     --LineHeight__ThinTextContent: 18px;
     
+    --LineHeight__TitleMainScreenModile: 36px;
+    --LineHeight__FeedBackBlockModile: 25px;
+    --LineHeight__FeedBackBlockSubTitleModile: 26px;
+    --LineHeight__MainTextModile: 24px;
     --LineHeight__TelephoneModile: 18px;
     --LineHeight__SubMainText: 20px;
 
