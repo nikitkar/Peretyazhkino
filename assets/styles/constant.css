@@ -1,6 +1,6 @@
 .buttonContent {
   padding: 19px 64px 15px;
-  border-radius: 50%;
+  border-radius: 48px;
   border: 1px solid var(--Color__Active);
   color: var(--Color__Active);
   font-family: "RasfirePersonal";
@@ -14,6 +14,13 @@
 .buttonContent:hover {
   background: var(--Color__Active);
   color: var(--Color__White);
+}
+@media (max-width: 1100px) {
+  .buttonContent {
+    padding: 10px 35px;
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 .logo {
@@ -254,6 +261,489 @@
   max-height: 98px;
   width: 100%;
   height: 100%;
+}
+
+.examplesWork {
+  width: 100%;
+  background-color: var(--Color__BGQuestionBlock);
+}
+.examplesWorkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 228px;
+}
+@media (max-width: 1100px) {
+  .examplesWorkWrapper {
+    gap: 30px;
+  }
+}
+.examplesWork--Title {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
+  font-weight: 400;
+  color: var(--Color__White);
+  letter-spacing: 0.07em;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .examplesWork--Title {
+    font-size: var(--SizeText__FeedBackBlockModile);
+    line-height: 30px;
+  }
+}
+.examplesWorkSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 263px;
+  z-index: 999;
+}
+@media (max-width: 1100px) {
+  .examplesWorkSlider {
+    gap: 181px;
+  }
+}
+.examplesWorkList {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 133px;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .examplesWorkList {
+    gap: 10px;
+  }
+}
+.examplesWorkItem {
+  position: relative;
+}
+.examplesWorkItem::before {
+  content: "";
+  width: 302px;
+  height: 302px;
+  background-color: var(--Color__Decor);
+  border-radius: 50%;
+  position: absolute;
+  top: -71px;
+  right: -77px;
+}
+@media (max-width: 1100px) {
+  .examplesWorkItem::before {
+    width: 97px;
+    height: 97px;
+    top: -43px;
+    right: -38px;
+    display: none;
+  }
+}
+.examplesWorkItem--Box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 639px;
+  width: 100%;
+  background: rgba(22, 22, 22, 0.42);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
+  backdrop-filter: blur(2px);
+  padding: 20px 34px;
+  border-left: 2px solid var(--Color__Decor);
+}
+.examplesWorkItem--ImageBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+@media (max-width: 1100px) {
+  .examplesWorkItem--ImageBlock {
+    gap: 20px;
+  }
+}
+.examplesWorkItem--ImageBlockContent {
+  width: 100%;
+  text-align: left;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__ExamplesWorkItemPseudoElement);
+  line-height: var(--LineHeight__ExamplesWorkItemPseudoElement);
+  font-weight: 400;
+  color: var(--Color__White);
+  letter-spacing: 0.05em;
+}
+@media (max-width: 1100px) {
+  .examplesWorkItem--ImageBlockContent {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.examplesWorkItem--ImageBlockContent.right {
+  text-align: right;
+}
+.examplesWorkItem--ImageBlock__img {
+  max-width: 541px;
+  width: 100%;
+  height: 100%;
+}
+.examplesWorkItem--ImageBlock__imgWrapper {
+  max-width: 541px;
+  width: 100%;
+}
+.examplesWorkItem--Content {
+  position: absolute;
+  bottom: -147px;
+  left: 34px;
+  max-width: 381px;
+  width: 100%;
+  padding: 42px 37px 19px;
+  background-color: var(--Color__White);
+  box-shadow: inset 0px 4px 50px rgba(0, 0, 0, 0.27);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 45px;
+}
+@media (max-width: 1100px) {
+  .examplesWorkItem--Content {
+    padding: 25px 20px;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.examplesWorkItem--ContentTitle {
+  letter-spacing: -0.03em;
+  color: var(--Color__Black);
+  width: 100%;
+  text-align: left;
+}
+@media (max-width: 1100px) {
+  .examplesWorkItem--ContentTitle {
+    font-size: var(--SizeText__MainTextModile);
+    line-height: var(--LineHeight__MainTextModile);
+  }
+}
+.examplesWorkItem--ContentLink {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__ExamplesWorkItemPseudoElement);
+  line-height: var(--LineHeight__ExamplesWorkItemPseudoElement);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--Color__ActiveHoverText);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 22px;
+}
+.examplesWorkItem--ContentLink span {
+  max-width: 31px;
+  max-height: 6px;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1100px) {
+  .examplesWorkItem--ContentLink {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.numbersBlockWrapper {
+  width: 100%;
+  padding: 98px 0;
+}
+@media (max-width: 1100px) {
+  .numbersBlockWrapper {
+    padding: 60px 0;
+  }
+}
+.numbersBlockList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media (max-width: 1100px) {
+  .numbersBlockList {
+    flex-direction: column;
+    gap: 19px;
+  }
+}
+.numbersBlockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  color: var(--Color__Black);
+}
+@media (max-width: 1100px) {
+  .numbersBlockItem {
+    gap: 10px;
+  }
+}
+.numbersBlockItem--Title {
+  font-family: "Raleway";
+  font-size: var(--SizeText__NumbersTitle);
+  line-height: var(--LineHeight__NumbersTitle);
+  font-weight: 700;
+}
+@media (max-width: 1100px) {
+  .numbersBlockItem--Title {
+    font-size: var(--SizeText__NumbersTitleModile);
+    line-height: var(--LineHeight__NumbersTitleModile);
+  }
+}
+.numbersBlockItem--Content {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__NumbersContent);
+  line-height: var(--LineHeight__NumbersContent);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1100px) {
+  .numbersBlockItem--Content {
+    font-size: var(--SizeText__NumbersContentModile);
+    line-height: var(--LineHeight__NumbersContentModile);
+  }
+}
+.numbersBlockItem--HR {
+  width: 1px;
+  height: 319px;
+  background-color: #dadada;
+}
+@media (max-width: 1100px) {
+  .numbersBlockItem--HR {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.reviews {
+  background-color: #1d2b38;
+}
+.reviewsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+  padding: 134px 0 39px;
+}
+@media (max-width: 1100px) {
+  .reviewsWrapper {
+    padding: 50px 60px;
+    gap: 30px;
+  }
+}
+.reviews--Title {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--Color__White);
+  z-index: 999;
+  position: relative;
+}
+.reviews--Title::before {
+  content: "";
+  max-width: 1372px;
+  min-width: 210px;
+  width: 100%;
+  height: 0.3px;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  top: 24px;
+  right: -190px;
+  z-index: -1;
+}
+@media (max-width: 1100px) {
+  .reviews--Title {
+    font-size: var(--SizeText__TitleSectionModile);
+    line-height: var(--LineHeight__TitleSectionModiles);
+  }
+}
+.reviewsSlider {
+  width: 100%;
+}
+.reviewsList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  .reviewsList {
+    gap: 0;
+  }
+}
+.reviewsItem {
+  max-width: 555px;
+  width: 100%;
+  padding: 40px 40px 51px;
+  background-color: rgba(22, 22, 22, 0.42);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+.reviewsItem:nth-child(2n) {
+  margin-top: 70px;
+}
+@media (max-width: 1100px) {
+  .reviewsItem:nth-child(2n) {
+    margin: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .reviewsItem {
+    padding: 40px 0 30px;
+    gap: 30px;
+  }
+}
+.reviewsItem--Img {
+  max-width: 474px;
+  max-height: 333px;
+  width: 100%;
+  height: 100%;
+}
+.reviewsItem--Content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 86px;
+  padding: 0;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--Content {
+    gap: 30px;
+    padding: 30px 20px;
+  }
+}
+.reviewsItem--ContentTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+.reviewsItem--Title {
+  width: 100%;
+  text-align: left;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__SliderTitle);
+  line-height: var(--LineHeight__SliderTitle);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  color: var(--Color__White);
+}
+@media (max-width: 1100px) {
+  .reviewsItem--Title {
+    font-size: var(--SizeText__SliderTitleModile);
+    line-height: var(--LineHeight__SliderTitleModile);
+  }
+}
+.reviewsItem--SubTitle {
+  width: 100%;
+  text-align: left;
+  letter-spacing: -0.03em;
+  color: #c8c8c8;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--SubTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.reviewsItem--Description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+.reviewsItem--Rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--Rating {
+    gap: 14px;
+  }
+}
+.reviewsItem--RatingStar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3.75px;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--RatingStar {
+    gap: 3px;
+  }
+}
+.reviewsItem--RatingStarspan {
+  max-width: 29px;
+  max-height: 28px;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--RatingStarspan {
+    max-width: 18px;
+    max-height: 18px;
+  }
+}
+.reviewsItem--RatingInfo {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__ThinTextContent);
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: #9f9f9f;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--RatingInfo {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+.reviewsItem--ReadMore {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__SubMainText);
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--Color__Decor);
+}
+@media (max-width: 1100px) {
+  .reviewsItem--ReadMore {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 /*# sourceMappingURL=constant.css.map */

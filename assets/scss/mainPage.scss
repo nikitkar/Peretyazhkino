@@ -233,10 +233,10 @@
 
             width: 100%;
 
-            & .feedBack{
+            & .feedBack {
                 margin-top: 66px;
 
-                @media (max-width: 1100px){
+                @media (max-width: 1100px) {
                     margin: 0;
                 }
             }
@@ -250,7 +250,7 @@
 
             border-right: 1px solid var(--Color__Decor);
 
-            @media (max-width: 1100px){
+            @media (max-width: 1100px) {
                 display: none;
             }
 
@@ -316,27 +316,385 @@
         }
     }
 
-    .advantages{
-        &Wrapper{
+    .advantages {
+        background-color: var(--Color__BGQuestionBlock);
+
+        &Wrapper {
             @include displayFlex(flex-start, center, column);
             gap: 127px;
 
             padding-top: 134px;
             padding-bottom: 105px;
+
+            position: relative;
+
+            @media (max-width: 1100px) {
+                gap: 45px;
+                padding: 60px 0;
+            }
+
+            &::before {
+                content: "";
+
+                max-width: 487px;
+                max-height: 1084px;
+
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 87px;
+                right: 0;
+
+                background-image: url(../images/decor/advantegesBeforeImg.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @media (max-width: 1100px) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: "";
+
+                max-width: 1206.5px;
+                max-height: 833.68px;
+
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 945px;
+                left: 0;
+
+                background-image: url(../images/decor/advantegesAfterImg.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                @media (max-width: 1100px) {
+                    display: none;
+                }
+            }
         }
 
-        &Content{
+        &Content {
             width: 100%;
 
-            &Wrapper{
+            &Wrapper {
                 @include displayFlex(flex-start, space-between);
                 gap: 39px;
 
                 width: 100%;
+
+                @media (max-width: 1100px) {
+                    flex-direction: column;
+                    gap: 30px;
+                }
             }
 
-            &--Title{
-                @include font();
+            &--Title {
+                @include font(
+                    var(--SizeText__TitleSection),
+                    400,
+                    "RasfirePersonal",
+                    var(--LineHeight__TitleSection)
+                );
+
+                letter-spacing: 0.07em;
+
+                color: var(--Color__White);
+
+                max-width: 657px;
+                width: 100%;
+
+                position: relative;
+
+                @media (max-width: 1100px) {
+                    @include font(
+                        var(--SizeText__TitleSectionModile),
+                        400,
+                        "RasfirePersonal",
+                        var(--LineHeight__TitleSectionModile)
+                    );
+
+                    width: 101%;
+                }
+
+                &::before {
+                    content: "";
+
+                    width: 100px;
+                    height: 2px;
+
+                    background-color: var(--Color__Decor);
+
+                    position: absolute;
+                    top: 13px;
+                    right: -140px;
+
+                    @media (max-width: 1100px) {
+                        width: 71px;
+                        bottom: 17px;
+                        top: auto;
+                        right: -17px;
+                    }
+                }
+            }
+
+            &--SubTitle {
+                letter-spacing: -0.03em;
+
+                color: #d9d9d9;
+
+                max-width: 717px;
+                width: 100%;
+
+                margin-top: 50px;
+
+                @media (max-width: 1100px) {
+                    margin: 0;
+                    font-size: 17px;
+                    line-height: 26px;
+                }
+            }
+        }
+
+        &--BlockBoldTitle {
+            width: 100%;
+
+            position: relative;
+
+            &.right1 {
+                &.advantages--BlockBoldTitle::before {
+                    content: "";
+                    top: 153px;
+
+                    @media (max-width: 1100px) {
+                        top: 0;
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+
+                max-width: 1700px;
+                width: 100%;
+
+                height: 0.3px;
+
+                background-color: var(--Color__Decor);
+
+                position: absolute;
+                top: 172.2px;
+                left: 0;
+
+                z-index: 10;
+
+                @media (max-width: 1100px) {
+                    top: 0;
+                }
+            }
+
+            &__Wrapper {
+                & .right {
+                    color: rgba(255, 255, 255, 0.68);
+                    -webkit-text-stroke: 0;
+
+                    width: 100%;
+                    text-align: right;
+                }
+            }
+
+            &__Title {
+                @include font(
+                    var(--SizeText__TitleBoldText),
+                    400,
+                    "RasfirePersonal",
+                    var(--LineHeight__TitleBoldText)
+                );
+                letter-spacing: 0.05em;
+
+                color: transparent;
+                -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+
+                z-index: 20;
+
+                @media (max-width: 1100px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .numbersBlock {
+        &Wrapper {
+            width: 100%;
+
+            padding: 98px 0;
+
+            @media (max-width: 1100px) {
+                padding: 60px 0;
+            }
+        }
+
+        &List {
+            @include displayFlex(center, space-between);
+            gap: 15px;
+
+            @media (max-width: 1100px) {
+                flex-direction: column;
+                gap: 19px;
+            }
+        }
+
+        &Item {
+            @include displayFlex(center, center, column);
+            gap: 38px;
+
+            color: var(--Color__Black);
+
+            @media (max-width: 1100px) {
+                gap: 10px;
+            }
+
+            &--Title {
+                @include font(
+                    var(--SizeText__NumbersTitle),
+                    700,
+                    "Raleway",
+                    var(--LineHeight__NumbersTitle)
+                );
+
+                @media (max-width: 1100px) {
+                    font-size: var(--SizeText__NumbersTitleModile);
+                    line-height: var(--LineHeight__NumbersTitleModile);
+                }
+            }
+
+            &--Content {
+                @include font(
+                    var(--SizeText__NumbersContent),
+                    400,
+                    "Montserrat",
+                    var(--LineHeight__NumbersContent)
+                );
+
+                letter-spacing: -0.03em;
+
+                @media (max-width: 1100px) {
+                    font-size: var(--SizeText__NumbersContentModile);
+                    line-height: var(--LineHeight__NumbersContentModile);
+                }
+            }
+
+            &--HR {
+                width: 1px;
+                height: 319px;
+
+                background-color: #dadada;
+
+                @media (max-width: 1100px) {
+                    width: 100%;
+                    height: 1px;
+                }
+            }
+        }
+    }
+
+    .infoMaterials {
+        background-image: url(../images/feedBackMaterials/feedBackMaterialsBD.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        height: 100%;
+
+        &Wrapper {
+            width: 100%;
+
+            padding: 71px 0;
+
+            @media (max-width: 1100px) {
+                padding: 40px 0;
+            }
+        }
+
+        &Block {
+            background: url(../images/feedBackMaterials/feedBackMaterialsWrapperBD.png) rgba(0, 0, 0, 0.6);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            backdrop-filter: blur(3.5px);
+
+            padding: 100px 231px 146px;
+
+            @include displayFlex(center, center, column);
+            gap: 70px;
+
+            @media (max-width: 1100px) {
+                padding: 46px 20px;
+                gap: 20px;
+            }
+        }
+
+        &--Title {
+            @include font(
+                var(--SizeText__TitleSection),
+                400,
+                "RasfirePersonal",
+                var(--LineHeight__TitleSection)
+            );
+
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+
+            color: var(--Color__White);
+
+            width: 100%;
+            text-align: center;
+
+            @media (max-width: 1100px){
+                font-size: var(--SizeText__TitleSectionModile);
+                line-height: var(--LineHeight__TitleSectionModile);
+            }
+        }
+
+        &--HR {
+            width: 321px;
+            height: 2px;
+            background-color: var(--Color__Decor);
+
+            @media (max-width: 1100px){
+                width: 148px;
+            }
+        }
+
+        &--Content {
+            letter-spacing: -0.03em;
+            color: var(--Color__White);
+            text-align: center;
+
+            @media (max-width: 1100px){
+                font-size: var(--SizeText__MainTextModile);
+                line-height: var(--LineHeight__MainTextModile);
+            }
+        }
+
+        &--Button {
+            border-color: var(--Color__White);
+            color: var(--Color__White);
+
+            &:hover {
+                background-color: var(--Color__White);
+                color: var(--Color__Black);
+            }
+
+            @media (max-width: 1100px){
+                padding: 9.5px 29px;
             }
         }
     }

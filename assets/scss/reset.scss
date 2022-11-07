@@ -33,8 +33,7 @@
 
 @font-face {
     font-family: "Raleway";
-    src: url("../fonts/Raleway/Raleway-Bold.ttf")
-        format("truetype");
+    src: url("../fonts/Raleway/Raleway-Bold.ttf") format("truetype");
     font-weight: 700;
 }
 
@@ -369,10 +368,11 @@ button {
 }
 
 html {
-    font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+
     scroll-behavior: smooth;
+
     font: normal 400 var(--SizeText__MainText) / var(--LineHeight__MainText)
         "Montserrat";
 }
@@ -389,7 +389,7 @@ body {
     padding: 0 20px;
 }
 
-.container1700{
+.container1700 {
     max-width: 1700px;
     width: 100%;
     margin: 0 auto;
@@ -405,7 +405,9 @@ hr {
 
 :root {
     /* Text Styles */
+    --SizeText__TitleBoldText: 236px;
     --SizeText__TitleMainScreen: 113px;
+    --SizeText__OtherPageMailBlockTitle: 103px;
     --SizeText__HeaderText: 25px;
     --SizeText__Telephone: 22px;
     --SizeText__MainText: 22px;
@@ -423,16 +425,22 @@ hr {
     --SizeText__SliderEtc: 18px;
     --SizeText__FooterTitle: 18px;
     --SizeText__ThinTextContent: 15px;
-    
+
     --SizeText__TitleMainScreenModile: 35px;
+    --SizeText__TitleSectionModile: 25px;
     --SizeText__FeedBackBlockModile: 24px;
     --SizeText__FeedBackBlockSubTitleModile: 17px;
     --SizeText__MainTextModile: 16px;
     --SizeText__TelephoneModile: 16px;
-    --SizeText__SubMainText: 16px;
+    --SizeText__SubMainTextModile: 16px;
+    --SizeText__NumbersTitleModile: 50px;
+    --SizeText__NumbersContentModile: 16px;
+    --SizeText__SliderTitleModile: 19px;
 
     /* line-height Styles */
+    --LineHeight__TitleBoldText: 354px;
     --LineHeight__TitleMainScreen: 116px;
+    --LineHeight__OtherPageMailBlockTitle: 106px;
     --LineHeight__HeaderText: 26px;
     --LineHeight__Telephone: 24px;
     --LineHeight__MainText: 33px;
@@ -450,13 +458,17 @@ hr {
     --LineHeight__SliderEtc: 27px;
     --LineHeight__FooterTitle: 22px;
     --LineHeight__ThinTextContent: 18px;
-    
+
     --LineHeight__TitleMainScreenModile: 36px;
+    --LineHeight__TitleSectionModile: 31px;
     --LineHeight__FeedBackBlockModile: 25px;
     --LineHeight__FeedBackBlockSubTitleModile: 26px;
     --LineHeight__MainTextModile: 24px;
     --LineHeight__TelephoneModile: 18px;
-    --LineHeight__SubMainText: 20px;
+    --LineHeight__SubMainTextModile: 20px;
+    --LineHeight__NumbersTitleModile: 59px;
+    --LineHeight__NumbersContentModile: 24px;
+    --LineHeight__SliderTitleModile: 24px;
 
     /* Color Styles */
     --Color__Black: #000;

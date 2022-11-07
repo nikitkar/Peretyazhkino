@@ -255,6 +255,9 @@
   bottom: 16px;
   left: -75px;
 }
+.main .advantages {
+  background-color: var(--Color__BGQuestionBlock);
+}
 .main .advantagesWrapper {
   display: flex;
   flex-direction: column;
@@ -263,6 +266,51 @@
   gap: 127px;
   padding-top: 134px;
   padding-bottom: 105px;
+  position: relative;
+}
+@media (max-width: 1100px) {
+  .main .advantagesWrapper {
+    gap: 45px;
+    padding: 60px 0;
+  }
+}
+.main .advantagesWrapper::before {
+  content: "";
+  max-width: 487px;
+  max-height: 1084px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 87px;
+  right: 0;
+  background-image: url(../images/decor/advantegesBeforeImg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 1100px) {
+  .main .advantagesWrapper::before {
+    display: none;
+  }
+}
+.main .advantagesWrapper::after {
+  content: "";
+  max-width: 1206.5px;
+  max-height: 833.68px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 945px;
+  left: 0;
+  background-image: url(../images/decor/advantegesAfterImg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 1100px) {
+  .main .advantagesWrapper::after {
+    display: none;
+  }
 }
 .main .advantagesContent {
   width: 100%;
@@ -275,11 +323,269 @@
   gap: 39px;
   width: 100%;
 }
+@media (max-width: 1100px) {
+  .main .advantagesContentWrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .main .advantagesContent--Title {
-  font-family: "Montserrat";
-  font-size: 22px;
-  line-height: normal;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
   font-weight: 400;
+  letter-spacing: 0.07em;
+  color: var(--Color__White);
+  max-width: 657px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 1100px) {
+  .main .advantagesContent--Title {
+    font-family: "RasfirePersonal";
+    font-size: var(--SizeText__TitleSectionModile);
+    line-height: var(--LineHeight__TitleSectionModile);
+    font-weight: 400;
+    width: 101%;
+  }
+}
+.main .advantagesContent--Title::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  top: 13px;
+  right: -140px;
+}
+@media (max-width: 1100px) {
+  .main .advantagesContent--Title::before {
+    width: 71px;
+    bottom: 17px;
+    top: auto;
+    right: -17px;
+  }
+}
+.main .advantagesContent--SubTitle {
+  letter-spacing: -0.03em;
+  color: #d9d9d9;
+  max-width: 717px;
+  width: 100%;
+  margin-top: 50px;
+}
+@media (max-width: 1100px) {
+  .main .advantagesContent--SubTitle {
+    margin: 0;
+    font-size: 17px;
+    line-height: 26px;
+  }
+}
+.main .advantages--BlockBoldTitle {
+  width: 100%;
+  position: relative;
+}
+.main .advantages--BlockBoldTitle.right1.advantages--BlockBoldTitle::before {
+  content: "";
+  top: 153px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--BlockBoldTitle.right1.advantages--BlockBoldTitle::before {
+    top: 0;
+  }
+}
+.main .advantages--BlockBoldTitle::before {
+  content: "";
+  max-width: 1700px;
+  width: 100%;
+  height: 0.3px;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  top: 172.2px;
+  left: 0;
+  z-index: 10;
+}
+@media (max-width: 1100px) {
+  .main .advantages--BlockBoldTitle::before {
+    top: 0;
+  }
+}
+.main .advantages--BlockBoldTitle__Wrapper .right {
+  color: rgba(255, 255, 255, 0.68);
+  -webkit-text-stroke: 0;
+  width: 100%;
+  text-align: right;
+}
+.main .advantages--BlockBoldTitle__Title {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleBoldText);
+  line-height: var(--LineHeight__TitleBoldText);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  z-index: 20;
+}
+@media (max-width: 1100px) {
+  .main .advantages--BlockBoldTitle__Title {
+    display: none;
+  }
+}
+.main .numbersBlockWrapper {
+  width: 100%;
+  padding: 98px 0;
+}
+@media (max-width: 1100px) {
+  .main .numbersBlockWrapper {
+    padding: 60px 0;
+  }
+}
+.main .numbersBlockList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media (max-width: 1100px) {
+  .main .numbersBlockList {
+    flex-direction: column;
+    gap: 19px;
+  }
+}
+.main .numbersBlockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  color: var(--Color__Black);
+}
+@media (max-width: 1100px) {
+  .main .numbersBlockItem {
+    gap: 10px;
+  }
+}
+.main .numbersBlockItem--Title {
+  font-family: "Raleway";
+  font-size: var(--SizeText__NumbersTitle);
+  line-height: var(--LineHeight__NumbersTitle);
+  font-weight: 700;
+}
+@media (max-width: 1100px) {
+  .main .numbersBlockItem--Title {
+    font-size: var(--SizeText__NumbersTitleModile);
+    line-height: var(--LineHeight__NumbersTitleModile);
+  }
+}
+.main .numbersBlockItem--Content {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__NumbersContent);
+  line-height: var(--LineHeight__NumbersContent);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1100px) {
+  .main .numbersBlockItem--Content {
+    font-size: var(--SizeText__NumbersContentModile);
+    line-height: var(--LineHeight__NumbersContentModile);
+  }
+}
+.main .numbersBlockItem--HR {
+  width: 1px;
+  height: 319px;
+  background-color: #dadada;
+}
+@media (max-width: 1100px) {
+  .main .numbersBlockItem--HR {
+    width: 100%;
+    height: 1px;
+  }
+}
+.main .infoMaterials {
+  background-image: url(../images/feedBackMaterials/feedBackMaterialsBD.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.main .infoMaterialsWrapper {
+  width: 100%;
+  padding: 71px 0;
+}
+@media (max-width: 1100px) {
+  .main .infoMaterialsWrapper {
+    padding: 40px 0;
+  }
+}
+.main .infoMaterialsBlock {
+  background: url(../images/feedBackMaterials/feedBackMaterialsWrapperBD.png) rgba(0, 0, 0, 0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  backdrop-filter: blur(3.5px);
+  padding: 100px 231px 146px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+@media (max-width: 1100px) {
+  .main .infoMaterialsBlock {
+    padding: 46px 20px;
+    gap: 20px;
+  }
+}
+.main .infoMaterials--Title {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--Color__White);
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .main .infoMaterials--Title {
+    font-size: var(--SizeText__TitleSectionModile);
+    line-height: var(--LineHeight__TitleSectionModile);
+  }
+}
+.main .infoMaterials--HR {
+  width: 321px;
+  height: 2px;
+  background-color: var(--Color__Decor);
+}
+@media (max-width: 1100px) {
+  .main .infoMaterials--HR {
+    width: 148px;
+  }
+}
+.main .infoMaterials--Content {
+  letter-spacing: -0.03em;
+  color: var(--Color__White);
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  .main .infoMaterials--Content {
+    font-size: var(--SizeText__MainTextModile);
+    line-height: var(--LineHeight__MainTextModile);
+  }
+}
+.main .infoMaterials--Button {
+  border-color: var(--Color__White);
+  color: var(--Color__White);
+}
+.main .infoMaterials--Button:hover {
+  background-color: var(--Color__White);
+  color: var(--Color__Black);
+}
+@media (max-width: 1100px) {
+  .main .infoMaterials--Button {
+    padding: 9.5px 29px;
+  }
 }
 
 /*# sourceMappingURL=mainPage.css.map */

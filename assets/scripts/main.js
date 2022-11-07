@@ -9,9 +9,11 @@ navModileItem.forEach((item, index) => {
         navModileItem[indexItem].style = "";
 
         if (navModileItemList[index]) {
-            navModileItem[index].style = "background-color: var(--Color__Decor);color: var(--Color__White);";
+            navModileItem[index].style =
+                "background-color: var(--Color__Decor);color: var(--Color__White);";
             navModileItemList[index].style.display = "flex";
             indexItem = index;
         }
     });
 });
+
