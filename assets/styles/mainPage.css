@@ -255,10 +255,10 @@
   bottom: 16px;
   left: -75px;
 }
-.main .advantages {
+.main .infoBlock {
   background-color: var(--Color__BGQuestionBlock);
 }
-.main .advantagesWrapper {
+.main .infoBlockWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -269,12 +269,12 @@
   position: relative;
 }
 @media (max-width: 1100px) {
-  .main .advantagesWrapper {
+  .main .infoBlockWrapper {
     gap: 45px;
     padding: 60px 0;
   }
 }
-.main .advantagesWrapper::before {
+.main .infoBlockWrapper::before {
   content: "";
   max-width: 487px;
   max-height: 1084px;
@@ -289,11 +289,11 @@
   background-size: contain;
 }
 @media (max-width: 1100px) {
-  .main .advantagesWrapper::before {
+  .main .infoBlockWrapper::before {
     display: none;
   }
 }
-.main .advantagesWrapper::after {
+.main .infoBlockWrapper::after {
   content: "";
   max-width: 1206.5px;
   max-height: 833.68px;
@@ -308,14 +308,14 @@
   background-size: contain;
 }
 @media (max-width: 1100px) {
-  .main .advantagesWrapper::after {
+  .main .infoBlockWrapper::after {
     display: none;
   }
 }
-.main .advantagesContent {
+.main .infoBlockContent {
   width: 100%;
 }
-.main .advantagesContentWrapper {
+.main .infoBlockContentWrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -324,12 +324,12 @@
   width: 100%;
 }
 @media (max-width: 1100px) {
-  .main .advantagesContentWrapper {
+  .main .infoBlockContentWrapper {
     flex-direction: column;
     gap: 30px;
   }
 }
-.main .advantagesContent--Title {
+.main .infoBlockContent--Title {
   font-family: "RasfirePersonal";
   font-size: var(--SizeText__TitleSection);
   line-height: var(--LineHeight__TitleSection);
@@ -341,7 +341,7 @@
   position: relative;
 }
 @media (max-width: 1100px) {
-  .main .advantagesContent--Title {
+  .main .infoBlockContent--Title {
     font-family: "RasfirePersonal";
     font-size: var(--SizeText__TitleSectionModile);
     line-height: var(--LineHeight__TitleSectionModile);
@@ -349,7 +349,12 @@
     width: 101%;
   }
 }
-.main .advantagesContent--Title::before {
+@media (max-width: 600px) {
+  .main .infoBlockContent--Title {
+    max-width: 450px;
+  }
+}
+.main .infoBlockContent--Title::before {
   content: "";
   width: 100px;
   height: 2px;
@@ -359,14 +364,14 @@
   right: -140px;
 }
 @media (max-width: 1100px) {
-  .main .advantagesContent--Title::before {
+  .main .infoBlockContent--Title::before {
     width: 71px;
     bottom: 17px;
     top: auto;
-    right: -17px;
+    right: -8px;
   }
 }
-.main .advantagesContent--SubTitle {
+.main .infoBlockContent--SubTitle {
   letter-spacing: -0.03em;
   color: #d9d9d9;
   max-width: 717px;
@@ -374,26 +379,26 @@
   margin-top: 50px;
 }
 @media (max-width: 1100px) {
-  .main .advantagesContent--SubTitle {
+  .main .infoBlockContent--SubTitle {
     margin: 0;
     font-size: 17px;
     line-height: 26px;
   }
 }
-.main .advantages--BlockBoldTitle {
+.main .infoBlock--BlockBoldTitle {
   width: 100%;
   position: relative;
 }
-.main .advantages--BlockBoldTitle.right1.advantages--BlockBoldTitle::before {
+.main .infoBlock--BlockBoldTitle.right1.infoBlock--BlockBoldTitle::before {
   content: "";
   top: 153px;
 }
 @media (max-width: 1100px) {
-  .main .advantages--BlockBoldTitle.right1.advantages--BlockBoldTitle::before {
+  .main .infoBlock--BlockBoldTitle.right1.infoBlock--BlockBoldTitle::before {
     top: 0;
   }
 }
-.main .advantages--BlockBoldTitle::before {
+.main .infoBlock--BlockBoldTitle::before {
   content: "";
   max-width: 1700px;
   width: 100%;
@@ -405,17 +410,17 @@
   z-index: 10;
 }
 @media (max-width: 1100px) {
-  .main .advantages--BlockBoldTitle::before {
+  .main .infoBlock--BlockBoldTitle::before {
     top: 0;
   }
 }
-.main .advantages--BlockBoldTitle__Wrapper .right {
+.main .infoBlock--BlockBoldTitle__Wrapper .right {
   color: rgba(255, 255, 255, 0.68);
   -webkit-text-stroke: 0;
   width: 100%;
   text-align: right;
 }
-.main .advantages--BlockBoldTitle__Title {
+.main .infoBlock--BlockBoldTitle__Title {
   font-family: "RasfirePersonal";
   font-size: var(--SizeText__TitleBoldText);
   line-height: var(--LineHeight__TitleBoldText);
@@ -426,7 +431,7 @@
   z-index: 20;
 }
 @media (max-width: 1100px) {
-  .main .advantages--BlockBoldTitle__Title {
+  .main .infoBlock--BlockBoldTitle__Title {
     display: none;
   }
 }
@@ -585,6 +590,399 @@
 @media (max-width: 1100px) {
   .main .infoMaterials--Button {
     padding: 9.5px 29px;
+  }
+}
+.main .advantages {
+  background-color: #1d2b38;
+  padding-bottom: 90px;
+}
+@media (max-width: 1100px) {
+  .main .advantages {
+    padding: 0;
+  }
+}
+.main .advantagesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 92px;
+  padding-top: 100px;
+  position: relative;
+}
+.main .advantagesWrapper::before {
+  content: "";
+  width: 132px;
+  height: 302px;
+  background-image: url(../images/decor/circleReview.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  right: 0;
+  z-index: 0;
+}
+@media (max-width: 1100px) {
+  .main .advantagesWrapper::before {
+    width: 78px;
+    height: 149px;
+    bottom: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .main .advantagesWrapper {
+    gap: 30px;
+    padding: 0;
+  }
+}
+.main .advantages--Title {
+  max-width: 794px;
+  width: 100%;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--Color__White);
+  position: relative;
+}
+.main .advantages--Title::before {
+  content: "";
+  width: 274px;
+  height: 2px;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  bottom: 33px;
+  right: 0;
+}
+@media (max-width: 1100px) {
+  .main .advantages--Title {
+    max-width: 500px;
+    font-size: var(--SizeText__TitleSectionModile);
+    line-height: var(--LineHeight__TitleSectionModile);
+  }
+  .main .advantages--Title span {
+    display: none;
+  }
+  .main .advantages--Title::before {
+    width: 94px;
+    bottom: 15px;
+  }
+}
+.main .advantages--TitleWrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 187px;
+}
+.main .advantages--TitleWrapper::before {
+  content: "";
+  max-width: 804px;
+  width: 100%;
+  height: 670px;
+  background-image: url(../images/decor/advantagesBDLeft.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -79px;
+  left: 0;
+  z-index: 0;
+}
+.main .advantages--TitleWrapper::after {
+  content: "";
+  max-width: 804px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/decor/advantagesBDRight.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -132px;
+  right: 0;
+  z-index: 0;
+}
+@media (max-width: 1100px) {
+  .main .advantages--TitleWrapper {
+    margin: 0;
+  }
+  .main .advantages--TitleWrapper::after, .main .advantages--TitleWrapper::before {
+    display: none;
+  }
+}
+.main .advantages--TitleInner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--TitleInner {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.main .advantages--TitleList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  margin-top: 77px;
+  z-index: 555;
+}
+@media (max-width: 1100px) {
+  .main .advantages--TitleList {
+    gap: 22px;
+    margin: 0;
+  }
+}
+.main .advantages--TitleItem {
+  transition: all linear 0.4s;
+  color: var(--Color__White);
+}
+.main .advantages--TitleItem:hover {
+  color: var(--Color__Decor);
+  transform: translateX(-25px);
+}
+.main .advantages--TitleItem__Title {
+  line-height: 27px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--TitleItem__Title {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+.main .advantages--HR {
+  width: 100%;
+  height: 1px;
+  background-color: var(--Color__Decor);
+  z-index: 555;
+}
+.main .advantages--ContentWrapper {
+  width: 100%;
+}
+.main .advantages--ContentInner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--ContentInner {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.main .advantages--LeftWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 81px;
+  max-width: 707px;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftWrapper {
+    gap: 30px;
+  }
+}
+.main .advantages--Left__Title {
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: var(--Color__White);
+  margin-left: 20px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--Left__Title {
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+  }
+}
+.main .advantages--LeftLists {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 77px;
+  margin-left: 31px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftLists {
+    gap: 30px;
+    margin-left: 40px;
+  }
+}
+.main .advantages--LeftListNumber {
+  counter-reset: LeftListNumber;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 27px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftListNumber {
+    gap: 11px;
+  }
+}
+.main .advantages--LeftListContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 28px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftListContent {
+    gap: 11px;
+  }
+}
+.main .advantages--LeftItemNumber {
+  color: var(--Color__SubMainText);
+  position: relative;
+}
+.main .advantages--LeftItemNumber::before {
+  counter-increment: LeftListNumber;
+  content: counters(LeftListNumber, "") ".";
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: var(--Color__White);
+  position: absolute;
+  top: 0;
+  left: -35px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftItemNumber::before {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+.main .advantages--LeftItemNumber__Title {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftItemNumber__Title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.main .advantages--LeftItemContent {
+  color: var(--Color__SubMainText);
+  position: relative;
+}
+.main .advantages--LeftItemContent::before {
+  content: "";
+  width: 33px;
+  height: 33px;
+  background-image: url(../images/decor/checkMark__marker.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: var(--Color__White);
+  position: absolute;
+  top: 50%;
+  left: -49px;
+  transform: translateY(-50%);
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftItemContent::before {
+    font-size: 17px;
+    line-height: 21px;
+    width: 20px;
+    height: 20px;
+    left: -35px;
+  }
+}
+.main .advantages--LeftItemContent__Title {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  .main .advantages--LeftItemContent__Title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.main .advantages--Right {
+  background-color: rgba(22, 22, 22, 0.32);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
+  backdrop-filter: blur(2px);
+  height: 1103px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--Right {
+    width: 100%;
+    height: auto;
+  }
+}
+.main .advantages--RightWrapper {
+  max-width: 830px;
+  width: 100%;
+  padding: 161px 73px 52px 103px;
+  z-index: 555;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 70px;
+}
+@media (max-width: 1100px) {
+  .main .advantages--RightWrapper {
+    padding: 40px 20px 30px;
+    gap: 30px;
+  }
+}
+.main .advantages--Right__Title {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__SubTitleSection);
+  line-height: var(--LineHeight__SubTitleSection);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--Color__White);
+}
+.main .advantages--Right__Title span {
+  font-family: "Montserrat";
+}
+@media (max-width: 1100px) {
+  .main .advantages--Right__Title {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+.main .advantages--Right__Text {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__SubMainText);
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--Color__SubMainText);
+}
+@media (max-width: 1100px) {
+  .main .advantages--Right__Text {
+    font-size: 16px;
+    line-height: 23px;
   }
 }
 

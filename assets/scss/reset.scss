@@ -359,6 +359,15 @@ textarea {
     padding: 0.2em 0;
 }
 
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+    display: none
+}
+  /* Убираем стандартный маркер Firefox */
+details > summary {
+    list-style: none;
+}
+
 button {
     cursor: pointer;
     padding: 0;

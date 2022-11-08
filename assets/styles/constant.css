@@ -10,10 +10,25 @@
   letter-spacing: 0.05em;
   background: transparent;
   transition: all linear 0.2s;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+.buttonContent span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .buttonContent:hover {
   background: var(--Color__Active);
   color: var(--Color__White);
+}
+.buttonContent:hover svg path, .buttonContent:hover svg line {
+  stroke: var(--Color__White);
 }
 @media (max-width: 1100px) {
   .buttonContent {
@@ -326,6 +341,7 @@
 }
 .examplesWorkItem::before {
   content: "";
+  display: none;
   width: 302px;
   height: 302px;
   background-color: var(--Color__Decor);
@@ -539,11 +555,32 @@
   justify-content: center;
   gap: 100px;
   padding: 134px 0 39px;
+  position: relative;
+}
+.reviewsWrapper::before {
+  content: "";
+  width: 132px;
+  height: 302px;
+  background-image: url(../images/decor/circleReview.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 181px;
+  right: 0;
+  z-index: 0;
 }
 @media (max-width: 1100px) {
   .reviewsWrapper {
-    padding: 50px 60px;
     gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .reviewsWrapper::before {
+    background-image: url(../images/decor/circleReviewMobile.svg);
+    width: 71px;
+    height: 107px;
+    top: 80px;
   }
 }
 .reviews--Title {
@@ -559,15 +596,22 @@
 }
 .reviews--Title::before {
   content: "";
-  max-width: 1372px;
   min-width: 210px;
-  width: 100%;
+  width: 85%;
   height: 0.3px;
   background-color: var(--Color__Decor);
   position: absolute;
   top: 24px;
-  right: -190px;
+  right: 0;
   z-index: -1;
+}
+@media (max-width: 1100px) {
+  .reviews--Title::before {
+    top: 12px;
+  }
+}
+.reviews--TitleWrapper {
+  width: 100%;
 }
 @media (max-width: 1100px) {
   .reviews--Title {
@@ -577,6 +621,10 @@
 }
 .reviewsSlider {
   width: 100%;
+  z-index: 999;
+}
+.reviewsSliderWrapper {
+  width: 100%;
 }
 .reviewsList {
   width: 100%;
@@ -584,7 +632,24 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 20px;
+}
+.reviewsList::before {
+  content: "";
+  width: 302px;
+  height: 302px;
+  background-color: var(--Color__Decor);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 0;
+}
+@media (max-width: 1100px) {
+  .reviewsList::before {
+    display: none;
+  }
 }
 @media (max-width: 1100px) {
   .reviewsList {
@@ -614,7 +679,7 @@
 }
 @media (max-width: 1100px) {
   .reviewsItem {
-    padding: 40px 0 30px;
+    padding: 40px 0 0;
     gap: 30px;
   }
 }
@@ -623,6 +688,12 @@
   max-height: 333px;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1100px) {
+  .reviewsItem--Img {
+    max-width: none;
+    max-height: none;
+  }
 }
 .reviewsItem--Content {
   display: flex;
@@ -635,7 +706,7 @@
 @media (max-width: 1100px) {
   .reviewsItem--Content {
     gap: 30px;
-    padding: 30px 20px;
+    padding: 0 20px;
   }
 }
 .reviewsItem--ContentTitle {
@@ -705,14 +776,25 @@
     gap: 3px;
   }
 }
-.reviewsItem--RatingStarspan {
+.reviewsItem--RatingStar span {
+  max-width: 29px;
+  max-height: 28px;
+  width: 100%;
+  height: 100%;
+}
+.reviewsItem--RatingStar span svg {
   max-width: 29px;
   max-height: 28px;
   width: 100%;
   height: 100%;
 }
 @media (max-width: 1100px) {
-  .reviewsItem--RatingStarspan {
+  .reviewsItem--RatingStar span {
+    max-width: 18px;
+    max-height: 18px;
+    display: contents;
+  }
+  .reviewsItem--RatingStar span svg {
     max-width: 18px;
     max-height: 18px;
   }
@@ -744,6 +826,113 @@
     font-size: 14px;
     line-height: 21px;
   }
+}
+
+.questions {
+  width: 100%;
+}
+.questionsWrapper {
+  width: 100%;
+  padding: 172px 0 33px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 90px;
+}
+.questionsWrapper::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  top: 57px;
+  left: 0;
+}
+.questionsWrapper::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  top: 0;
+  right: 267px;
+}
+.questionsWrapper--Title {
+  width: 100%;
+}
+.questionsWrapper--List {
+  width: 100%;
+}
+.questions--Title {
+  width: 100%;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--Color__Black);
+}
+.questionsList {
+  max-width: 1126px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.questionsItem {
+  width: 100%;
+  background-color: var(--Color__BGQuestionBlock);
+}
+.questionsItem[open] .questionsItem--Header::before {
+  background-image: url(../images/decor/plusQuestionsOpen.svg);
+}
+.questionsItem--Header {
+  width: 100%;
+  padding: 34.5px 67px;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+.questionsItem--Header::before {
+  content: "";
+  width: 27px;
+  height: 27px;
+  transition: all linear 0.2s;
+  background-image: url(../images/decor/plusQuestions.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 34.5px;
+  right: 67px;
+}
+.questionsItem--Header::marker {
+  display: none;
+}
+.questionsItem--Header__Title {
+  max-width: 920px;
+  width: 100%;
+  color: var(--Color__White);
+  font-family: "Montserrat";
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 400;
+}
+.questionsItem--Body {
+  background-color: var(--Color__White);
+  padding: 46px 170px 46px 25px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--Color__Black);
 }
 
 /*# sourceMappingURL=constant.css.map */
