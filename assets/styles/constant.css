@@ -24,7 +24,7 @@
   justify-content: center;
 }
 .buttonContent:hover {
-  background: var(--Color__Active);
+  background-color: var(--Color__Active);
   color: var(--Color__White);
 }
 .buttonContent:hover svg path, .buttonContent:hover svg line {
@@ -58,6 +58,168 @@
 
 .buttonArrow {
   padding: 26px 17px 25px;
+}
+
+.nav {
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .nav {
+    display: none;
+  }
+}
+.nav .menuDesktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.nav .menuDesktopItem--Title {
+  display: flex;
+  font-family: "Gabriola";
+  font-size: var(--SizeText__HeaderText);
+  line-height: var(--LineHeight__HeaderText);
+  font-weight: 400;
+  color: var(--Color__Black);
+  letter-spacing: 0.055em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav .menuDesktopItem--Title:hover {
+  color: var(--Color__Decor);
+}
+.nav .dropList:hover .navServices {
+  display: flex;
+}
+.nav .dropListBefor {
+  position: relative;
+}
+.nav .dropListBefor::before {
+  content: "";
+  width: 10px;
+  height: 7px;
+  background-image: url(../images/decor/arrowBottom.webp);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--Color__Decor);
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  transform: translateY(-50%);
+}
+.navServices {
+  position: absolute;
+  top: 217px;
+  left: 0;
+  padding: 60px 56px 56px;
+  background-color: var(--Color__White);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 74px;
+  z-index: 999;
+  display: none;
+}
+.navServicesBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 29px;
+}
+.navServices--Title {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__SubMainText);
+  line-height: var(--LineHeight__SubMainText);
+  font-weight: 600;
+  color: var(--Color__Black);
+}
+.navServices--hr {
+  width: 50px;
+  border-bottom: 2px solid var(--Color__Decor);
+}
+.navServicesList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 23px;
+}
+.navServicesItem {
+  display: flex;
+}
+.navServicesItem--Title {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__ThinTextContent);
+  line-height: var(--LineHeight__ThinTextContent);
+  font-weight: 400;
+}
+.navServicesItem--Title:hover {
+  color: var(--Color__Decor);
+}
+.navModile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 82px;
+  left: 0;
+  background-color: var(--Color__White);
+  text-align: left;
+  z-index: 9999;
+}
+.navModileItem {
+  padding: 10px 55px 10px 20px;
+  width: 100%;
+  color: var(--Color__Black);
+  position: relative;
+}
+.navModileItem:hover.navModileItem::before {
+  color: var(--Color__White);
+  background-image: url(../images/decor/plusEmpty.svg);
+}
+.navModileItem::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-image: url(../images/decor/plus.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 11px;
+}
+.navModileItem--Title {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__SubMainText);
+  line-height: var(--LineHeight__SubMainText);
+  font-weight: 600;
+}
+.navModileItem--List {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 23px;
+  display: none;
+  width: 100%;
+  padding: 20px 20px 44px;
+  font-family: "Montserrat";
+  font-size: var(--SizeText__ThinTextContent);
+  line-height: var(--LineHeight__ThinTextContent);
+  font-weight: 400;
+  color: var(--Color__TextMenu);
+}
+.navModileItem--Item:hover {
+  color: var(--Color__Decor);
 }
 
 .numbersList {
@@ -288,6 +450,7 @@
   align-items: center;
   justify-content: center;
   gap: 228px;
+  padding-bottom: 55px;
 }
 @media (max-width: 1100px) {
   .examplesWorkWrapper {
@@ -859,11 +1022,9 @@
   top: 0;
   right: 267px;
 }
-.questionsWrapper--Title {
+.questionsWrapper--Title, .questionsWrapper--List {
   width: 100%;
-}
-.questionsWrapper--List {
-  width: 100%;
+  z-index: 999;
 }
 .questions--Title {
   width: 100%;
@@ -933,6 +1094,119 @@
   line-height: 24px;
   font-weight: 400;
   color: var(--Color__Black);
+}
+
+.inviteDesignerWrapper {
+  padding: 139px 143px 167px;
+  max-height: 819px;
+  background-color: var(--Color__White);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inviteDesignerWrapper::before {
+  content: "";
+  background-image: url(../images/decor/inviteDesigner/inviteDesignerDecorImgLeft.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.inviteDesignerWrapper::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: var(--Color__Decor);
+  position: absolute;
+  top: 0;
+  right: 267px;
+}
+.inviteDesigner--Block {
+  background-color: var(--Color__White);
+  box-shadow: 0px 0px 52px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  padding: 110px 0;
+  z-index: 999;
+}
+.inviteDesigner--BlockWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+}
+.inviteDesigner--Title {
+  width: 100%;
+  text-align: center;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__SubTitleSection);
+  line-height: var(--LineHeight__SubTitleSection);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--Color__Black);
+}
+.inviteDesigner--Title span {
+  color: var(--Color__Decor);
+}
+.inviteDesigner--Text {
+  font-size: 22px;
+  line-height: 27px;
+  width: 100%;
+  text-align: center;
+  color: #3e3e3e;
+}
+.inviteDesigner--NumberList {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: none;
+}
+.inviteDesigner--Button {
+  background-color: var(--Color__Active);
+  color: var(--Color__White);
+}
+.inviteDesigner--Button svg path, .inviteDesigner--Button svg line {
+  stroke: var(--Color__White);
+}
+.inviteDesigner--Button:hover {
+  background: var(--Color__Active);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.servicesNav {
+  background-color: var(--Color__DarkDecorCircle);
+}
+.servicesNavWrapper {
+  width: 100%;
+  position: relative;
+  padding: 92px 0 230px;
+}
+.servicesNav--Services {
+  position: unset;
+  display: flex;
+  background-color: var(--Color__DarkDecorCircle);
+  padding: 0;
+}
+.servicesNav--Services .navServices--Title {
+  color: var(--Color__White);
+}
+.servicesNav--Services .navServicesItem--Title {
+  color: var(--Color__SubMainText);
+  transition: all linear 0.2s;
+}
+.servicesNav--Services .navServicesItem--Title:hover {
+  color: var(--Color__Decor);
 }
 
 /*# sourceMappingURL=constant.css.map */

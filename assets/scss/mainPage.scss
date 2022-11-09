@@ -20,13 +20,17 @@
         }
 
         &Content {
-            @include displayFlex(flex-start, center, column);
-            gap: 60px;
+            width: 100%;
 
-            color: var(--Color__Black);
+            &Wrapper {
+                @include displayFlex(flex-start, center, column);
+                gap: 60px;
 
-            @media (max-width: 1100px) {
-                gap: 30px;
+                color: var(--Color__Black);
+
+                @media (max-width: 1100px) {
+                    gap: 30px;
+                }
             }
 
             &--Title {
@@ -101,7 +105,7 @@
         &Image {
             position: absolute;
             bottom: -35px;
-            right: -20px;
+            right: 0;
 
             max-width: 641px;
             min-width: 280px;
@@ -321,10 +325,10 @@
 
         &Wrapper {
             @include displayFlex(flex-start, center, column);
-            gap: 127px;
+            gap: 80px;
 
             padding-top: 134px;
-            padding-bottom: 105px;
+            padding-bottom: 50px;
 
             position: relative;
 
@@ -637,6 +641,9 @@
 
             padding: 100px 231px 146px;
 
+            max-width: 1414px;
+            margin: 0 auto;
+
             @include displayFlex(center, center, column);
             gap: 70px;
 
@@ -706,7 +713,6 @@
 
     .advantages {
         background-color: #1d2b38;
-        padding-bottom: 90px;
 
         @media (max-width: 1100px) {
             padding: 0;
@@ -714,13 +720,13 @@
 
         &Wrapper {
             @include displayFlex(flex-start, flex-start, column);
-            gap: 92px;
+            gap: 97px;
 
             padding-top: 100px;
 
             position: relative;
 
-            &::before{
+            &::before {
                 content: "";
 
                 width: 132px;
@@ -752,7 +758,7 @@
         }
 
         &--Title {
-            max-width: 794px;
+            max-width: 800px;
             width: 100%;
 
             @include font(
@@ -803,7 +809,7 @@
 
                 position: relative;
 
-                margin-bottom: 187px;
+                margin-bottom: 140px;
 
                 &::before {
                     content: "";
@@ -880,11 +886,11 @@
             }
 
             &Item {
-                transition: all linear .4s;
+                transition: all linear 0.4s;
 
                 color: var(--Color__White);
 
-                &:hover{
+                &:hover {
                     color: var(--Color__Decor);
                     transform: translateX(-25px);
                 }
@@ -926,13 +932,13 @@
         }
 
         &--Left {
-            &Wrapper{
+            &Wrapper {
                 @include displayFlex(flex-start, flex-start, column);
                 gap: 81px;
-    
+
                 max-width: 707px;
                 width: 100%;
-    
+
                 @media (max-width: 1100px) {
                     gap: 30px;
                 }
@@ -1041,9 +1047,8 @@
                         color: var(--Color__White);
 
                         position: absolute;
-                        top: 50%;
+                        top: -5px;
                         left: -49px;
-                        transform: translateY(-50%);
 
                         @media (max-width: 1100px) {
                             font-size: 17px;
@@ -1080,17 +1085,17 @@
                 height: auto;
             }
 
-            &Wrapper{
+            &Wrapper {
                 max-width: 830px;
                 width: 100%;
-    
+
                 padding: 161px 73px 52px 103px;
-    
+
                 z-index: 555;
-    
+
                 @include displayFlex(flex-start, flex-start, column);
                 gap: 70px;
-    
+
                 @media (max-width: 1100px) {
                     padding: 40px 20px 30px;
                     gap: 30px;
@@ -1098,14 +1103,19 @@
             }
 
             &__Title {
-                @include font(var(--SizeText__SubTitleSection), 400, "RasfirePersonal", var(--LineHeight__SubTitleSection));
-                
+                @include font(
+                    var(--SizeText__SubTitleSection),
+                    400,
+                    "RasfirePersonal",
+                    var(--LineHeight__SubTitleSection)
+                );
+
                 letter-spacing: 0.07em;
                 text-transform: uppercase;
-                
+
                 color: var(--Color__White);
 
-                & span{
+                & span {
                     font-family: "Montserrat";
                 }
 
@@ -1116,7 +1126,12 @@
             }
 
             &__Text {
-                @include font(var(--SizeText__SubMainText), 400, "Montserrat", 26px);
+                @include font(
+                    var(--SizeText__SubMainText),
+                    400,
+                    "Montserrat",
+                    26px
+                );
                 color: var(--Color__SubMainText);
 
                 @media (max-width: 1100px) {
@@ -1126,6 +1141,4 @@
             }
         }
     }
-
-
 }

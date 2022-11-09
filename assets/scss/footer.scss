@@ -1,0 +1,243 @@
+@import "./mixin.scss";
+
+.footer {
+    background: #1F1F1F;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(2px);
+
+    &Wrapper {
+        width: 100%;
+
+        padding: 107px 0 104px;
+
+        position: relative;
+        @include displayFlex(flex-start, flex-start, column);
+        gap: 177px;
+
+        @media (max-width: 1100px) {
+        }
+    }
+
+    &MainContent {
+        @include displayFlex(flex-start, space-between);
+        gap: 25px;
+
+        width: 100%;
+
+        @media (max-width: 1100px) {
+        }
+
+        &--NavList {
+            @include displayFlex(flex-start, flex-start, column);
+            gap: 15px;
+
+            list-style: none;
+
+            @media (max-width: 1100px) {
+            }
+        }
+
+        &--NavItem {
+            &__Link {
+                @include font(
+                    var(--SizeText__FooterTitle),
+                    400,
+                    "Montserrat",
+                    var(--LineHeight__FooterTitle)
+                );
+
+                text-decoration-line: underline;
+
+                color: var(--Color__Decor);
+
+                @media (max-width: 1100px) {
+                }
+            }
+        }
+
+        &--Main {
+            max-width: 442px;
+            width: 100%;
+
+            text-align: center;
+
+            @include displayFlex(center, center, column);
+            gap: 42px;
+
+            .logo{
+                max-width: 278px;
+                max-height: 52px;
+            }
+
+            @media (max-width: 1100px) {
+            }
+
+            &Text {
+                @include font(
+                    var(--SizeText__FooterTitle),
+                    400,
+                    "Montserrat",
+                    var(--LineHeight__FooterTitle)
+                );
+
+                color: #d3d3d3;
+
+                @media (max-width: 1100px) {
+                }
+            }
+        }
+
+        &--Contact {
+            @include displayFlex(flex-end, flex-start, column);
+            gap: 33px;
+
+            @media (max-width: 1100px) {
+            }
+
+            .numbersList{
+                .numbersItem{
+                    &--Tel{
+                        color: var(--Color__White);
+                    }
+                }
+            }
+
+            &Time {
+                @include font(
+                    var(--SizeText__FooterTitle),
+                    400,
+                    "Montserrat",
+                    19px
+                );
+
+                letter-spacing: 0.055em;
+
+                color: var(--Color__White);
+
+                @media (max-width: 1100px) {
+                }
+            }
+
+            &Mail {
+                @include font(
+                    var(--SizeText__FooterTitle),
+                    400,
+                    "Montserrat",
+                    19px
+                );
+
+                letter-spacing: 0.055em;
+
+                color: var(--Color__Decor);
+
+                @media (max-width: 1100px) {
+                }
+            }
+        }
+    }
+
+    &OtherInfo {
+        @include displayFlex(flex-start, flex-start, column);
+        width: 100%;
+
+        @media (max-width: 1100px) {
+        }
+
+        &--Social {
+            @include displayFlex(baseline, flex-start);
+            gap: 26px;
+
+            width: 100%;
+
+            @media (max-width: 1100px) {
+            }
+
+            &__HR {
+                width: 100%;
+                height: 1px;
+
+                background-color: var(--Color__Decor);
+            }
+
+            &Inner {
+                @include displayFlex(center, center, column);
+                gap: 23px;
+
+                @media (max-width: 1100px) {
+                }
+            }
+
+            &__Text {
+                @include font(20px, 400, "Montserrat", 24px);
+
+                white-space: nowrap;
+                color: #d3d3d3;
+
+                @media (max-width: 1100px) {
+                }
+            }
+
+            &__List {
+                @include displayFlex(flex-start, center);
+                gap: 30px;
+
+                @media (max-width: 1100px) {
+                }
+            }
+
+            &__Item {
+                max-width: 32px;
+                max-height: 32px;
+
+                width: 100%;
+                height: 100%;
+
+                @media (max-width: 1100px) {
+                }
+
+                & a {
+                    & svg {
+                        max-width: 32px;
+                        max-height: 32px;
+
+                        width: 100%;
+                        height: 100%;
+
+                        @media (max-width: 1100px) {
+                        }
+                    }
+                }
+            }
+        }
+
+        &--Creators {
+            width: 100%;
+            margin-top: -22px;
+
+            @include displayFlex(flex-start, space-between);
+            gap: 30px;
+
+            &__legalInformation {
+                @include font(17px, 400, "Montserrat", 21px);
+
+                color: var(--Color__White);
+            }
+
+            & span {
+                @include font(17px, 400, "Montserrat", 20px);
+                @include displayFlex(center, center);
+                gap: 3px;
+
+                color: var(--Color__White);
+
+                & svg {
+                    max-width: 104px;
+                    max-height: 48px;
+
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

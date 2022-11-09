@@ -29,7 +29,7 @@
     }
 
     &:hover {
-        background: var(--Color__Active);
+        background-color: var(--Color__Active);
         color: var(--Color__White);
 
         & svg {
@@ -70,6 +70,211 @@
 
 .buttonArrow {
     padding: 26px 17px 25px;
+}
+
+.nav {
+    width: 100%;
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
+
+    .menuDesktop {
+        @include displayFlex(center, space-between);
+        gap: 15px;
+
+        &Item {
+            &--Title {
+                display: flex;
+
+                @include font(
+                    var(--SizeText__HeaderText),
+                    400,
+                    "Gabriola",
+                    var(--LineHeight__HeaderText)
+                );
+                color: var(--Color__Black);
+
+                letter-spacing: 0.055em;
+                cursor: pointer;
+
+                white-space: nowrap;
+
+                &:hover {
+                    color: var(--Color__Decor);
+                }
+            }
+        }
+    }
+
+    .dropList:hover {
+        & .navServices {
+            display: flex;
+        }
+    }
+
+    .dropListBefor {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 7px;
+
+            background-image: url(../images/decor/arrowBottom.webp);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            color: var(--Color__Decor);
+
+            position: absolute;
+            top: 50%;
+            right: -11px;
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &Services {
+        position: absolute;
+        top: 217px;
+        left: 0;
+
+        padding: 60px 56px 56px;
+        background-color: var(--Color__White);
+
+        @include displayFlex(flex-start, space-between);
+        gap: 74px;
+
+        z-index: 999;
+
+        display: none;
+
+        &Block {
+            @include displayFlex(flex-start, center, column);
+            gap: 29px;
+        }
+
+        &--Title {
+            @include font(
+                var(--SizeText__SubMainText),
+                600,
+                "Montserrat",
+                var(--LineHeight__SubMainText)
+            );
+            color: var(--Color__Black);
+        }
+
+        &--hr {
+            width: 50px;
+            border-bottom: 2px solid var(--Color__Decor);
+        }
+
+        &List {
+            @include displayFlex(flex-start, center, column);
+            gap: 23px;
+        }
+
+        &Item {
+            display: flex;
+
+            &--Title {
+                @include font(
+                    var(--SizeText__ThinTextContent),
+                    400,
+                    "Montserrat",
+                    var(--LineHeight__ThinTextContent)
+                );
+
+                &:hover {
+                    color: var(--Color__Decor);
+                }
+            }
+        }
+    }
+
+    &Modile {
+        @include displayFlex(flex-start, center, column);
+        display: none;
+
+        width: 100%;
+
+        position: absolute;
+        top: 82px;
+        left: 0;
+        background-color: var(--Color__White);
+
+        text-align: left;
+
+        z-index: 9999;
+
+        &Item {
+            padding: 10px 55px 10px 20px;
+            width: 100%;
+
+            color: var(--Color__Black);
+
+            position: relative;
+
+            &:hover {
+                &.navModileItem::before {
+                    color: var(--Color__White);
+                    background-image: url(../images/decor/plusEmpty.svg);
+                }
+            }
+
+            &::before {
+                content: "";
+
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+
+                background-image: url(../images/decor/plus.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                width: 12px;
+                height: 11px;
+            }
+
+            &--Title {
+                @include font(
+                    var(--SizeText__SubMainText),
+                    600,
+                    "Montserrat",
+                    var(--LineHeight__SubMainText)
+                );
+            }
+
+            &--List {
+                @include displayFlex(flex-start, center, column);
+                gap: 23px;
+
+                display: none;
+
+                width: 100%;
+                padding: 20px 20px 44px;
+
+                @include font(
+                    var(--SizeText__ThinTextContent),
+                    400,
+                    "Montserrat",
+                    var(--LineHeight__ThinTextContent)
+                );
+                color: var(--Color__TextMenu);
+            }
+
+            &--Item {
+                &:hover {
+                    color: var(--Color__Decor);
+                }
+            }
+        }
+    }
 }
 
 .numbers {
@@ -326,6 +531,8 @@
     &Wrapper {
         @include displayFlex(center, center, column);
         gap: 228px;
+
+        padding-bottom: 55px;
 
         @media (max-width: 1100px) {
             gap: 30px;
@@ -964,12 +1171,11 @@
             right: 267px;
         }
 
-        &--Title{
+        &--Title,
+        &--List {
             width: 100%;
-        }
 
-        &--List{
-            width: 100%;
+            z-index: 999;
         }
 
         @media (max-width: 1100px) {
@@ -1015,7 +1221,7 @@
 
         background-color: var(--Color__BGQuestionBlock);
 
-        &[open]{
+        &[open] {
             .questionsItem--Header::before {
                 background-image: url(../images/decor/plusQuestionsOpen.svg);
             }
@@ -1039,8 +1245,8 @@
 
                 width: 27px;
                 height: 27px;
-                
-                transition: all linear .2s;
+
+                transition: all linear 0.2s;
 
                 background-image: url(../images/decor/plusQuestions.svg);
                 background-position: center;
@@ -1079,6 +1285,170 @@
 
             @include font(20px, 400, "Montserrat", 24px);
             color: var(--Color__Black);
+        }
+    }
+}
+
+.inviteDesigner {
+    &Wrapper {
+        padding: 139px 143px 167px;
+        max-height: 819px;
+
+        background-color: var(--Color__White);
+
+        position: relative;
+
+        @include displayFlex(center, center, column);
+
+        &::before {
+            content: "";
+
+            background-image: url(../images/decor/inviteDesigner/inviteDesignerDecorImgLeft.png);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &::after {
+            content: "";
+
+            width: 1px;
+            height: 100%;
+
+            background-color: var(--Color__Decor);
+
+            position: absolute;
+            top: 0;
+            right: 267px;
+        }
+
+        @media (max-width: 1100px) {
+        }
+    }
+
+    &--Block {
+        background-color: var(--Color__White);
+        box-shadow: 0px 0px 52px rgba(0, 0, 0, 0.1);
+
+        width: 100%;
+        height: 100%;
+
+        padding: 110px 0;
+
+        z-index: 999;
+
+        &Wrapper {
+            @include displayFlex(center, flex-start, column);
+            gap: 32px;
+
+            max-width: 750px;
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1100px) {
+        }
+    }
+
+    &--Title {
+        width: 100%;
+        text-align: center;
+
+        @include font(
+            var(--SizeText__SubTitleSection),
+            400,
+            "RasfirePersonal",
+            var(--LineHeight__SubTitleSection)
+        );
+
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+
+        color: var(--Color__Black);
+
+        & span {
+            color: var(--Color__Decor);
+        }
+
+        @media (max-width: 1100px) {
+        }
+    }
+
+    &--Text {
+        font-size: 22px;
+        line-height: 27px;
+
+        width: 100%;
+
+        text-align: center;
+
+        color: #3e3e3e;
+
+        @media (max-width: 1100px) {
+        }
+    }
+
+    &--NumberList {
+        width: 100%;
+
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: none;
+    }
+
+    &--Button {
+        background-color: var(--Color__Active);
+        color: var(--Color__White);
+
+        & svg {
+            & path,
+            & line {
+                stroke: var(--Color__White);
+            }
+        }
+
+        &:hover {
+            background: var(--Color__Active);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.servicesNav{
+    background-color: var(--Color__DarkDecorCircle);
+
+    &Wrapper{
+        width: 100%;
+        position: relative;
+
+        padding: 92px 0 230px;
+    }
+
+    &--Services{
+        position: unset;
+        display: flex;
+        background-color: var(--Color__DarkDecorCircle);
+        padding: 0;
+
+        .navServices--Title{
+            color: var(--Color__White);
+        }
+
+        .navServicesItem--Title{
+            color: var(--Color__SubMainText);
+
+            transition: all linear .2s;
+
+            &:hover{
+                color: var(--Color__Decor);
+            }
         }
     }
 }
