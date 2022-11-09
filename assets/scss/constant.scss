@@ -45,6 +45,15 @@
 
         font-size: 14px;
         line-height: 21px;
+
+        & svg {
+            width: 23px;
+
+            & path,
+            & line {
+                stroke: var(--Color__White);
+            }
+        }
     }
 }
 
@@ -210,67 +219,82 @@
         z-index: 9999;
 
         &Item {
-            padding: 10px 55px 10px 20px;
             width: 100%;
 
-            color: var(--Color__Black);
+            &[open] {
+                .navModileItem--Header {
+                    background-color: var(--Color__Decor);
+                    
+                    &::before {
+                        background-image: url(../images/decor/plusEmpty.svg);   
+                    }
 
-            position: relative;
-
-            &:hover {
-                &.navModileItem::before {
-                    color: var(--Color__White);
-                    background-image: url(../images/decor/plusEmpty.svg);
+                    &__Title {
+                        color: var(--Color__White);
+                    }
                 }
             }
 
-            &::before {
-                content: "";
+            &--Header {
+                width: 100%;
+                padding: 10px 40px 10px 20px;
+                cursor: pointer;
 
-                position: absolute;
-                top: 50%;
-                right: 20px;
-                transform: translateY(-50%);
+                text-align: left;
 
-                background-image: url(../images/decor/plus.svg);
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
+                position: relative;
 
-                width: 12px;
-                height: 11px;
+                &::before {
+                    content: "";
+
+                    width: 13px;
+                    height: 13px;
+
+                    transition: all linear 0.2s;
+
+                    background-image: url(../images/decor/plus.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                }
+
+                &::marker {
+                    display: none;
+                }
+
+                &__Title {
+                    max-width: calc(100% - 40px);
+                    width: 100%;
+
+                    color: var(--Color__Black);
+
+                    @include font(16px, 600, "Montserrat", 20px);
+                }
             }
 
-            &--Title {
-                @include font(
-                    var(--SizeText__SubMainText),
-                    600,
-                    "Montserrat",
-                    var(--LineHeight__SubMainText)
-                );
+            &--Body{
+                padding: 20px 50px 40px 20px;
             }
 
             &--List {
-                @include displayFlex(flex-start, center, column);
+                @include displayFlex(flex-start, flex-start, column);
                 gap: 23px;
-
-                display: none;
-
-                width: 100%;
-                padding: 20px 20px 44px;
-
-                @include font(
-                    var(--SizeText__ThinTextContent),
-                    400,
-                    "Montserrat",
-                    var(--LineHeight__ThinTextContent)
-                );
-                color: var(--Color__TextMenu);
             }
 
             &--Item {
-                &:hover {
-                    color: var(--Color__Decor);
+                &Content {
+                    @include font(15px, 400, "Montserrat", 18px);
+
+                    color: var(--Color__TextMenu);
+
+                    &:hover {
+                        color: var(--Color__Decor);
+                    }
                 }
             }
         }
@@ -577,7 +601,8 @@
         width: 100%;
 
         @media (max-width: 1100px) {
-            gap: 10px;
+            gap: 190px;
+            flex-wrap: wrap;
         }
     }
 
@@ -624,6 +649,11 @@
             padding: 20px 34px;
 
             border-left: 2px solid var(--Color__Decor);
+
+            @media (max-width: 1100px) {
+                border: none;
+                padding: 20px;
+            }
         }
 
         &--ImageBlock {
@@ -691,9 +721,11 @@
             @media (max-width: 1100px) {
                 padding: 25px 20px;
 
-                bottom: -140px;
+                bottom: -110px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                gap: 15px;
             }
 
             &Title {
@@ -895,6 +927,19 @@
 
             @media (max-width: 1100px) {
                 top: 12px;
+                width: 90%;
+            }
+
+            @media (max-width: 7500px) {
+                width: 85%;
+            }
+
+            @media (max-width: 500px) {
+                width: 79%;
+            }
+
+            @media (max-width: 400px) {
+                width: 69%;
             }
         }
 
@@ -998,7 +1043,7 @@
 
             @media (max-width: 1100px) {
                 gap: 30px;
-                padding: 0 20px;
+                padding: 0 20px 30px;
             }
 
             &Title {
@@ -1104,6 +1149,7 @@
                 letter-spacing: -0.03em;
 
                 color: #9f9f9f;
+                white-space: nowrap;
 
                 @media (max-width: 1100px) {
                     font-size: 13px;
@@ -1123,6 +1169,7 @@
             letter-spacing: -0.03em;
 
             color: var(--Color__Decor);
+            white-space: nowrap;
 
             @media (max-width: 1100px) {
                 font-size: 14px;
@@ -1156,6 +1203,10 @@
             position: absolute;
             top: 57px;
             left: 0;
+
+            @media (max-width: 1100px) {
+                display: none;
+            }
         }
 
         &::after {
@@ -1169,6 +1220,10 @@
             position: absolute;
             top: 0;
             right: 267px;
+
+            @media (max-width: 1100px) {
+                display: none;
+            }
         }
 
         &--Title,
@@ -1179,6 +1234,8 @@
         }
 
         @media (max-width: 1100px) {
+            padding: 60px 0;
+            gap: 30px;
         }
     }
 
@@ -1200,6 +1257,8 @@
         color: var(--Color__Black);
 
         @media (max-width: 1100px) {
+            font-size: 24px;
+            line-height: 30px;
         }
     }
 
@@ -1213,6 +1272,7 @@
         gap: 20px;
 
         @media (max-width: 1100px) {
+            gap: 10px;
         }
     }
 
@@ -1227,9 +1287,6 @@
             }
         }
 
-        @media (max-width: 1100px) {
-        }
-
         &--Header {
             width: 100%;
             padding: 34.5px 67px;
@@ -1239,6 +1296,10 @@
             text-align: left;
 
             position: relative;
+
+            @media (max-width: 1100px) {
+                padding: 21px 12px;
+            }
 
             &::before {
                 content: "";
@@ -1254,15 +1315,20 @@
                 background-size: contain;
 
                 position: absolute;
-                top: 34.5px;
+                top: 50%;
                 right: 67px;
+                transform: translateY(-50%);
+
+                @media (max-width: 1100px) {
+                    width: 17px;
+                    height: 17px;
+
+                    right: 12px;
+                }
             }
 
             &::marker {
                 display: none;
-            }
-
-            @media (max-width: 1100px) {
             }
 
             &__Title {
@@ -1274,6 +1340,8 @@
                 @include font(22px, 400, "Montserrat", 27px);
 
                 @media (max-width: 1100px) {
+                    font-size: var(--SizeText__ThinTextContent);
+                    line-height: var(--LineHeight__ThinTextContent);
                 }
             }
         }
@@ -1285,6 +1353,14 @@
 
             @include font(20px, 400, "Montserrat", 24px);
             color: var(--Color__Black);
+
+            @media (max-width: 1100px) {
+                padding: 0;
+                padding-top: 20px;
+
+                font-size: var(--SizeText__ThinTextContent);
+                line-height: var(--LineHeight__ThinTextContent);
+            }
         }
     }
 }
@@ -1300,6 +1376,10 @@
 
         @include displayFlex(center, center, column);
 
+        @media (max-width: 1100px) {
+            padding: 17px 0 70px;
+        }
+
         &::before {
             content: "";
 
@@ -1313,6 +1393,17 @@
             bottom: 0;
             left: 0;
             right: 0;
+
+            @media (max-width: 1100px) {
+                background: none;
+
+                width: calc(100% - 20px);
+                height: 1px;
+
+                background-color: var(--Color__Decor);
+                top: auto;
+                bottom: 40px;
+            }
         }
 
         &::after {
@@ -1326,9 +1417,11 @@
             position: absolute;
             top: 0;
             right: 267px;
-        }
 
-        @media (max-width: 1100px) {
+            @media (max-width: 1100px) {
+                right: 35px;
+                height: calc(100% - 10px);
+            }
         }
     }
 
@@ -1351,9 +1444,14 @@
             width: 100%;
 
             margin: 0 auto;
+
+            @media (max-width: 1100px) {
+                gap: 20px;
+            }
         }
 
         @media (max-width: 1100px) {
+            padding: 40px 20px;
         }
     }
 
@@ -1378,6 +1476,8 @@
         }
 
         @media (max-width: 1100px) {
+            font-size: var(--SizeText__SubTitleSectionModile);
+            line-height: var(--LineHeight__TitleSectionModile);
         }
     }
 
@@ -1392,15 +1492,25 @@
         color: #3e3e3e;
 
         @media (max-width: 1100px) {
+            margin-top: 20px;
+
+            font-size: 15px;
+            line-height: 18px;
         }
     }
 
     &--NumberList {
         width: 100%;
 
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
         max-width: none;
+
+        @media (max-width: 1100px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &--Button {
@@ -1421,33 +1531,130 @@
     }
 }
 
-.servicesNav{
+.servicesNav {
     background-color: var(--Color__DarkDecorCircle);
 
-    &Wrapper{
+    &Wrapper {
         width: 100%;
         position: relative;
 
         padding: 92px 0 230px;
+
+        @media (max-width: 1100px) {
+            padding: 0;
+        }
     }
 
-    &--Services{
+    &--Services {
         position: unset;
         display: flex;
         background-color: var(--Color__DarkDecorCircle);
         padding: 0;
 
-        .navServices--Title{
+        @media (max-width: 1100px) {
+            display: none;
+        }
+
+        .navServices--Title {
             color: var(--Color__White);
         }
 
-        .navServicesItem--Title{
+        .navServicesItem--Title {
             color: var(--Color__SubMainText);
 
-            transition: all linear .2s;
+            transition: all linear 0.2s;
 
-            &:hover{
+            &:hover {
                 color: var(--Color__Decor);
+            }
+        }
+    }
+
+    &--Modile {
+        &List {
+            @include displayFlex(flex-start, flex-start, column);
+
+            width: 100%;
+
+            padding: 20px 0;
+
+            background-color: var(--Color__DarkDecorCircle);
+
+            display: none;
+            @media (max-width: 1100px) {
+                display: block;
+            }
+        }
+
+        &Item {
+            width: 100%;
+
+            &[open] {
+                .servicesNav--ModileItem__Header::before {
+                    background-image: url(../images/servicesNavModileDecor/servicesNavModileDecor__Close.svg);
+                }
+            }
+
+            &__Header {
+                width: 100%;
+                padding: 10px 0;
+
+                cursor: pointer;
+
+                text-align: left;
+
+                position: relative;
+
+                &::before {
+                    content: "";
+
+                    width: 12px;
+                    height: 6px;
+
+                    transition: all linear 0.2s;
+
+                    background-image: url(../images/servicesNavModileDecor/servicesNavModileDecor__Open.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                }
+
+                &::marker {
+                    display: none;
+                }
+
+                &Title {
+                    max-width: calc(100% - 60px);
+                    width: 100%;
+
+                    color: var(--Color__White);
+
+                    @include font(16px, 400, "Montserrat", 20px);
+                }
+            }
+
+            &__Body {
+                &List {
+                    @include displayFlex(flex-start, flex-start, column);
+                    gap: 20px;
+                }
+
+                &Item {
+                    &__Link {
+                        @include font(15px, 400, "Montserrat", 18px);
+
+                        color: #bcbcbc;
+
+                        &:hover {
+                            color: var(--Color__Decor);
+                        }
+                    }
+                }
             }
         }
     }

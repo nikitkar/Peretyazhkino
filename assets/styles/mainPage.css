@@ -165,7 +165,8 @@
 @media (max-width: 1100px) {
   .mainBlockImage--img::before {
     background-position: left;
-    bottom: -303px;
+    bottom: -300px;
+    max-height: 306px;
     z-index: -1;
   }
 }
@@ -369,7 +370,7 @@
 @media (max-width: 1100px) {
   .main .infoBlockContent--Title::before {
     width: 71px;
-    bottom: 17px;
+    bottom: 13px;
     top: auto;
     right: -8px;
   }

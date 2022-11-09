@@ -1,7 +1,7 @@
 @import "./mixin.scss";
 
 .footer {
-    background: #1F1F1F;
+    background: #1f1f1f;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
     backdrop-filter: blur(2px);
 
@@ -15,6 +15,9 @@
         gap: 177px;
 
         @media (max-width: 1100px) {
+            padding: 20px 0 40px;
+
+            gap: 30px;
         }
     }
 
@@ -25,6 +28,7 @@
         width: 100%;
 
         @media (max-width: 1100px) {
+            flex-direction: column;
         }
 
         &--NavList {
@@ -34,10 +38,13 @@
             list-style: none;
 
             @media (max-width: 1100px) {
+                gap: 20px;
             }
         }
 
         &--NavItem {
+            display: flex;
+
             &__Link {
                 @include font(
                     var(--SizeText__FooterTitle),
@@ -51,6 +58,8 @@
                 color: var(--Color__Decor);
 
                 @media (max-width: 1100px) {
+                    font-size: 16px;
+                    line-height: 20px;
                 }
             }
         }
@@ -64,12 +73,28 @@
             @include displayFlex(center, center, column);
             gap: 42px;
 
-            .logo{
+            .logo {
                 max-width: 278px;
                 max-height: 52px;
             }
 
+            &Modile {
+                display: none;
+
+                .logo {
+                    height: 28px;
+                    width: 130px;
+                }
+
+                @media (max-width: 1100px) {
+                    display: flex !important;
+                }
+            }
+
             @media (max-width: 1100px) {
+                display: none;
+
+                gap: 20px;
             }
 
             &Text {
@@ -83,6 +108,8 @@
                 color: #d3d3d3;
 
                 @media (max-width: 1100px) {
+                    font-size: var(--SizeText__ThinTextContent);
+                    line-height: var(--LineHeight__ThinTextContent);
                 }
             }
         }
@@ -92,12 +119,27 @@
             gap: 33px;
 
             @media (max-width: 1100px) {
+                gap: 20px;
+                align-items: flex-start;
             }
 
-            .numbersList{
-                .numbersItem{
-                    &--Tel{
+            .numbersList {
+                display: flex !important;
+                @media (max-width: 1100px) {
+                    gap: 10px;
+                }
+
+                .numbersItem {
+                    @media (max-width: 1100px) {
+                        gap: 16px;
+                    }
+                    &--Tel {
                         color: var(--Color__White);
+
+                        @media (max-width: 1100px) {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
                     }
                 }
             }
@@ -115,6 +157,8 @@
                 color: var(--Color__White);
 
                 @media (max-width: 1100px) {
+                    font-size: 16px;
+                    line-height: 16px;
                 }
             }
 
@@ -131,6 +175,8 @@
                 color: var(--Color__Decor);
 
                 @media (max-width: 1100px) {
+                    font-size: 16px;
+                    line-height: 16px;
                 }
             }
         }
@@ -141,6 +187,7 @@
         width: 100%;
 
         @media (max-width: 1100px) {
+            gap: 46px;
         }
 
         &--Social {
@@ -150,6 +197,7 @@
             width: 100%;
 
             @media (max-width: 1100px) {
+                gap: 12px;
             }
 
             &__HR {
@@ -164,6 +212,7 @@
                 gap: 23px;
 
                 @media (max-width: 1100px) {
+                    gap: 30px;
                 }
             }
 
@@ -174,15 +223,14 @@
                 color: #d3d3d3;
 
                 @media (max-width: 1100px) {
+                    font-size: 16px;
+                    line-height: 20px;
                 }
             }
 
             &__List {
                 @include displayFlex(flex-start, center);
                 gap: 30px;
-
-                @media (max-width: 1100px) {
-                }
             }
 
             &__Item {
@@ -192,9 +240,6 @@
                 width: 100%;
                 height: 100%;
 
-                @media (max-width: 1100px) {
-                }
-
                 & a {
                     & svg {
                         max-width: 32px;
@@ -202,9 +247,6 @@
 
                         width: 100%;
                         height: 100%;
-
-                        @media (max-width: 1100px) {
-                        }
                     }
                 }
             }
@@ -217,10 +259,20 @@
             @include displayFlex(flex-start, space-between);
             gap: 30px;
 
+            @media (max-width: 1100px) {
+                margin: 0;
+                flex-direction: column-reverse;
+            }
+
             &__legalInformation {
                 @include font(17px, 400, "Montserrat", 21px);
 
                 color: var(--Color__White);
+
+                @media (max-width: 1100px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
             }
 
             & span {
@@ -230,12 +282,25 @@
 
                 color: var(--Color__White);
 
+                @media (max-width: 1100px) {
+                    gap: 13px;
+
+                    font-size: 14px;
+                    line-height: 16px;
+                    white-space: nowrap;
+                }
+
                 & svg {
                     max-width: 104px;
                     max-height: 48px;
 
                     width: 100%;
                     height: 100%;
+
+                    @media (max-width: 1100px) {
+                        height: 36px;
+                        width: 78px;
+                    }
                 }
             }
         }
