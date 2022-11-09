@@ -1,0 +1,298 @@
+.mainTitle {
+  height: 722px;
+  width: 100%;
+  background: url(../images/services/backTitleServices.png) no-repeat;
+  background-position: right left;
+  background-size: cover;
+}
+.mainTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 81px;
+  padding: 210px 0px 0px 0px;
+}
+.mainTitleInfo {
+  color: var(--Color__White);
+  letter-spacing: 0.055em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 65px;
+}
+.mainTitleInfo--List {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  max-width: 920px;
+  margin-left: 20px;
+  list-style: disc;
+}
+.mainTitleInfo--Item {
+  color: var(--Color__Decor);
+}
+.mainTitleInfo--ItemText {
+  color: var(--Color__White);
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1100px) {
+  .mainTitleInfo--ItemText {
+    font-family: "Montserrat";
+    font-size: var(--SizeText__MainTextModile);
+    line-height: var(--LineHeight__MainTextModile);
+    font-weight: 400;
+  }
+}
+.mainTitleInfo--title {
+  max-width: 1150px;
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__OtherPageMailBlockTitle);
+  line-height: var(--LineHeight__OtherPageMailBlockTitle);
+  font-weight: 400;
+}
+.main .InfoWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 74px;
+  padding: 134px 0px 187px;
+}
+.main .InfoLeft {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.main .InfoLeftInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.main .InfoLeftTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.main .InfoLeftTitle--title2 {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__TitleSection);
+  line-height: var(--LineHeight__TitleSection);
+  font-weight: 400;
+}
+.main .InfoLeftTitle--title3 {
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__SubTitleSection);
+  line-height: var(--LineHeight__SubTitleSection);
+  font-weight: 400;
+}
+.main .InfoLeft--text {
+  font-family: "Montserrat";
+  font-size: var(--SizeText__MainText);
+  line-height: var(--LineHeight__MainText);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.main .InfoLeftLists {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 27px;
+  margin-left: 31px;
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftLists {
+    gap: 30px;
+    margin-left: 40px;
+  }
+}
+.main .InfoLeftListNumber {
+  counter-reset: LeftListNumber;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 27px;
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftListNumber {
+    gap: 11px;
+  }
+}
+.main .InfoLeftListContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 27px;
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftListContent {
+    gap: 11px;
+  }
+}
+.main .InfoLeftItemNumber {
+  color: var(--Color__SubMainText);
+  position: relative;
+}
+.main .InfoLeftItemNumber::before {
+  counter-increment: LeftListNumber;
+  content: counters(LeftListNumber, "") ".";
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: var(--Color__Black);
+  position: absolute;
+  top: 0;
+  left: -35px;
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftItemNumber::before {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+.main .InfoLeftItemNumber__Title {
+  font-family: "Montserrat";
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftItemNumber__Title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.main .InfoLeftItemContent {
+  color: var(--Color__SubMainText);
+  position: relative;
+}
+.main .InfoLeftItemContent::before {
+  content: "";
+  width: 33px;
+  height: 33px;
+  background-image: url(../images/services/okay.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: var(--Color__Black);
+  position: absolute;
+  top: 15%;
+  left: -49px;
+  transform: translateY(-50%);
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftItemContent::before {
+    font-size: 17px;
+    line-height: 21px;
+    width: 20px;
+    height: 20px;
+    left: -35px;
+  }
+}
+.main .InfoLeftItemContent__Title {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  word-wrap: break-word;
+  max-width: 589px;
+}
+@media (max-width: 1100px) {
+  .main .InfoLeftItemContent__Title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.main .InfoRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 52px;
+}
+.main .InfoRightTable {
+  width: 100%;
+}
+.main .InfoRightTable--table {
+  width: 100%;
+}
+.main .InfoRightTable--tr {
+  background-color: rgba(192, 192, 192, 0.13);
+  width: 100%;
+}
+.main .InfoRightTable--name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 425px;
+  height: 90px;
+  padding-left: 30px;
+  letter-spacing: 0.04em;
+  word-wrap: break-word;
+}
+.main .InfoRightTable--name--first {
+  color: var(--Color__White);
+  background: var(--Color__BGQuestionBlock);
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__MainText);
+  line-height: var(--LineHeight__ExamplesWorkItemSubText);
+  font-weight: 400;
+}
+.main .InfoRightTable--price {
+  max-width: 272px;
+  height: 90px;
+  padding-left: 30px;
+  word-wrap: break-word;
+  letter-spacing: 0.04em;
+}
+.main .InfoRightTable--price--first {
+  position: relative;
+  color: var(--Color__White);
+  background: var(--Color__BGQuestionBlock);
+  font-family: "RasfirePersonal";
+  font-size: var(--SizeText__MainText);
+  line-height: var(--LineHeight__ExamplesWorkItemSubText);
+  font-weight: 400;
+}
+.main .InfoRightTable--price--first::before {
+  content: "";
+  width: 1px;
+  height: 57px;
+  background-image: url(../images/services/lineInTable.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+}
+.main .InfoRight--text {
+  max-width: 697px;
+  word-wrap: break-word;
+  font-family: "Montserrat";
+  font-size: var(--SizeText__MainText);
+  line-height: var(--LineHeight__ExamplesWorkItemSubText);
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=servicesPage.css.map */
