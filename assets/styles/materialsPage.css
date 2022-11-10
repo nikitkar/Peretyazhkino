@@ -13,6 +13,11 @@
   gap: 81px;
   padding: 100px 0px 0px 0px;
 }
+@media (max-width: 1150px) {
+  .mainTitleWrapper {
+    gap: 40px;
+  }
+}
 .mainTitle__title {
   color: var(--Color__White);
   letter-spacing: 0.055em;
@@ -22,6 +27,11 @@
   justify-content: center;
   gap: 75px;
 }
+@media (max-width: 1150px) {
+  .mainTitle__title {
+    gap: 40px;
+  }
+}
 .mainTitle__title--title {
   max-width: 1146px;
   word-wrap: normal;
@@ -30,11 +40,11 @@
   line-height: var(--LineHeight__OtherPageMailBlockTitle);
   font-weight: 400;
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .mainTitle__title--title {
     font-family: "RasfirePersonal";
-    font-size: 50px;
-    line-height: var(--LineHeight__TitleSection);
+    font-size: var(--SizeText__TitleMainScreenModile);
+    line-height: var(--LineHeight__TitleMainScreenModile);
     font-weight: 400;
   }
 }
@@ -62,9 +72,7 @@
 }
 .main .restoration {
   width: 100%;
-  background: var(--Color__BGQuestionBlock);
-  background-image: url(../images/materials/decor1.png) no-repeat;
-  background-position: right;
+  background-color: var(--Color__BGQuestionBlock);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -78,26 +86,16 @@
   justify-content: space-between;
   gap: 96px;
 }
-.main .restoration .breadCrumbs {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  gap: 18px;
-}
-.main .restoration .breadCrumbs--text {
-  letter-spacing: -0.03em;
-  color: rgba(255, 255, 255, 0.4);
-  font-family: "Montserrat";
-  font-size: var(--SizeText__SubMainText);
-  line-height: var(--LineHeight__ExamplesWorkItemSubText);
-  font-weight: 400;
-}
-.main .restoration .breadCrumbs--text--active {
-  color: var(--Color__White);
+@media (max-width: 1150px) {
+  .main .restorationWrapper {
+    gap: 50px;
+  }
 }
 .main .restorationInfo {
+  width: 100%;
+  position: relative;
+}
+.main .restorationInfoWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -106,10 +104,15 @@
   width: 100%;
   position: relative;
 }
+@media (max-width: 1150px) {
+  .main .restorationInfoWrapper {
+    gap: 80px;
+  }
+}
 .main .restorationInfo::before {
   content: "";
-  width: 575px;
-  height: 788px;
+  width: 788px;
+  height: 834px;
   position: absolute;
   top: 0px;
   right: 0;
@@ -130,7 +133,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .main .restorationInfo::after {
     display: none;
   }
@@ -144,20 +147,27 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 70px;
+  width: 100%;
+}
+@media (max-width: 1150px) {
+  .main .restoration .upholstery {
+    gap: 40px;
+  }
 }
 .main .restoration .upholstery--title {
   color: var(--Color__White);
   letter-spacing: 0.07em;
+  width: 100%;
   font-family: "RasfirePersonal";
   font-size: var(--SizeText__TitleSection);
   line-height: var(--LineHeight__TitleSection);
   font-weight: 400;
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .main .restoration .upholstery--title {
     font-family: "RasfirePersonal";
     font-size: var(--SizeText__SubTitleSection);
-    line-height: var(--LineHeight__TitleSection);
+    line-height: var(--LineHeight__SubTitleSection);
     font-weight: 400;
   }
 }
@@ -167,33 +177,46 @@
   align-items: center;
   justify-content: center;
   gap: 70px;
+  width: 100%;
 }
 .main .restoration .upholsteryList {
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px 93px;
+  position: relative;
+  width: 100%;
 }
-@media (max-width: 768px) {
-  .main .restoration .upholsteryList {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+.main .restoration .upholsteryList::before {
+  content: "";
+  width: 302px;
+  height: 302px;
+  background-color: var(--Color__Decor);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -114px;
+  left: -124px;
+  z-index: 1;
+}
+@media (max-width: 1150px) {
+  .main .restoration .upholsteryList::before {
+    display: none;
   }
 }
 .main .restoration .upholsteryItem--img {
-  width: 409px;
+  max-width: 409px;
+  width: 100%;
   height: 221px;
   position: relative;
   z-index: 999;
 }
 .main .restoration .upholsteryItem--imgContent {
   position: absolute;
-  top: 99px;
-  left: 152px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
   opacity: 0;
   text-align: center;
   color: var(--Color__White);
@@ -204,16 +227,6 @@
   font-weight: 400;
   letter-spacing: 0.07em;
   transition: 0.5s all ease;
-}
-@media (max-width: 426px) {
-  .main .restoration .upholsteryItem--imgContent {
-    left: 102px;
-  }
-}
-@media (max-width: 426px) {
-  .main .restoration .upholsteryItem--img {
-    width: 280px;
-  }
 }
 .main .restoration .upholsteryItem--img:hover .upholsteryItem--back {
   opacity: 1;
@@ -230,16 +243,7 @@
   transition: 0.5s all ease;
 }
 .main .restoration .upholstery--button {
-  color: var(--Color__Active);
-  font-family: "RasfirePersonal";
-  font-size: var(--SizeText__TextButton);
-  line-height: var(--LineHeight__TextButton);
-  font-weight: 400;
-  letter-spacing: 0.05em;
   padding: 14px 39px;
-  border: 1px solid var(--Color__Active);
-  border-radius: 48px;
-  transition: 0.5s all ease;
 }
 .main .restoration .upholstery--button:hover {
   background: var(--Color__Active);
@@ -251,16 +255,23 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 70px;
+  width: 100%;
+}
+@media (max-width: 1150px) {
+  .main .restoration .filler {
+    gap: 40px;
+  }
 }
 .main .restoration .filler--title {
   color: var(--Color__White);
   letter-spacing: 0.07em;
+  width: 100%;
   font-family: "RasfirePersonal";
   font-size: var(--SizeText__TitleSection);
   line-height: var(--LineHeight__TitleSection);
   font-weight: 400;
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .main .restoration .filler--title {
     font-family: "RasfirePersonal";
     font-size: var(--SizeText__SubTitleSection);
@@ -274,33 +285,29 @@
   align-items: center;
   justify-content: center;
   gap: 70px;
+  width: 100%;
 }
 .main .restoration .fillerList {
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px 93px;
-}
-@media (max-width: 768px) {
-  .main .restoration .fillerList {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-  }
+  width: 100%;
 }
 .main .restoration .fillerItem--img {
-  width: 409px;
+  max-width: 409px;
+  width: 100%;
   height: 221px;
   position: relative;
   z-index: 999;
 }
 .main .restoration .fillerItem--imgContent {
   position: absolute;
-  top: 99px;
-  left: 152px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
   opacity: 0;
   text-align: center;
   color: var(--Color__White);
@@ -311,16 +318,6 @@
   font-weight: 400;
   letter-spacing: 0.07em;
   transition: 0.5s all ease;
-}
-@media (max-width: 426px) {
-  .main .restoration .fillerItem--imgContent {
-    left: 102px;
-  }
-}
-@media (max-width: 426px) {
-  .main .restoration .fillerItem--img {
-    width: 280px;
-  }
 }
 .main .restoration .fillerItem--img:hover .fillerItem--back {
   opacity: 1;
@@ -337,16 +334,7 @@
   transition: 0.5s all ease;
 }
 .main .restoration .filler--button {
-  color: var(--Color__Active);
-  font-family: "RasfirePersonal";
-  font-size: var(--SizeText__TextButton);
-  line-height: var(--LineHeight__TextButton);
-  font-weight: 400;
-  letter-spacing: 0.05em;
   padding: 14px 39px;
-  border: 1px solid var(--Color__Active);
-  border-radius: 48px;
-  transition: 0.5s all ease;
 }
 .main .restoration .filler--button:hover {
   background: var(--Color__Active);
@@ -368,7 +356,7 @@
   justify-content: center;
   gap: 36px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
   .main .designerInfo {
     padding: 110px 20px;
   }
@@ -399,7 +387,7 @@
   font-size: var(--SizeText__MainText);
   line-height: var(--LineHeight__ExamplesWorkItemSubText);
   font-weight: 400;
-  color: #3E3E3E;
+  color: #3e3e3e;
   text-align: center;
   max-width: 737px;
 }
@@ -423,7 +411,7 @@
   line-height: var(--LineHeight__Telephone);
   font-weight: 700;
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .main .designerNumbers--text {
     font-family: "Montserrat";
     font-size: 15px;
@@ -431,7 +419,7 @@
     font-weight: 700;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .main .designerNumbers {
     gap: 0px;
   }
@@ -450,7 +438,7 @@
 .main .designer--button:hover {
   box-shadow: 0px 4px 14px rgba(255, 255, 255, 0.25);
 }
-@media (max-width: 426px) {
+@media (max-width: 1150px) {
   .main .designer--button {
     max-width: 272px;
   }

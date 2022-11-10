@@ -1,26 +1,36 @@
 @import "./mixin.scss";
 
-.main{
-    &Title{
+.main {
+    &Title {
         height: 768px;
         width: 100%;
         background: url(../images/materials/backTitle.png) no-repeat;
         background-position: center;
         background-size: cover;
-        &Wrapper{
+
+        &Wrapper {
             @include displayFlex(flex-start, center, column);
             gap: 81px;
             padding: 100px 0px 0px 0px;
+
+            @media (max-width: 1150px) {
+                gap: 40px;
+            }
         }
 
-        &__title{
+        &__title {
             color: var(--Color__White);
             letter-spacing: 0.055em;
             @include displayFlex(flex-start, center, column);
             gap: 75px;
-            &--title{
+            
+            @media (max-width: 1150px) {
+                gap: 40px;
+            }
+
+            &--title {
                 max-width: 1146px;
-                word-wrap:normal;
+                word-wrap: normal;
                 @include font(
                     var(--SizeText__OtherPageMailBlockTitle),
                     400,
@@ -28,29 +38,29 @@
                     var(--LineHeight__OtherPageMailBlockTitle)
                 );
 
-                @media (max-width: 426px) {
+                @media (max-width: 1150px) {
                     @include font(
-                        50px,
+                        var(--SizeText__TitleMainScreenModile),
                         400,
                         "RasfirePersonal",
-                        var(--LineHeight__TitleSection)
+                        var(--LineHeight__TitleMainScreenModile)
                     );
                 }
             }
 
-            &--text{
+            &--text {
                 max-width: 606px;
                 letter-spacing: -0.03em;
+
                 @include font(
                     var(--SizeText__MainText),
                     400,
                     "Montserrat",
                     var(--LineHeight__MainText)
                 );
-                
             }
 
-            &--button{
+            &--button {
                 @include displayFlex(center, center);
                 gap: 20px;
                 border-radius: 48px;
@@ -58,55 +68,52 @@
                 color: var(--Color__White);
                 background-color: var(--Color__Active);
 
-                &:hover{
+                &:hover {
                     box-shadow: 0px 4px 14px rgba(255, 255, 255, 0.25);
                 }
             }
         }
     }
 
-    .restoration{
+    .restoration {
         width: 100%;
-        background: var(--Color__BGQuestionBlock);
-        background-image: url(../images/materials/decor1.png) no-repeat;
-        background-position: right;
+        background-color: var(--Color__BGQuestionBlock);
+        
         @include displayFlex(flex-start, space-between);
         padding: 43px 0px 102px;
-    
-        &Wrapper{
+
+        &Wrapper {
             @include displayFlex(flex-start, space-between, column);
             gap: 96px;
-        }
-    
-        .breadCrumbs{
-            @include displayFlex(flex-start, flex-start);
-            width: 100%;
-            gap: 18px;
-            &--text{
-                letter-spacing: -0.03em;
-                color: rgba(255, 255, 255, 0.4);
-                @include font(
-                    var(--SizeText__SubMainText),
-                    400,
-                    "Montserrat",
-                    var(--LineHeight__ExamplesWorkItemSubText)
-                );
-                &--active{
-                    color: var(--Color__White);
-                }
+            
+            @media (max-width: 1150px) {
+                gap: 50px;
             }
         }
-    
-        &Info{
-            @include displayFlex(flex-start, space-between, column);
-            gap: 120px;
+
+        &Info {
             width: 100%;
+
             position: relative;
+
+            &Wrapper {
+                @include displayFlex(flex-start, space-between, column);
+                gap: 120px;
+
+                width: 100%;
+
+                position: relative;
+
+                @media (max-width: 1150px) {
+                    gap: 80px;
+                }
+            }
+
             &::before {
                 content: "";
 
-                width: 575px;
-                height: 788px;
+                width: 788px;
+                height: 834px;
 
                 position: absolute;
                 top: 0px;
@@ -118,7 +125,7 @@
                 background-size: contain;
             }
 
-            &::after{
+            &::after {
                 content: "";
 
                 width: 482px;
@@ -134,23 +141,33 @@
                 background-size: contain;
             }
 
-            @media (max-width: 426px) {
-                &::after{
+            @media (max-width: 1150px) {
+                &::after {
                     display: none;
                 }
 
-                &::before{
+                &::before {
                     display: none;
                 }
             }
         }
-    
-        .upholstery{
+
+        .upholstery {
             @include displayFlex(flex-start, flex-start, column);
             gap: 70px;
-            &--title{
+
+            width: 100%;
+
+            @media (max-width: 1150px) {
+                gap: 40px;
+            }
+
+            &--title {
                 color: var(--Color__White);
                 letter-spacing: 0.07em;
+
+                width: 100%;
+
                 @include font(
                     var(--SizeText__TitleSection),
                     400,
@@ -158,7 +175,137 @@
                     var(--LineHeight__TitleSection)
                 );
 
-                @media (max-width: 426px) {
+                @media (max-width: 1150px) {
+                    @include font(
+                        var(--SizeText__SubTitleSection),
+                        400,
+                        "RasfirePersonal",
+                        var(--LineHeight__SubTitleSection)
+                    );
+                }
+            }
+
+            &Wrapper {
+                @include displayFlex(center, center, column);
+                gap: 70px;
+
+                width: 100%;
+            }
+
+            &List {
+                flex-wrap: wrap;
+                @include displayFlex(flex-start, space-evenly);
+                gap: 20px 93px;
+
+                position: relative;
+
+                width: 100%;
+
+                &::before {
+                    content: "";
+
+                    width: 302px;
+                    height: 302px;
+
+                    background-color: var(--Color__Decor);
+
+                    border-radius: 50%;
+
+                    position: absolute;
+
+                    bottom: -114px;
+                    left: -124px;
+
+                    z-index: 1;
+
+                    @media (max-width: 1150px) {
+                        display: none;
+                    }
+                }
+            }
+
+            &Item {
+                &--img {
+                    max-width: 409px;
+                    width: 100%;
+                    height: 221px;
+
+                    position: relative;
+
+                    z-index: 999;
+
+                    &Content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%);
+                        opacity: 0;
+                        text-align: center;
+                        color: var(--Color__White);
+                        text-transform: uppercase;
+                        @include font(25px, 400, "RasfirePersonal", 31px);
+                        letter-spacing: 0.07em;
+                        transition: 0.5s all ease;
+                    }
+
+                    &:hover {
+                        .upholsteryItem--back {
+                            opacity: 1;
+                        }
+                        .upholsteryItem--imgContent {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &--back {
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        0deg,
+                        rgba(0, 0, 0, 0.84),
+                        rgba(0, 0, 0, 0.84)
+                    );
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
+                    opacity: 0;
+                    transition: 0.5s all ease;
+                }
+            }
+
+            &--button {
+                padding: 14px 39px;
+
+                &:hover {
+                    background: var(--Color__Active);
+                    color: var(--Color__White);
+                }
+            }
+        }
+
+        .filler {
+            @include displayFlex(flex-start, flex-start, column);
+            gap: 70px;
+
+            width: 100%;
+
+            @media (max-width: 1150px) {
+                gap: 40px;
+            }
+
+            &--title {
+                color: var(--Color__White);
+                letter-spacing: 0.07em;
+
+                width: 100%;
+
+                @include font(
+                    var(--SizeText__TitleSection),
+                    400,
+                    "RasfirePersonal",
+                    var(--LineHeight__TitleSection)
+                );
+
+                @media (max-width: 1150px) {
                     @include font(
                         var(--SizeText__SubTitleSection),
                         400,
@@ -167,235 +314,128 @@
                     );
                 }
             }
-    
-            &Wrapper{
+
+            &Wrapper {
                 @include displayFlex(center, center, column);
                 gap: 70px;
+
+                width: 100%;
             }
-    
-            &List{
+
+            &List {
                 flex-wrap: wrap;
-                @include displayFlex(flex-start, space-between);
+                @include displayFlex(flex-start, space-evenly);
                 gap: 20px 93px;
 
-                @media (max-width: 768px) {
-                    @include displayFlex(flex-start, center);
-                }
+                width: 100%;
+
+                // position: relative;
+
+                // &::before {
+                //     content: "";
+
+                //     width: 302px;
+                //     height: 302px;
+
+                //     background-color: var(--Color__Decor);
+
+                //     border-radius: 50%;
+
+                //     position: absolute;
+
+                //     bottom: -147px;
+                //     right: -134px;
+
+                //     z-index: 1;
+
+                //     @media (max-width: 1100px) {
+                //         display: none;
+                //     }
+                // }
             }
 
-            &Item{
-                &--img{
-                    width: 409px;
+            &Item {
+                &--img {
+                    max-width: 409px;
+                    width: 100%;
                     height: 221px;
                     position: relative;
                     z-index: 999;
-                    &Content{
+
+                    &Content {
                         position: absolute;
-                        top: 99px;
-                        left: 152px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%);
                         opacity: 0;
                         text-align: center;
                         color: var(--Color__White);
                         text-transform: uppercase;
-                        @include font(
-                            25px, // такого нет
-                            400,
-                            "RasfirePersonal",
-                            31px //Такого нет
-                        );
+                        @include font(25px, 400, "RasfirePersonal", 31px);
                         letter-spacing: 0.07em;
-                        transition: .5s all ease;
-
-                                
-                        @media (max-width: 426px) {
-                            left: 102px;
-                        }
+                        transition: 0.5s all ease;
                     }
 
-                    @media (max-width: 426px) {
-                        width: 280px;
-                    }
-                    
-                    &:hover{
-                        .upholsteryItem--back{
+                    &:hover {
+                        .fillerItem--back {
                             opacity: 1;
                         }
-                        .upholsteryItem--imgContent{
+                        .fillerItem--imgContent {
                             opacity: 1;
                         }
                     }
                 }
 
-                &--back{
+                &--back {
                     width: 100%;
                     height: 100%;
-                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84));
-                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
-                    opacity: 0;
-                    transition: .5s all ease;
-                }
-            }
-    
-            &--button{
-                color: var(--Color__Active);
-                @include font(
-                    var(--SizeText__TextButton),
-                    400,
-                    "RasfirePersonal",
-                    var(--LineHeight__TextButton)
-                );
-                letter-spacing: 0.05em;
-                padding: 14px 39px;
-                border: 1px solid var(--Color__Active);
-                border-radius: 48px;
-                transition: .5s all ease;
-
-                &:hover{
-                    background: var(--Color__Active);
-                    color: var(--Color__White);
-                }
-            }
-        }
-    
-        .filler{
-            @include displayFlex(flex-start, flex-start, column);
-            gap: 70px;
-            &--title{
-                color: var(--Color__White);
-                letter-spacing: 0.07em;
-                @include font(
-                    var(--SizeText__TitleSection),
-                    400,
-                    "RasfirePersonal",
-                    var(--LineHeight__TitleSection)
-                );
-
-                @media (max-width: 426px) {
-                    @include font(
-                        var(--SizeText__SubTitleSection),
-                        400,
-                        "RasfirePersonal",
-                        var(--LineHeight__TitleSection)
+                    background: linear-gradient(
+                        0deg,
+                        rgba(0, 0, 0, 0.84),
+                        rgba(0, 0, 0, 0.84)
                     );
-                }
-            }
-    
-            &Wrapper{
-                @include displayFlex(center, center, column);
-                gap: 70px;
-            }
-    
-            &List{
-                flex-wrap: wrap;
-                @include displayFlex(flex-start, space-between);
-                gap: 20px 93px;
-                @media (max-width: 768px) {
-                    @include displayFlex(flex-start, center);
-                }
-            }
-
-            &Item{
-                &--img{
-                    width: 409px;
-                    height: 221px;
-                    position: relative;
-                    z-index: 999;
-
-                    &Content{
-                        position: absolute;
-                        top: 99px;
-                        left: 152px;
-                        opacity: 0;
-                        text-align: center;
-                        color: var(--Color__White);
-                        text-transform: uppercase;
-                        @include font(
-                            25px, // такого нет
-                            400,
-                            "RasfirePersonal",
-                            31px //Такого нет
-                        );
-                        letter-spacing: 0.07em;
-                        transition: .5s all ease;
-
-                        @media (max-width: 426px) {
-                            left: 102px;
-                        }
-                    }
-
-                    @media (max-width: 426px) {
-                        width: 280px;
-                    }
-
-                    &:hover{
-                        .fillerItem--back{
-                            opacity: 1;
-                        }
-                        .fillerItem--imgContent{
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                &--back{
-                    width: 100%;
-                    height: 100%;
-                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84));
                     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.11);
                     opacity: 0;
-                    transition: .5s all ease;
+                    transition: 0.5s all ease;
                 }
             }
-    
-            &--button{
-                color: var(--Color__Active);
-                @include font(
-                    var(--SizeText__TextButton),
-                    400,
-                    "RasfirePersonal",
-                    var(--LineHeight__TextButton)
-                );
-                letter-spacing: 0.05em;
-                padding: 14px 39px;
-                border: 1px solid var(--Color__Active);
-                border-radius: 48px;
-                transition: .5s all ease;
 
-                &:hover{
+            &--button {
+                padding: 14px 39px;
+
+                &:hover {
                     background: var(--Color__Active);
                     color: var(--Color__White);
                 }
             }
         }
-    
     }
 
-    .designer{
+    .designer {
         width: 100%;
-        
-        &Wrapper{
+
+        &Wrapper {
             padding: 139px 0px 167px;
         }
 
-        &Info{
+        &Info {
             background: var(--Color__White);
             box-shadow: 0px 0px 52px rgba(0, 0, 0, 0.1);
             padding: 110px 338px;
             @include displayFlex(center, center, column);
             gap: 36px;
-            @media (max-width: 768px) {
+            @media (max-width: 1150px) {
                 padding: 110px 20px;
             }
-
         }
 
-        &Title{
+        &Title {
             @include displayFlex(center, center, column);
             gap: 32px;
             max-width: 737px;
         }
 
-        &--title{
+        &--title {
             @include font(
                 var(--SizeText__SubTitleSection),
                 400,
@@ -407,31 +447,31 @@
             letter-spacing: 0.07em;
             color: var(--Color__Black);
 
-            span{
+            span {
                 color: var(--Color__LineBeige);
             }
         }
 
-        &--text{
+        &--text {
             @include font(
                 var(--SizeText__MainText),
                 400,
                 "Montserrat",
                 var(--LineHeight__ExamplesWorkItemSubText)
             );
-            color: #3E3E3E;
+            color: #3e3e3e;
             text-align: center;
             max-width: 737px;
         }
 
-        &Number{
+        &Number {
             @include displayFlex(center, space-around);
             width: 100%;
-            &s{
+            &s {
                 @include displayFlex(center, center);
                 gap: 15px;
 
-                &--text{
+                &--text {
                     @include font(
                         var(--SizeText__MainText),
                         700,
@@ -439,7 +479,7 @@
                         var(--LineHeight__Telephone)
                     );
 
-                    @media (max-width: 426px) {
+                    @media (max-width: 1150px) {
                         @include font(
                             15px,
                             700,
@@ -449,13 +489,13 @@
                     }
                 }
 
-                @media (max-width: 426px) {
+                @media (max-width: 1150px) {
                     gap: 0px;
                 }
             }
         }
 
-        &--button{
+        &--button {
             @include displayFlex(center, center);
             gap: 20px;
             border-radius: 48px;
@@ -463,11 +503,11 @@
             color: var(--Color__White);
             background-color: var(--Color__Active);
 
-            &:hover{
+            &:hover {
                 box-shadow: 0px 4px 14px rgba(255, 255, 255, 0.25);
             }
 
-            @media (max-width: 426px) {
+            @media (max-width: 1150px) {
                 max-width: 272px;
             }
         }

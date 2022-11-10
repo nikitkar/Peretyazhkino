@@ -1,23 +1,38 @@
 @import "./mixin.scss";
 
-.main{
-    &Title{
+.main {
+    &Title {
         height: 722px;
         width: 100%;
         background: url(../images/services/backTitleServices.png) no-repeat;
-        background-position: right left;
+        background-position: left top;
         background-size: cover;
-        &Wrapper{
-            @include displayFlex(center, center, column);
-            gap: 81px;
-            padding: 210px 0px 0px 0px;
+
+        @media (max-width: 1100px) {
+            height: 510px;
         }
 
-        &Info{
+        &Wrapper {
+            @include displayFlex(center, center, column);
+            gap: 81px;
+            padding-top: 210px;
+
+            @media (max-width: 1100px) {
+                padding-top: 100px;
+            }
+        }
+
+        &Info {
             color: var(--Color__White);
             letter-spacing: 0.055em;
             @include displayFlex(flex-start, center, column);
             gap: 65px;
+
+            width: 100%;
+
+            @media (max-width: 1100px) {
+                gap: 30px;
+            }
 
             &--List {
                 @include displayFlex(flex-start, center, column);
@@ -48,58 +63,78 @@
                 }
             }
 
-            &--title{
+            &--title {
                 max-width: 1150px;
+
                 @include font(
                     var(--SizeText__OtherPageMailBlockTitle),
                     400,
                     "RasfirePersonal",
                     var(--LineHeight__OtherPageMailBlockTitle)
                 );
+
+                @media (max-width: 1100px) {
+                    font-size: var(--SizeText__TitleMainScreenModile);
+                    line-height: var(--LineHeight__TitleMainScreenModile);
+                }
             }
         }
     }
 
-    .Info{
-        &Wrapper{
+    &HR {
+        width: 100%;
+        height: 1px;
+
+        background-color: var(--Color__Decor);
+
+        margin-bottom: 52px;
+
+        @media (max-width: 1100px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .breadCrumbs {
+        &Wrapper {
+            padding: 53px 0 43px;
+        }
+
+        &--text {
+            color: rgba(0, 0, 0, 0.4);
+
+            &--active {
+                color: var(--Color__Black);
+            }
+        }
+    }
+
+    .Info {
+        &Wrapper {
             @include displayFlex(flex-start, center, row);
             gap: 74px;
             padding: 134px 0px 187px;
+
+            @media (max-width: 1100px) {
+                padding: 0 0 90px;
+                flex-direction: column;
+
+                gap: 60px;
+            }
         }
 
-        &Left{
-            width: 50%;
-            &Info{
-                @include displayFlex(flex-start, flex-start, column);
-                gap: 40px;
+        &Left {
+            max-width: 702px;
+            width: 100%;
+
+            @include displayFlex(center, center, column);
+            gap: 60px;
+
+            @media (max-width: 1100px) {
+                max-width: none;
+                gap: 45px;
             }
 
-            &Title{
-                @include displayFlex(flex-start, flex-start, column);
-                gap: 30px;
-
-                &--title{
-                    &2{
-                        @include font(
-                            var(--SizeText__TitleSection),
-                            400,
-                            "RasfirePersonal",
-                            var(--LineHeight__TitleSection)
-                        );
-                    }
-
-                    &3{
-                        @include font(
-                            var(--SizeText__SubTitleSection),
-                            400,
-                            "RasfirePersonal",
-                            var(--LineHeight__SubTitleSection)
-                        );
-                    }
-                }
-            }
-
-            &--text{
+            &--text {
                 @include font(
                     var(--SizeText__MainText),
                     400,
@@ -107,9 +142,65 @@
                     var(--LineHeight__MainText)
                 );
                 letter-spacing: -0.03em;
+
+                @media (max-width: 1100px) {
+                    font-size: var(--SizeText__MainTextModile);
+                    line-height: var(--LineHeight__MainTextModile);
+                }
             }
-            @include displayFlex(center, center, column);
-            gap: 60px;
+
+            &Info {
+                @include displayFlex(flex-start, flex-start, column);
+                gap: 40px;
+
+                width: 100%;
+
+                @media (max-width: 1100px) {
+                    gap: 20px;
+                }
+            }
+
+            &Title {
+                @include displayFlex(flex-start, flex-start, column);
+                gap: 30px;
+
+                width: 100%;
+
+                @media (max-width: 1100px) {
+                    gap: 5px;
+                }
+
+                &--title {
+                    &2 {
+                        @include font(
+                            var(--SizeText__TitleSection),
+                            400,
+                            "RasfirePersonal",
+                            var(--LineHeight__TitleSection)
+                        );
+
+                        @media (max-width: 1100px) {
+                            font-size: 36px;
+                            line-height: normal;
+                        }
+                    }
+
+                    &3 {
+                        @include font(
+                            var(--SizeText__SubTitleSection),
+                            400,
+                            "RasfirePersonal",
+                            var(--LineHeight__SubTitleSection)
+                        );
+
+                        @media (max-width: 1100px) {
+                            font-size: 21px;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+
             &List {
                 &s {
                     @include displayFlex(flex-start, flex-start, column);
@@ -225,89 +316,184 @@
             }
         }
 
-        &Right{
-            width: 50%;
+        &Right {
+            max-width: 697px;
+            width: 100%;
+
+            @media (max-width: 1100px) {
+                max-width: none;
+            }
+
             @include displayFlex(flex-start, flex-start, column);
             gap: 52px;
 
-            &Table{
+            @media (max-width: 1100px) {
+                gap: 40px;
+            }
+
+            &Table {
                 width: 100%;
-                &--table{
+
+                &--table {
                     width: 100%;
-                }
-                &--tr{
-                    background-color: rgba(192, 192, 192, 0.13);;
-                    width: 100%;
-                }
-                &--name{
-                    @include displayFlex(center, flex-start, row);
-                    max-width: 425px;
-                    height: 90px;
-                    padding-left: 30px;
-                    letter-spacing: 0.04em;
-                    &--first{
-                        color: var(--Color__White);
-                        background: var(--Color__BGQuestionBlock);
-                        @include font(
-                            var(--SizeText__MainText),
-                            400,
-                            "RasfirePersonal",
-                            var(--LineHeight__ExamplesWorkItemSubText)
-                        );
+
+                    & tbody{
+                        width: 100%;
+    
+                        @include displayFlex(flex-start, flex-start, column);
+                        gap: 10px;
+    
+                        @media (max-width: 1100px) {
+                            gap: 5px;
+                        }
                     }
-                    word-wrap: break-word;
                 }
 
-                &--price{
-                    max-width: 272px;
-                    height: 90px;
-                    padding-left: 30px;
-                    word-wrap: break-word;
+                &--tr {
+                    width: 100%;
+                    background-color: rgba(192, 192, 192, 0.13);
+
+                    padding: 32px 30px;
+
+                    @include font(17px, 400, "Montserrat", 26px);
                     letter-spacing: 0.04em;
-                    &--first{
-                        position: relative;
-                        color: var(--Color__White);
+
+                    word-wrap: break-word;
+
+                    @include displayFlex(flex-start, space-between);
+                    gap: 20px;
+
+                    @media (max-width: 1100px) {
+                        font-size: 14px;
+                        line-height: normal;
+
+                        padding: 15px;
+
+                        gap: 5px;
+                    }
+
+                    &__Header {
                         background: var(--Color__BGQuestionBlock);
+
+                        @include displayFlex(center, space-between);
+
+                        padding: 33px 30px 24px;
+
+                        color: var(--Color__White);
+
                         @include font(
                             var(--SizeText__MainText),
                             400,
                             "RasfirePersonal",
-                            var(--LineHeight__ExamplesWorkItemSubText)
-                        );   
-                        
+                            var(--LineHeight__MainText)
+                        );
+
+                        @media (max-width: 1100px) {
+                            padding: 15px;
+
+                            font-size: var(--SizeText__MainTextModile);
+                            line-height: var(--LineHeight__MainTextModile);
+                        }
+                    }
+                }
+
+                &--name {
+                    max-width: 380px;
+                    width: 100%;
+
+                    @include displayFlex(center, flex-start, row);
+
+                    &__first {
+                        max-width: 380px;
+                        width: 100%;
+                    }
+                }
+
+                &--price {
+                    max-width: 212px;
+                    width: 100%;
+
+                    text-align: right;
+                    
+
+                    @media (max-width: 1100px) {
+                        max-width: 80px;
+                    }
+
+                    &__first {
+                        max-width: 272px;
+                        width: 100%;
+
+                        position: relative;
+
+                        padding-left: 20px;
+
+                        @media (max-width: 1100px) {
+                            max-width: 80px;
+                        }
+
                         &::before {
                             content: "";
-    
+
                             width: 1px;
                             height: 57px;
-    
-                            background-image: url(../images/services/lineInTable.png);
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: contain;
-    
-                            position: absolute;
-                            top: 16px;
-                            left: 0px;
-    
-                        }
-    
-                    }
+                            
+                            background-color: rgba(255, 255, 255, 0.3);;
 
+                            position: absolute;
+                            top: 50%;
+                            left: 0px;
+
+                            transform: translateY(-50%);
+                            
+                            @media (max-width: 1100px) {
+                                height: 35px;
+                            }
+                        }
+                    }
                 }
             }
 
-            &--text{
+            &--text {
                 max-width: 697px;
+                width: 100%;
+
                 word-wrap: break-word;
+
                 @include font(
                     var(--SizeText__MainText),
                     400,
                     "Montserrat",
                     var(--LineHeight__ExamplesWorkItemSubText)
                 );
+
+                @media (max-width: 1100px) {
+                    max-width: none;
+
+                    font-size: var(--SizeText__MainTextModile);
+                    line-height: var(--LineHeight__MainTextModile);
+                }
             }
         }
+    }
 
+    .feedBack{
+        margin: 0 auto;
+
+        // margin-bottom: 134px;
+
+        @media (max-width: 1100px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .examplesWork{
+        &Wrapper{
+            padding-top: 134px;
+
+            @media (max-width: 1100px) {
+                padding-top: 50px;
+            }
+        }
     }
 }

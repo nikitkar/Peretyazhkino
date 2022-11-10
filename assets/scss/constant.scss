@@ -224,9 +224,9 @@
             &[open] {
                 .navModileItem--Header {
                     background-color: var(--Color__Decor);
-                    
+
                     &::before {
-                        background-image: url(../images/decor/plusEmpty.svg);   
+                        background-image: url(../images/decor/plusEmpty.svg);
                     }
 
                     &__Title {
@@ -277,7 +277,7 @@
                 }
             }
 
-            &--Body{
+            &--Body {
                 padding: 20px 50px 40px 20px;
             }
 
@@ -409,6 +409,34 @@
             & .numbersListModile--Img {
                 rotate: 180deg;
             }
+        }
+    }
+}
+
+.breadCrumbs {
+    width: 100%;
+
+    &Wrapper {
+        @include displayFlex(flex-start, flex-start);
+
+        gap: 18px;
+        flex-wrap: wrap;
+
+        row-gap: 0;
+    }
+
+    &--text {
+        letter-spacing: -0.03em;
+        color: rgba(255, 255, 255, 0.4);
+        @include font(
+            var(--SizeText__SubMainText),
+            400,
+            "Montserrat",
+            var(--LineHeight__ExamplesWorkItemSubText)
+        );
+
+        &--active {
+            color: var(--Color__White);
         }
     }
 }
@@ -552,6 +580,8 @@
     width: 100%;
     background-color: var(--Color__BGQuestionBlock);
 
+    overflow: hidden;
+
     &Wrapper {
         @include displayFlex(center, center, column);
         gap: 228px;
@@ -612,8 +642,6 @@
         &::before {
             content: "";
 
-            display: none;
-
             width: 302px;
             height: 302px;
 
@@ -631,8 +659,6 @@
 
                 top: -43px;
                 right: -38px;
-
-                display: none;
             }
         }
 
@@ -990,10 +1016,6 @@
             @media (max-width: 1100px) {
                 display: none;
             }
-        }
-
-        @media (max-width: 1100px) {
-            gap: 0;
         }
     }
 
@@ -1639,12 +1661,16 @@
             }
 
             &__Body {
+                padding-bottom: 20px;
+
                 &List {
                     @include displayFlex(flex-start, flex-start, column);
                     gap: 20px;
                 }
 
                 &Item {
+                    display: flex;
+
                     &__Link {
                         @include font(15px, 400, "Montserrat", 18px);
 

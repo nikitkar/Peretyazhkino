@@ -1,153 +1,141 @@
 @import "./mixin.scss";
 
-.main{
-    &Title{
+.main {
+    &Title {
         width: 100%;
-        background:url(../images/about/backTitleAbout.png) no-repeat;
+
+        background: url(../images/about/backTitleAbout.png) no-repeat;
         background-position: center;
         background-size: cover;
-        &Wrapper{
+
+        &Wrapper {
             @include displayFlex(flex-start, center, column);
             gap: 68px;
+
             padding: 197px 0px 0px 0px;
 
-            @media (max-width: 768px) {
-                gap: 60px;
-                padding: 197px 0px 20px 0px;
+            @media (max-width: 1100px) {
+                gap: 10px;
+
+                padding: 105px 0px 0 0px;
             }
         }
 
-        &Info{
+        &Info {
             color: var(--Color__White);
+
             letter-spacing: 0.055em;
+
             @include displayFlex(flex-start, center, column);
             gap: 68px;
-            &--title{
+
+            @media (max-width: 1100px) {
+                gap: 30px;
+            }
+
+            &--title {
                 max-width: 1146px;
+
                 @include font(
                     var(--SizeText__OtherPageMailBlockTitle),
                     400,
                     "RasfirePersonal",
                     var(--LineHeight__OtherPageMailBlockTitle)
                 );
+
+                @media (max-width: 1100px) {
+                    font-size: var(--SizeText__TitleMainScreenModile);
+                    line-height: var(--LineHeight__TitleMainScreenModile);
+                }
             }
 
-            &--text{
+            &--text {
                 max-width: 728px;
+
                 letter-spacing: -0.03em;
+
                 @include font(
                     var(--SizeText__MainText),
                     400,
                     "Montserrat",
                     var(--LineHeight__MainText)
                 );
-            }
-        }
 
-        &Block {
-            &Wrapper {
-                width: 100%;
-            }
-    
-            &List {
-                @include displayFlex(center, space-between);
-                gap: 15px;
-    
                 @media (max-width: 1100px) {
-                    flex-direction: column;
-                    gap: 19px;
-                }
-            }
-    
-            &Item {
-                @include displayFlex(center, center, column);
-                gap: 38px;
-    
-                color: var(--Color__Black);
-    
-                @media (max-width: 1100px) {
-                    gap: 10px;
-                }
-    
-                &--Title {
-                    color: var(--Color__Decor);
-                    @include font(
-                        var(--SizeText__NumbersTitle),
-                        700,
-                        "Raleway",
-                        var(--LineHeight__NumbersTitle)
-                    );
-    
-                    @media (max-width: 1100px) {
-                        font-size: var(--SizeText__NumbersTitleModile);
-                        line-height: var(--LineHeight__NumbersTitleModile);
-                    }
-                }
-    
-                &--Content {
-                    color: var(--Color__White);
-                    @include font(
-                        var(--SizeText__NumbersContent),
-                        400,
-                        "Montserrat",
-                        var(--LineHeight__NumbersContent)
-                    );
-    
-                    letter-spacing: -0.03em;
-    
-                    @media (max-width: 1100px) {
-                        font-size: var(--SizeText__NumbersContentModile);
-                        line-height: var(--LineHeight__NumbersContentModile);
-                    }
-                }
-    
-                &--HR {
-                    width: 1px;
-                    height: 319px;
-    
-                    background-color: #dadada;
-    
-                    @media (max-width: 1100px) {
-                        width: 100%;
-                        height: 1px;
-                    }
+                    max-width: 555px;
+
+                    font-size: var(--SizeText__MainTextModile);
+                    line-height: var(--LineHeight__MainTextModile);
                 }
             }
         }
-    
     }
 
-    .italy{
+    .numbersBlock {
         width: 100%;
-        &Wrapper{
-            padding: 122px 0px 74px 0px;
-            @include displayFlex(flex-start, center, column);
-            gap: 70px;
-        }
 
-        &Info{
-            &Wrapper{
-                @include displayFlex(flex-start, center, column);
-                gap: 70px;
+        &Item {
+            &--Title {
+                color: var(--Color__Decor);
+            }
+
+            &--Content {
+                color: var(--Color__White);
+            }
+
+            &--HR {
+                background-color: #dadada;
+            }
+        }
+    }
+
+    .italy {
+        width: 100%;
+
+        &Wrapper {
+            padding: 122px 0px 74px 0px;
+
+            @media (max-width: 1100px) {
+                padding-top: 80px;
             }
         }
 
-        &Main{
+        &Main {
             @include displayFlex(flex-start, center, column);
             gap: 70px;
+
+            @media (max-width: 1100px) {
+            }
         }
 
-        &Title{
+        &Info {
             width: 100%;
+
+            &Wrapper {
+                @include displayFlex(flex-start, center, column);
+                gap: 70px;
+
+                @media (max-width: 1100px) {
+                    gap: 25px;
+                }
+            }
+        }
+
+        &Title {
+            width: 100%;
+
             @include displayFlex(flex-end, flex-start, row);
             gap: 83px;
 
-            @media (max-width: 768px) {
-                gap: 0px;
+            @media (max-width: 1150px) {
+                gap: 40px;
+
+                align-items: flex-end;
             }
-            
-            &--title{
+
+            &--title {
                 max-width: 874px;
+
                 @include font(
                     var(--SizeText__TitleSection),
                     400,
@@ -155,101 +143,92 @@
                     var(--LineHeight__TitleSection)
                 );
 
-                @media (max-width: 768px) {
-                    max-width: 620px;
-                    @include font(
-                        var(--SizeText__FeedBackBlock),
-                        400,
-                        "RasfirePersonal",
-                        var(--LineHeight__FeedBackBlock)
-                    );
-                }
-
-                @media (max-width: 426px) {
-                    max-width: 385px;
-                    @include font(
-                        37px,
-                        400,
-                        "RasfirePersonal",
-                        var(--LineHeight__NumbersContent)
-                    );
-                }
-
                 text-transform: uppercase;
                 letter-spacing: 0.07em;
+
+                @media (max-width: 1100px) {
+                    max-width: 407px;
+                    width: 100%;
+
+                    @include font(
+                        var(--SizeText__TitleSectionModile),
+                        400,
+                        "RasfirePersonal",
+                        var(--LineHeight__TitleSectionModile)
+                    );
+                }
             }
 
-            &--hr{
+            &--hr {
                 width: 274px;
                 height: 2px;
+
                 background-color: var(--Color__LineBeige);
+
                 margin-bottom: 40px;
 
-                @media (max-width: 768px) {
-                    width: 125px;
+                @media (max-width: 1100px) {
+                    max-width: 125px;
+                    width: 100%;
+                    
+                    margin-bottom: 13px;
                 }
 
-                @media (max-width: 426px) {
+                @media (max-width: 610px) {
                     display: none;
                 }
             }
         }
 
-        &Text{
+        &Text {
             width: 100%;
             @include displayFlex(center flex-start, row);
-            &--text{
+
+            &--text {
                 max-width: 900px;
+                width: 100%;
+
                 @include font(
                     var(--SizeText__SliderTitle),
                     400,
                     "Montserrat",
                     var(--LineHeight__SliderTitle)
                 );
+
                 letter-spacing: 0.07em;
 
-                @media (max-width: 768px) {
-                    max-width: 745px;
-                    @include font(
-                        var(--SizeText__ExamplesWorkItemPseudoElement),
-                        400,
-                        "Montserrat",
-                        var(--LineHeight__ExamplesWorkItemPseudoElement)
-                    );
-                }
+                @media (max-width: 1100px) {
+                    max-width: 600px;
 
-                @media (max-width: 426px) {
-                    max-width: 385px;
-                    @include font(
-                        var(--SizeText__ExamplesWorkItemPseudoElement),
-                        400,
-                        "Montserrat",
-                        var(--LineHeight__ExamplesWorkItemPseudoElement)
-                    );
+                    @include font(17px, 400, "Montserrat", 26px);
                 }
-                
             }
         }
 
-        &List{
-            @include displayFlex(flex-start, flex-start, row);
-            gap: 218px;
+        &List {
+            @include displayFlex(flex-start, space-between);
+            gap: 25px;
+
             width: 100%;
 
-            @media (max-width: 768px) {
-                gap: 40px;
-            }
-
-            @media (max-width: 426px) {
+            @media (max-width: 1100px) {
                 @include displayFlex(center, center, column);
             }
 
-            &s{
-                margin-left: 31px;
+            &s {
+                max-width: 701px;
+                width: 100%;
 
                 @media (max-width: 1100px) {
                     gap: 30px;
+                    max-width: none;
+                }
+            }
 
+            &Wrapper {
+                margin-left: 31px;
+
+                @media (max-width: 1100px) {
                     margin-left: 40px;
                 }
             }
@@ -264,10 +243,20 @@
                 }
             }
 
-            &Img{
-                background: url(../images/about/backList.png) no-repeat;
-                min-width: 696px;
-                min-height: 575px;
+            &Img {
+                max-width: 696px;
+                max-height: 575px;
+
+                width: 100%;
+                height: 100%;
+
+                &--img {
+                    max-width: 696px;
+                    max-height: 575px;
+
+                    width: 100%;
+                    height: 100%;
+                }
 
                 @media (max-width: 768px) {
                     min-width: 336px;
@@ -279,7 +268,7 @@
             }
         }
 
-        &Item{
+        &Item {
             &Content {
                 position: relative;
 
@@ -312,7 +301,7 @@
                     }
                 }
 
-                &--text{
+                &--text {
                     @include font(18px, 400, "Montserrat", 22px);
 
                     @media (max-width: 1100px) {
@@ -322,17 +311,16 @@
                 }
             }
         }
-
     }
 
-    .designer{
+    .designer {
         width: 100%;
-        
-        &Wrapper{
+
+        &Wrapper {
             padding: 139px 0px 167px;
         }
 
-        &Info{
+        &Info {
             background: var(--Color__White);
             box-shadow: 0px 0px 52px rgba(0, 0, 0, 0.1);
             padding: 110px 338px;
@@ -341,16 +329,15 @@
             @media (max-width: 768px) {
                 padding: 110px 20px;
             }
-
         }
 
-        &Title{
+        &Title {
             @include displayFlex(center, center, column);
             gap: 32px;
             max-width: 737px;
         }
 
-        &--title{
+        &--title {
             @include font(
                 var(--SizeText__SubTitleSection),
                 400,
@@ -362,31 +349,31 @@
             letter-spacing: 0.07em;
             color: var(--Color__Black);
 
-            span{
+            span {
                 color: var(--Color__LineBeige);
             }
         }
 
-        &--text{
+        &--text {
             @include font(
                 var(--SizeText__MainText),
                 400,
                 "Montserrat",
                 var(--LineHeight__ExamplesWorkItemSubText)
             );
-            color: #3E3E3E;
+            color: #3e3e3e;
             text-align: center;
             max-width: 737px;
         }
 
-        &Number{
+        &Number {
             @include displayFlex(center, space-around);
             width: 100%;
-            &s{
+            &s {
                 @include displayFlex(center, center);
                 gap: 15px;
 
-                &--text{
+                &--text {
                     @include font(
                         var(--SizeText__MainText),
                         700,
@@ -410,7 +397,7 @@
             }
         }
 
-        &--button{
+        &--button {
             @include displayFlex(center, center);
             gap: 20px;
             border-radius: 48px;
@@ -418,7 +405,7 @@
             color: var(--Color__White);
             background-color: var(--Color__Active);
 
-            &:hover{
+            &:hover {
                 box-shadow: 0px 4px 14px rgba(255, 255, 255, 0.25);
             }
 
@@ -428,4 +415,36 @@
         }
     }
 
+    .inviteDesigner {
+        height: 854px;
+
+        @media (max-width: 1100px) {
+            height: auto;
+        }
+
+        &Wrapper {
+            max-height: none;
+
+            &::before {
+                height: 854px;
+
+                background-image: url(../images/about/inviteDesignerBD.png);
+                background-position: center top;
+                background-size: cover;
+
+                @media (max-width: 1100px) {
+                    background-image: none;
+                    height: 1px;
+                }
+            }
+
+            &::after {
+                display: none;
+
+                @media (max-width: 1100px) {
+                    display: block;
+                }
+            }
+        }
+    }
 }
