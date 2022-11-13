@@ -23,7 +23,7 @@
             letter-spacing: 0.055em;
             @include displayFlex(flex-start, center, column);
             gap: 75px;
-            
+
             @media (max-width: 1150px) {
                 gap: 40px;
             }
@@ -78,14 +78,16 @@
     .restoration {
         width: 100%;
         background-color: var(--Color__BGQuestionBlock);
-        
+
         @include displayFlex(flex-start, space-between);
         padding: 43px 0px 102px;
 
         &Wrapper {
             @include displayFlex(flex-start, space-between, column);
             gap: 96px;
-            
+
+            overflow: hidden;
+
             @media (max-width: 1100px) {
                 gap: 50px;
             }
@@ -193,8 +195,8 @@
             }
 
             &List {
-                flex-wrap: wrap;
                 @include displayFlex(flex-start, space-evenly);
+                flex-wrap: wrap;
                 gap: 20px 93px;
 
                 position: relative;
@@ -221,6 +223,16 @@
                     @media (max-width: 1100px) {
                         display: none;
                     }
+                }
+
+                &--hidden {
+                    @include displayFlex(flex-start, space-evenly);
+                    flex-wrap: wrap;
+
+                    width: 100%;
+
+                    display: none;
+                    gap: 20px 93px;
                 }
             }
 
@@ -328,6 +340,41 @@
                 gap: 20px 93px;
 
                 width: 100%;
+
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+
+                    width: 302px;
+                    height: 302px;
+
+                    background-color: var(--Color__Decor);
+
+                    border-radius: 50%;
+
+                    position: absolute;
+
+                    bottom: 0;
+                    right: -134px;
+
+                    z-index: 1;
+
+                    @media (max-width: 1100px) {
+                        display: none;
+                    }
+                }
+
+                &--hidden {
+                    width: 100%;
+
+                    @include displayFlex(flex-start, space-evenly);
+                    flex-wrap: wrap;
+
+                    display: none;
+
+                    gap: 20px 93px;
+                }
             }
 
             &Item {

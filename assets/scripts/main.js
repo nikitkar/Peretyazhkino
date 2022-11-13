@@ -14,12 +14,6 @@ const reviewsTitleWrapper = document.querySelector(".reviews--Title");
 const reviewsTitleWrapperLeftMargin =
     (window.innerWidth - reviewsTitleWrapper.clientWidth) / 2 + 15;
 
-console.log(
-    window.innerWidth,
-    reviewsTitleWrapper.clientWidth,
-    reviewsTitleWrapperLeftMargin
-);
-
 let widthResizeLeft = 689;
 let widthResizeRightBefore = 175;
 let widthResizeRightAfter1385 = 591;
