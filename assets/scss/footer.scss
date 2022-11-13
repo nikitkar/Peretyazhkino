@@ -191,7 +191,7 @@
         }
 
         &--Social {
-            @include displayFlex(baseline, flex-start);
+            @include displayFlex(flex-start, flex-start);
             gap: 26px;
 
             width: 100%;
@@ -205,6 +205,8 @@
                 height: 1px;
 
                 background-color: var(--Color__Decor);
+
+                margin-top: 12px;
             }
 
             &Inner {
@@ -254,9 +256,9 @@
 
         &--Creators {
             width: 100%;
-            margin-top: -22px;
+            margin-top: -41px;
 
-            @include displayFlex(flex-start, space-between);
+            @include displayFlex(center, space-between);
             gap: 30px;
 
             @media (max-width: 1100px) {

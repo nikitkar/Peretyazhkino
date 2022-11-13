@@ -9,11 +9,20 @@ const mainBlockHRRightBefore = document.getElementById(
 );
 const mainBlockHRRightAfter = document.getElementById("mainBlockHRRightAfter");
 
+const reviewsHR = document.getElementById("reviewsHR");
+const reviewsTitleWrapper = document.querySelector(".reviews--Title");
+const reviewsTitleWrapperLeftMargin =
+    (window.innerWidth - reviewsTitleWrapper.clientWidth) / 2 + 15;
+
+console.log(
+    window.innerWidth,
+    reviewsTitleWrapper.clientWidth,
+    reviewsTitleWrapperLeftMargin
+);
+
 let widthResizeLeft = 689;
 let widthResizeRightBefore = 175;
 let widthResizeRightAfter1385 = 591;
-
-let widthWindow = window.innerWidth;
 
 let widthRightMinus = 1450;
 
@@ -22,9 +31,17 @@ mainBlockHRRightBefore.style.width =
 
 mainBlockHRRightAfter.style.width = window.innerWidth / 2 + 136 + "px";
 
+reviewsHR.style.width =
+    window.innerWidth - reviewsTitleWrapperLeftMargin - 185 + "px";
+
 if (window.innerWidth < 1385) {
     mainBlockHRRightAfter.style.width =
         window.innerWidth - widthResizeRightAfter1385 + "px";
+}
+
+if (window.innerWidth < 1100) {
+    reviewsHR.style.width =
+        window.innerWidth - reviewsTitleWrapperLeftMargin - 85 + "px";
 }
 
 if (window.innerWidth > 1450) {
@@ -37,7 +54,7 @@ if (window.innerWidth > 1450) {
     mainBlockHRRightBefore.style.width =
         window.innerWidth / 2 -
         widthResizeRightBefore -
-        (widthRightMinus - widthWindow) / 2 +
+        (widthRightMinus - window.innerWidth) / 2 +
         "px";
 
     if (window.innerWidth < 1100) {
@@ -58,7 +75,7 @@ window.addEventListener("resize", () => {
             window.innerWidth / 2 - widthResizeRightBefore + "px";
     }
 
-    if (this.innerWidth > 1130) {
+    if (this.innerWidth > 1100) {
         let advantagesLeftHeight = advantagesLeft.clientHeight;
 
         if (advantagesLeftHeight > 1103)

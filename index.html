@@ -1191,7 +1191,7 @@
                         <div class="reviewsSliderWrapper">
                             <div class="container">
                                 <div class="reviewsSlider swiperReviews swiper">
-                                    <ul class="swiper-wrapper">
+                                    <ul class="reviewsList swiper-wrapper">
                                         <li class="reviewsItem swiper-slide">
                                             <img
                                                 class="reviewsItem--Img"
@@ -1695,6 +1695,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="reviewsHR" id="reviewsHR"></div>
             </section>
 
             <section class="advantages">
@@ -1755,8 +1756,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="advantages--HR"></div>
 
                         <div class="advantages--ContentWrapper">
                             <div class="advantages--ContentInner">
@@ -2962,8 +2961,7 @@
 
             var swiperreviews = new Swiper(".swiperReviews", {
                 slidesPerView: "auto",
-                centeredSlides: true,
-                spaceBetween: 30,
+                spaceBetween: 20,
 
                 grabCursor: true,
 
@@ -2971,9 +2969,19 @@
                     el: ".swiper-scrollbar",
                     draggable: true,
                 },
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20,
+                    },
+                    1100: {
+                        spaceBetween: 20,
+                    }
+                }
             });
 
-            var swiperExamplesWork = new Swiper(".swiper", {
+            var swiperExamplesWork = new Swiper(".swiperExamplesWork", {
                 slidesPerView: "auto",
                 spaceBetween: 135,
                 slidesPerGroup: 1,
