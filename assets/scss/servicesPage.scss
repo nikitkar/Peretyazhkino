@@ -8,6 +8,8 @@
         background-position: left top;
         background-size: cover;
 
+        position: relative;
+
         @media (max-width: 1100px) {
             height: 510px;
         }
@@ -29,6 +31,8 @@
             gap: 65px;
 
             width: 100%;
+
+            z-index: 999;
 
             @media (max-width: 1100px) {
                 gap: 30px;
@@ -64,7 +68,7 @@
             }
 
             &--title {
-                max-width: 1150px;
+                letter-spacing: 0.055em;
 
                 @include font(
                     var(--SizeText__OtherPageMailBlockTitle),
@@ -76,6 +80,45 @@
                 @media (max-width: 1100px) {
                     font-size: var(--SizeText__TitleMainScreenModile);
                     line-height: var(--LineHeight__TitleMainScreenModile);
+                }
+            }
+        }
+
+        &HR{
+            &Left,
+            &Right{
+                position: absolute;
+
+                width: 100%;
+                height: 1px;
+
+                background-color: var(--Color__Decor);
+
+                z-index: 10;
+            }
+            &Left{
+                left: 0;
+                top: 257px;
+                
+                @media (max-width: 1100px) {
+                    top: 115.5px;
+                }
+            }
+
+            &Right{
+                right: 0;
+                top: 255px;
+
+                @media (max-width: 1194px) {
+                    top: 361.5px;
+                }
+                
+                @media (max-width: 1100px) {
+                    top: 115.5px;
+                }
+
+                @media (max-width: 431px) {
+                    top: 151.5px;
                 }
             }
         }
@@ -410,10 +453,10 @@
                 }
 
                 &--price {
-                    max-width: 212px;
+                    max-width: 250px;
                     width: 100%;
 
-                    text-align: right;
+                    text-align: left;
                     
 
                     @media (max-width: 1100px) {
@@ -479,6 +522,23 @@
 
     .feedBack{
         margin: 0 auto;
+        max-width: 1413px;
+
+        &Wrapper{
+            max-width: 905px;
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        &--Title{
+            text-align: center;
+        }
+
+        &List{
+            width: 100%;
+            justify-content: center;
+        }
 
         @media (max-width: 1100px) {
             margin-bottom: 50px;

@@ -4,6 +4,7 @@
   background: url(../images/services/backTitleServices.png) no-repeat;
   background-position: left top;
   background-size: cover;
+  position: relative;
 }
 @media (max-width: 1100px) {
   .mainTitle {
@@ -32,6 +33,7 @@
   justify-content: center;
   gap: 65px;
   width: 100%;
+  z-index: 999;
 }
 @media (max-width: 1100px) {
   .mainTitleInfo {
@@ -64,7 +66,7 @@
   }
 }
 .mainTitleInfo--title {
-  max-width: 1150px;
+  letter-spacing: 0.055em;
   font-family: "RasfirePersonal";
   font-size: var(--SizeText__OtherPageMailBlockTitle);
   line-height: var(--LineHeight__OtherPageMailBlockTitle);
@@ -74,6 +76,41 @@
   .mainTitleInfo--title {
     font-size: var(--SizeText__TitleMainScreenModile);
     line-height: var(--LineHeight__TitleMainScreenModile);
+  }
+}
+.mainTitleHRLeft, .mainTitleHRRight {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--Color__Decor);
+  z-index: 10;
+}
+.mainTitleHRLeft {
+  left: 0;
+  top: 257px;
+}
+@media (max-width: 1100px) {
+  .mainTitleHRLeft {
+    top: 115.5px;
+  }
+}
+.mainTitleHRRight {
+  right: 0;
+  top: 255px;
+}
+@media (max-width: 1194px) {
+  .mainTitleHRRight {
+    top: 361.5px;
+  }
+}
+@media (max-width: 1100px) {
+  .mainTitleHRRight {
+    top: 115.5px;
+  }
+}
+@media (max-width: 431px) {
+  .mainTitleHRRight {
+    top: 151.5px;
   }
 }
 .mainHR {
@@ -402,9 +439,9 @@
   width: 100%;
 }
 .main .InfoRightTable--price {
-  max-width: 212px;
+  max-width: 250px;
   width: 100%;
-  text-align: right;
+  text-align: left;
 }
 @media (max-width: 1100px) {
   .main .InfoRightTable--price {
@@ -455,6 +492,19 @@
 }
 .main .feedBack {
   margin: 0 auto;
+  max-width: 1413px;
+}
+.main .feedBackWrapper {
+  max-width: 905px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main .feedBack--Title {
+  text-align: center;
+}
+.main .feedBackList {
+  width: 100%;
+  justify-content: center;
 }
 @media (max-width: 1100px) {
   .main .feedBack {

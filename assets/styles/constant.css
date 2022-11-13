@@ -1,3 +1,13 @@
+.page {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
 .buttonContent {
   padding: 19px 64px 15px;
   border-radius: 48px;
@@ -117,8 +127,11 @@
 }
 .navServices {
   position: absolute;
-  top: 217px;
-  left: 0;
+  top: 95px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1414px;
+  width: 100%;
   padding: 60px 56px 56px;
   background-color: var(--Color__White);
   display: flex;
@@ -126,7 +139,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 74px;
-  z-index: 999;
+  z-index: 99999;
   display: none;
 }
 .navServicesBlock {
@@ -1261,6 +1274,9 @@
   }
 }
 
+.inviteDesigner {
+  position: relative;
+}
 .inviteDesignerWrapper {
   padding: 139px 143px 167px;
   max-height: 819px;
@@ -1510,6 +1526,164 @@
 }
 .servicesNav--ModileItem__BodyItem__Link:hover {
   color: var(--Color__Decor);
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.modalShow {
+  display: block;
+}
+.modalWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1414px;
+  width: 100%;
+  background-color: var(--Color__White);
+  padding: 63px 20px 120px;
+  box-shadow: 0px 0px 52px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  z-index: 9999;
+}
+@media (max-width: 1100px) {
+  .modalWrapper {
+    padding: 70px 20px 52px;
+  }
+}
+@media (max-height: 560px) and (min-width: 1100px) {
+  .modalWrapper {
+    padding: 20px 20px 20px;
+  }
+}
+.modalForm {
+  max-width: 576px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 43px;
+}
+@media (max-width: 1100px) {
+  .modalForm {
+    gap: 35px;
+  }
+}
+.modalName, .modalTel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  .modalName, .modalTel {
+    gap: 19px;
+  }
+}
+.modalName--Title, .modalTel--Title {
+  font-family: "RasfirePersonal";
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  color: var(--Color__Black);
+}
+@media (max-width: 1100px) {
+  .modalName--Title, .modalTel--Title {
+    font-size: 23px;
+    line-height: 29px;
+  }
+}
+.modalName--Input, .modalTel--Input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: "Montserrat";
+  font-size: var(--SizeText__MainText);
+  line-height: var(--LineHeight__MainText);
+  font-weight: 400;
+}
+@media (max-width: 1100px) {
+  .modalName--Input, .modalTel--Input {
+    font-size: var(--SizeText__MainTextModile);
+    line-height: var(--LineHeight__MainTextModile);
+  }
+}
+.modalName--Input::placeholder, .modalTel--Input::placeholder {
+  font-family: "Montserrat";
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #969696;
+}
+@media (max-width: 1100px) {
+  .modalName--Input::placeholder, .modalTel--Input::placeholder {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+.modalButton {
+  background-color: #259d8e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--Color__White);
+}
+.modalButton:hover {
+  background-color: var(--Color__White);
+  color: var(--Color__Active);
+}
+.modalClose {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: transform linear 0.2s, opacity linear 0.2s;
+}
+.modalClose:hover {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+@media (max-width: 1100px) {
+  .modalClose {
+    width: 15px;
+    height: 15px;
+  }
+}
+.modalClose::before, .modalClose::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: var(--Color__Black);
+  position: absolute;
+}
+@media (max-width: 1100px) {
+  .modalClose::before, .modalClose::after {
+    width: 15px;
+  }
+}
+.modalClose::before {
+  top: 50%;
+  transform: translateY(-50%);
+  rotate: 45deg;
+}
+.modalClose::after {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1px;
+  rotate: -45deg;
 }
 
 @keyframes flicker {

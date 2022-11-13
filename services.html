@@ -24,6 +24,7 @@
     </head>
 
     <body>
+        <div class="page" id="page"></div>
         <header class="header">
             <div class="container">
                 <div class="headerWrapper">
@@ -646,6 +647,9 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mainTitleHRLeft" id="mainTitleHRLeft"></div>
+                <div class="mainTitleHRRight" id="mainTitleHRRight"></div>
             </section>
 
             <section class="breadCrumbs">
@@ -678,7 +682,11 @@
                     </p>
                     <ul class="feedBackList">
                         <li class="feedBackItem">
-                            <a class="feedBackItem--Link" href="/">
+                            <a
+                                class="feedBackItem--Link"
+                                href="viber://chat?number=%2B375297695995"
+                                target="_blank"
+                            >
                                 <img
                                     class="feedBackItem--Img"
                                     src="./assets/images/socialIcon/viber.png"
@@ -687,7 +695,11 @@
                             </a>
                         </li>
                         <li class="feedBackItem">
-                            <a class="feedBackItem--Link" href="/">
+                            <a
+                                class="feedBackItem--Link"
+                                href="https://telegram.me/AdamhikDmitrii"
+                                target="_blank"
+                            >
                                 <img
                                     class="feedBackItem--Img"
                                     src="./assets/images/socialIcon/telegram.png"
@@ -696,7 +708,11 @@
                             </a>
                         </li>
                         <li class="feedBackItem">
-                            <a class="feedBackItem--Link" href="/">
+                            <a
+                                class="feedBackItem--Link"
+                                href="viber://chat?number=%2B375297695995"
+                                target="_blank"
+                            >
                                 <img
                                     class="feedBackItem--Img"
                                     src="./assets/images/socialIcon/whatsapp.png"
@@ -1822,6 +1838,7 @@
                                     </li>
                                 </ul>
                                 <button
+                                    id="inviteDesigner--Button"
                                     class="inviteDesigner--Button buttonContent"
                                 >
                                     Вызвать дизайнера
@@ -2425,7 +2442,8 @@
                             <li class="footerMainContent--NavItem">
                                 <a
                                     class="footerMainContent--NavItem__Link"
-                                    href="/about.html" target="_blank"
+                                    href="/about.html"
+                                    target="_blank"
                                     >О нас</a
                                 >
                             </li>
@@ -2439,7 +2457,8 @@
                             <li class="footerMainContent--NavItem">
                                 <a
                                     class="footerMainContent--NavItem__Link"
-                                    href="/materials.html" target="_blank"
+                                    href="/materials.html"
+                                    target="_blank"
                                     >Материал</a
                                 >
                             </li>
@@ -2636,6 +2655,32 @@
             </div>
         </footer>
 
+        <div class="modal" id="modal">
+            <div class="modalWrapper">
+                <form class="modalForm">
+                    <div class="modalName">
+                        <p class="modalName--Title">Имя</p>
+                        <input
+                            class="modalName--Input"
+                            type="text"
+                            placeholder="Имя"
+                        />
+                    </div>
+                    <div class="modalTel">
+                        <p class="modalTel--Title">Номер телефона</p>
+                        <input
+                            class="modalTel--Input"
+                            type="tel"
+                            placeholder="Номер телефона"
+                        />
+                    </div>
+                    <button class="modalButton buttonContent">Отправить</button>
+                </form>
+
+                <div class="modalClose" id="modalClose"></div>
+            </div>
+        </div>
+
         <script type="module">
             import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
@@ -2693,6 +2738,7 @@
             });
         </script>
 
-        <script src="./assets/scripts/main.js"></script>
+        <script src="./assets/scripts/servicesPage.js"></script>
+        <script src="./assets/scripts/modal.js"></script>
     </body>
 </html>
