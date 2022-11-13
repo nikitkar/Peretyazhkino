@@ -38,6 +38,7 @@
   font-size: var(--SizeText__OtherPageMailBlockTitle);
   line-height: var(--LineHeight__OtherPageMailBlockTitle);
   font-weight: 400;
+  letter-spacing: 0.055em;
 }
 @media (max-width: 1100px) {
   .mainTitleInfo--title {
@@ -72,15 +73,28 @@
 .main .numbersBlockItem--HR {
   background-color: #dadada;
 }
+.main .breadCrumbs {
+  border-bottom: 1px solid var(--Color__Decor);
+}
+.main .breadCrumbsWrapper {
+  padding: 53px 0 43px;
+}
+.main .breadCrumbs--text {
+  color: rgba(0, 0, 0, 0.4);
+}
+.main .breadCrumbs--text--active {
+  color: var(--Color__Black);
+}
 .main .italy {
   width: 100%;
 }
 .main .italyWrapper {
-  padding: 122px 0px 74px 0px;
+  padding: 95px 0px 0 0px;
 }
 @media (max-width: 1100px) {
   .main .italyWrapper {
     padding-top: 80px;
+    padding-bottom: 60px;
   }
 }
 .main .italyMain {
@@ -99,10 +113,12 @@
   align-items: flex-start;
   justify-content: center;
   gap: 70px;
+  padding-left: 50px;
 }
 @media (max-width: 1100px) {
   .main .italyInfoWrapper {
     gap: 25px;
+    padding-left: 60px;
   }
 }
 .main .italyTitle {
@@ -266,9 +282,8 @@
   line-height: 29px;
   font-weight: 400;
   position: absolute;
-  top: 15%;
-  left: -49px;
-  transform: translateY(-50%);
+  top: 0;
+  left: -45px;
 }
 @media (max-width: 1100px) {
   .main .italyItemContent::before {

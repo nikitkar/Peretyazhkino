@@ -43,6 +43,8 @@
                     var(--LineHeight__OtherPageMailBlockTitle)
                 );
 
+                letter-spacing: 0.055em;
+
                 @media (max-width: 1100px) {
                     font-size: var(--SizeText__TitleMainScreenModile);
                     line-height: var(--LineHeight__TitleMainScreenModile);
@@ -89,14 +91,30 @@
         }
     }
 
+    .breadCrumbs{
+        border-bottom: 1px solid var(--Color__Decor);
+
+        &Wrapper{
+            padding: 53px 0 43px;
+        }
+        &--text{
+            color: rgba(0, 0, 0, 0.4);
+
+            &--active{
+                color: var(--Color__Black);
+            }
+        }
+    }
+
     .italy {
         width: 100%;
 
         &Wrapper {
-            padding: 122px 0px 74px 0px;
+            padding: 95px 0px 0 0px;
 
             @media (max-width: 1100px) {
                 padding-top: 80px;
+                padding-bottom: 60px;
             }
         }
 
@@ -115,8 +133,12 @@
                 @include displayFlex(flex-start, center, column);
                 gap: 70px;
 
+                padding-left: 50px;
+
                 @media (max-width: 1100px) {
                     gap: 25px;
+
+                    padding-left: 60px;
                 }
             }
         }
@@ -170,7 +192,7 @@
                 @media (max-width: 1100px) {
                     max-width: 125px;
                     width: 100%;
-                    
+
                     margin-bottom: 13px;
                 }
 
@@ -286,9 +308,8 @@
                     @include font(24px, 400, "Montserrat", 29px);
 
                     position: absolute;
-                    top: 15%;
-                    left: -49px;
-                    transform: translateY(-50%);
+                    top: 0;
+                    left: -45px;
 
                     @media (max-width: 1100px) {
                         font-size: 17px;
