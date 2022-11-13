@@ -1,9 +1,63 @@
 const advantagesLeft = document.getElementById("advantages--Left");
 const advantagesRight = document.getElementById("advantages--Right");
 
-let indexItem = 0;
+const mainBlockHRLeftBefore = document.getElementById("mainBlockHRLeftBefore");
+const mainBlockHRLeftAfter = document.getElementById("mainBlockHRLeftAfter");
+
+const mainBlockHRRightBefore = document.getElementById(
+    "mainBlockHRRightBefore"
+);
+const mainBlockHRRightAfter = document.getElementById("mainBlockHRRightAfter");
+
+let widthResizeLeft = 689;
+let widthResizeRightBefore = 175;
+let widthResizeRightAfter1385 = 591;
+
+let widthWindow = window.innerWidth;
+
+let widthRightMinus = 1450;
+
+mainBlockHRRightBefore.style.width =
+    window.innerWidth / 2 - widthResizeRightBefore + "px";
+
+mainBlockHRRightAfter.style.width = window.innerWidth / 2 + 136 + "px";
+
+if (window.innerWidth < 1385) {
+    mainBlockHRRightAfter.style.width =
+        window.innerWidth - widthResizeRightAfter1385 + "px";
+}
+
+if (window.innerWidth > 1450) {
+    mainBlockHRLeftBefore.style.width =
+        window.innerWidth / 2 - widthResizeLeft + "px";
+
+    mainBlockHRLeftAfter.style.width =
+        window.innerWidth / 2 - widthResizeLeft + "px";
+} else {
+    mainBlockHRRightBefore.style.width =
+        window.innerWidth / 2 -
+        widthResizeRightBefore -
+        (widthRightMinus - widthWindow) / 2 +
+        "px";
+
+    if (window.innerWidth < 1100) {
+        mainBlockHRRightBefore.style.width = window.innerWidth - 290 + "px";
+        mainBlockHRRightAfter.style.width = window.innerWidth - 197 + "px";
+    }
+}
 
 window.addEventListener("resize", () => {
+    if (this.innerWidth > 1450) {
+        mainBlockHRLeftBefore.style.width =
+            window.innerWidth / 2 - widthResizeLeft + "px";
+
+        mainBlockHRLeftAfter.style.width =
+            window.innerWidth / 2 - widthResizeLeft + "px";
+
+        mainBlockHRRightBefore.style.width =
+            window.innerWidth / 2 - widthResizeRightBefore + "px";
+    }
+
     if (this.innerWidth > 1130) {
         let advantagesLeftHeight = advantagesLeft.clientHeight;
 

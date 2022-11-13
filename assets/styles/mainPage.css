@@ -1,11 +1,113 @@
 .mainBlock {
   padding-top: 210px;
   margin-bottom: 73px;
+  position: relative;
+}
+.mainBlockHRLeftBefore {
+  width: 32px;
+  height: 0.3px;
+  background-color: var(--Color__Black);
+  position: absolute;
+  left: 0;
+  top: 250px;
+  z-index: 0;
+}
+@media (max-height: 768px) and (min-width: 1100px) {
+  .mainBlockHRLeftBefore {
+    top: 104.9px;
+  }
+}
+@media (max-width: 1100px) {
+  .mainBlockHRLeftBefore {
+    top: 76.9px;
+  }
+}
+@media (max-width: 1100px) and (min-height: 768px) {
+  .mainBlockHRLeftBefore {
+    top: 40.9px;
+  }
+}
+.mainBlockHRLeftAfter {
+  width: 31px;
+  height: 0.3px;
+  background-color: var(--Color__Black);
+  position: absolute;
+  left: 0;
+  top: 499px;
+  z-index: 0;
+}
+@media (max-height: 768px) and (min-width: 1100px) {
+  .mainBlockHRLeftAfter {
+    top: 353px;
+  }
+}
+@media (max-width: 1100px) {
+  .mainBlockHRLeftAfter {
+    top: 153.9px;
+  }
+}
+@media (max-width: 1100px) and (min-height: 768px) {
+  .mainBlockHRLeftAfter {
+    top: 118.9px;
+  }
+}
+.mainBlockHRRightBefore {
+  width: 32px;
+  height: 0.3px;
+  background-color: var(--Color__Black);
+  position: absolute;
+  right: 0;
+  top: 273px;
+  z-index: 0;
+}
+@media (max-height: 768px) and (min-width: 1100px) {
+  .mainBlockHRRightBefore {
+    top: 127px;
+  }
+}
+@media (max-width: 1100px) {
+  .mainBlockHRRightBefore {
+    top: 84px;
+  }
+}
+@media (max-width: 1100px) and (min-height: 768px) {
+  .mainBlockHRRightBefore {
+    top: 49px;
+  }
+}
+.mainBlockHRRightAfter {
+  width: 32px;
+  height: 0.3px;
+  background-color: var(--Color__Black);
+  position: absolute;
+  right: 0;
+  top: 505px;
+  z-index: 0;
+}
+@media (max-height: 768px) and (min-width: 1100px) {
+  .mainBlockHRRightAfter {
+    top: 360px;
+  }
+}
+@media (max-width: 1100px) {
+  .mainBlockHRRightAfter {
+    top: 156px;
+  }
+}
+@media (max-width: 1100px) and (min-height: 768px) {
+  .mainBlockHRRightAfter {
+    top: 120px;
+  }
 }
 @media (max-width: 1100px) {
   .mainBlock {
     padding-top: 30px;
     margin-bottom: 60px;
+  }
+}
+@media (max-height: 768px) {
+  .mainBlock {
+    padding-top: 65px;
   }
 }
 .mainBlockWrapper {
@@ -43,17 +145,12 @@
 }
 @media (max-width: 1100px) {
   .mainBlockContent--Title {
+    max-width: 279px;
     font-family: "RasfirePersonal";
     font-size: var(--SizeText__TitleMainScreenModile);
     line-height: var(--LineHeight__TitleMainScreenModile);
     font-weight: 400;
   }
-}
-.mainBlockContent--TitleHrTop {
-  position: absolute;
-}
-.mainBlockContent--TitleHrBottom {
-  position: absolute;
 }
 .mainBlockContent--List {
   display: flex;
@@ -101,7 +198,12 @@
   .mainBlockImage {
     max-width: 350px;
     max-height: 330px;
-    top: 60px;
+    top: 130px;
+  }
+}
+@media (min-height: 768px) and (max-width: 1330px) {
+  .mainBlockImage {
+    top: 250px;
   }
 }
 @media (max-width: 1175px) {
@@ -299,12 +401,12 @@
 }
 .main .infoBlockWrapper::after {
   content: "";
-  max-width: 1206.5px;
+  max-width: 610px;
   max-height: 833.68px;
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 945px;
+  bottom: 0;
   left: 0;
   background-image: url(../images/decor/advantegesAfterImg.png);
   background-position: center;

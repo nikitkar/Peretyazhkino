@@ -6,9 +6,121 @@
 
         margin-bottom: 73px;
 
+        position: relative;
+
+        &HR {
+            &Left {
+                &Before {
+                    width: 32px;
+                    height: 0.3px;
+
+                    background-color: var(--Color__Black);
+
+                    position: absolute;
+                    left: 0;
+                    top: 250px;
+
+                    z-index: 0;
+
+                    @media (max-height: 768px) and (min-width: 1100px) {
+                        top: 104.9px;
+                    }
+
+                    @media (max-width: 1100px) {
+                        top: 76.9px;
+                    }
+
+                    @media (max-width: 1100px) and (min-height: 768px) {
+                        top: 40.9px;
+                    }
+                }
+
+                &After {
+                    width: 31px;
+                    height: 0.3px;
+
+                    background-color: var(--Color__Black);
+
+                    position: absolute;
+                    left: 0;
+                    top: 499px;
+
+                    z-index: 0;
+        
+                    @media (max-height: 768px) and (min-width: 1100px){
+                        top: 353px;
+                    }
+        
+                    @media (max-width: 1100px) {
+                        top: 153.9px;
+                    }
+        
+                    @media (max-width: 1100px) and (min-height: 768px){
+                        top: 118.9px;
+                    }
+                }
+            }
+
+            &Right {
+                &Before {
+                    width: 32px;
+                    height: 0.3px;
+
+                    background-color: var(--Color__Black);
+
+                    position: absolute;
+                    right: 0;
+                    top: 273px;
+
+                    z-index: 0;
+
+                    @media (max-height: 768px) and (min-width: 1100px) {
+                        top: 127px;
+                    }
+
+                    @media (max-width: 1100px) {
+                        top: 84px;
+                    }
+
+                    @media (max-width: 1100px) and (min-height: 768px) {
+                        top: 49px;
+                    }
+                }
+
+                &After {
+                    width: 32px;
+                    height: 0.3px;
+
+                    background-color: var(--Color__Black);
+
+                    position: absolute;
+                    right: 0;
+                    top: 505px;
+
+                    z-index: 0;
+
+                    @media (max-height: 768px) and (min-width: 1100px) {
+                        top: 360px;
+                    }
+
+                    @media (max-width: 1100px) {
+                        top: 156px;
+                    }
+
+                    @media (max-width: 1100px) and (min-height: 768px) {
+                        top: 120px;
+                    }
+                }
+            }
+        }
+
         @media (max-width: 1100px) {
             padding-top: 30px;
             margin-bottom: 60px;
+        }
+
+        @media (max-height: 768px) {
+            padding-top: 65px;
         }
 
         &Wrapper {
@@ -47,28 +159,14 @@
                 letter-spacing: 0.055em;
 
                 @media (max-width: 1100px) {
+                    max-width: 279px;
+
                     @include font(
                         var(--SizeText__TitleMainScreenModile),
                         400,
                         "RasfirePersonal",
                         var(--LineHeight__TitleMainScreenModile)
                     );
-                }
-
-                &Hr {
-                    &Top {
-                        position: absolute;
-
-                        // width: 100px;
-                        // border-bottom: 0.3px solid #000000;
-                    }
-
-                    &Bottom {
-                        position: absolute;
-
-                        // width: 100px;
-                        // border-bottom: 0.3px solid #000000;
-                    }
                 }
             }
 
@@ -125,7 +223,11 @@
             @media (max-width: 1330px) {
                 max-width: 350px;
                 max-height: 330px;
-                top: 60px;
+                top: 130px;
+            }
+
+            @media (min-height: 768px) and (max-width: 1330px) {
+                top: 250px;
             }
 
             @media (max-width: 1175px) {
@@ -364,14 +466,14 @@
             &::after {
                 content: "";
 
-                max-width: 1206.5px;
+                max-width: 610px;
                 max-height: 833.68px;
 
                 width: 100%;
                 height: 100%;
 
                 position: absolute;
-                top: 945px;
+                bottom: 0;
                 left: 0;
 
                 background-image: url(../images/decor/advantegesAfterImg.png);

@@ -105,7 +105,7 @@
   content: "";
   width: 10px;
   height: 7px;
-  background-image: url(../images/decor/arrowBottom.webp);
+  background-image: url(../images/decor/arrowBottom.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@
 .numbersListModile--Img {
   width: 10px;
   height: 7px;
-  background-image: url(../images/decor/arrowBottomTelephone.png);
+  background-image: url(../images/decor/arrowBottomTelephone.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -393,15 +393,15 @@
 }
 .feedBackWrapper::before {
   content: "";
-  width: 26px;
-  height: 26px;
+  width: 14px;
+  height: 14px;
+  animation: flicker 0.8s infinite alternate;
   position: absolute;
   top: 74px;
   right: 30px;
-  background-image: url(../images/decor/onlineCircleGreen.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background: #00dc3e;
+  box-shadow: 0px 0px 4px #00dc3e;
+  border-radius: 50%;
 }
 @media (max-width: 1100px) {
   .feedBackWrapper::before {
@@ -529,6 +529,7 @@
   justify-content: center;
   gap: 263px;
   z-index: 999;
+  width: 100%;
 }
 @media (max-width: 1100px) {
   .examplesWorkSlider {
@@ -551,6 +552,8 @@
 }
 .examplesWorkItem {
   position: relative;
+  max-width: 639px;
+  width: 100%;
 }
 .examplesWorkItem::before {
   content: "";
@@ -688,6 +691,50 @@
   .examplesWorkItem--ContentLink {
     font-size: 14px;
     line-height: 21px;
+  }
+}
+.examplesWork .swiper-wrapperExamplesWork {
+  padding-top: 80px;
+}
+.examplesWork .swiper-button-prev, .examplesWork .swiper-button-next {
+  top: auto;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+.examplesWork .swiper-button-prev::after, .examplesWork .swiper-button-next::after {
+  content: "";
+  width: 30px;
+  height: 13px;
+  background-image: url(../images/decor/arrowButtonNext.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.examplesWork .swiper-button-prev:hover::after, .examplesWork .swiper-button-next:hover::after {
+  background-image: url(../images/decor/arrowButtonNextWhite.svg);
+}
+.examplesWork .swiper-button-prev {
+  left: 35%;
+  transform: translateX(-35%);
+}
+.examplesWork .swiper-button-prev::after {
+  rotate: 180deg;
+}
+@media (max-width: 1220px) {
+  .examplesWork .swiper-button-prev {
+    left: 32%;
+    transform: translateX(-32%);
+  }
+}
+.examplesWork .swiper-button-next {
+  right: 32%;
+  transform: translateX(-32%);
+}
+@media (max-width: 1220px) {
+  .examplesWork .swiper-button-next {
+    right: 29%;
+    transform: translateX(-29%);
   }
 }
 
@@ -1057,6 +1104,18 @@
     font-size: 14px;
     line-height: 21px;
   }
+}
+.reviews .swiper-scrollbar {
+  height: 5px;
+  background: #565656;
+  border-radius: 22px;
+}
+.reviews .swiper-scrollbar-drag {
+  width: 81px;
+  height: 10px;
+  background: #259d8e;
+  border-radius: 35px;
+  top: -4px;
 }
 
 .questions {
@@ -1467,6 +1526,12 @@
 }
 .servicesNav--ModileItem__BodyItem__Link:hover {
   color: var(--Color__Decor);
+}
+
+@keyframes flicker {
+  from {
+    filter: drop-shadow(0px 0px 4px #00dc3e);
+  }
 }
 
 /*# sourceMappingURL=constant.css.map */
