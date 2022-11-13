@@ -14,6 +14,13 @@ const reviewsTitleWrapper = document.querySelector(".reviews--Title");
 const reviewsTitleWrapperLeftMargin =
     (window.innerWidth - reviewsTitleWrapper.clientWidth) / 2 + 15;
 
+const servicesBlockHRTopAfter = document.getElementById(
+    "servicesBlockHRTopAfter"
+);
+const servicesBlockHRCenterAfterDecor = document.getElementById(
+    "servicesBlockHRCenterAfterDecor"
+);
+
 let widthResizeLeft = 689;
 let widthResizeRightBefore = 175;
 let widthResizeRightAfter1385 = 591;
@@ -27,6 +34,9 @@ mainBlockHRRightAfter.style.width = window.innerWidth / 2 + 136 + "px";
 
 reviewsHR.style.width =
     window.innerWidth - reviewsTitleWrapperLeftMargin - 185 + "px";
+
+servicesBlockHRTopAfter.style.left = window.innerWidth / 2 + 234 + "px";
+servicesBlockHRCenterAfterDecor.style.left = window.innerWidth / 2 + 77 + "px";
 
 if (window.innerWidth < 1385) {
     mainBlockHRRightAfter.style.width =
