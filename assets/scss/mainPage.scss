@@ -437,7 +437,7 @@
 
             @media (max-width: 1100px) {
                 gap: 45px;
-                padding: 60px 0;
+                padding: 60px 0 30px;
             }
 
             &::before {
@@ -870,7 +870,7 @@
                 }
             }
 
-            &:hover{
+            &:hover {
                 svg {
                     path,
                     line {
@@ -1107,19 +1107,19 @@
                     width: 100%;
                 }
 
-                .swiper-pagination{
+                .swiper-pagination {
                     bottom: 0;
 
                     @include displayFlex(center, center);
                     gap: 11px;
-                    
-                    &-bullet{
+
+                    &-bullet {
                         width: 11px;
                         height: 11px;
 
                         background-color: #898989;
 
-                        &-active{
+                        &-active {
                             background-color: var(--Color__Decor);
                         }
                     }
@@ -1635,6 +1635,24 @@
                 @media (max-width: 1100px) {
                     font-size: 16px;
                     line-height: 23px;
+                }
+            }
+
+            &__Button {
+                svg {
+                    path,
+                    line {
+                        stroke: var(--Color__Active);
+                    }
+                }
+
+                &:hover {
+                    svg {
+                        path,
+                        line {
+                            stroke: var(--Color__White);
+                        }
+                    }
                 }
             }
         }

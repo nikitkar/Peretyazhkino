@@ -377,7 +377,7 @@
 @media (max-width: 1100px) {
   .main .infoBlockWrapper {
     gap: 45px;
-    padding: 60px 0;
+    padding: 60px 0 30px;
   }
 }
 .main .infoBlockWrapper::before {
@@ -1384,6 +1384,14 @@
     font-size: 16px;
     line-height: 23px;
   }
+}
+.main .advantages--Right__Button svg path,
+.main .advantages--Right__Button svg line {
+  stroke: var(--Color__Active);
+}
+.main .advantages--Right__Button:hover svg path,
+.main .advantages--Right__Button:hover svg line {
+  stroke: var(--Color__White);
 }
 
 /*# sourceMappingURL=mainPage.css.map */
