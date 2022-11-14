@@ -1,8 +1,8 @@
 .mainTitle {
   height: 722px;
   width: 100%;
-  background-image: url(../images/services/backTitleServices.png);
-  background-position: no-repeat;
+  backdrop-filter: blur(9px);
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -209,6 +209,9 @@
   line-height: var(--LineHeight__TitleSection);
   font-weight: 400;
 }
+.main .InfoLeftTitle--title2 span {
+  font-family: "Montserrat";
+}
 @media (max-width: 1100px) {
   .main .InfoLeftTitle--title2 {
     font-size: 36px;
@@ -220,6 +223,9 @@
   font-size: var(--SizeText__SubTitleSection);
   line-height: var(--LineHeight__SubTitleSection);
   font-weight: 400;
+}
+.main .InfoLeftTitle--title3 span {
+  font-family: "Montserrat";
 }
 @media (max-width: 1100px) {
   .main .InfoLeftTitle--title3 {
@@ -392,6 +398,7 @@
   font-weight: 400;
   letter-spacing: 0.04em;
   word-wrap: break-word;
+  word-break: break-all;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -445,7 +452,7 @@
 }
 @media (max-width: 1100px) {
   .main .InfoRightTable--price {
-    max-width: 80px;
+    max-width: 100px;
   }
 }
 .main .InfoRightTable--price__first {
@@ -456,7 +463,7 @@
 }
 @media (max-width: 1100px) {
   .main .InfoRightTable--price__first {
-    max-width: 80px;
+    max-width: 120px;
   }
 }
 .main .InfoRightTable--price__first::before {
