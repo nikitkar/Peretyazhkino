@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Реставрация диванов</title>
+        <link rel="stylesheet" href="./assets/styles/reset.css" />
+
+        <link rel="stylesheet" href="./assets/styles/constant.css" />
+        <link rel="stylesheet" href="./assets/styles/header.css" />
+        <link rel="stylesheet" href="./assets/styles/footer.css" />
+        <link rel="stylesheet" href="./assets/styles/servicesPage.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        />
+
+        <script
+            async
+            src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+        ></script>
+    </head>
+
+    <body>
+
+        
+        
+
+        <div class="modal" id="modal">
+            <div class="modalWrapper">
+                <form class="modalForm">
+                    <div class="modalName">
+                        <p class="modalName--Title">Имя</p>
+                        <input
+                            class="modalName--Input"
+                            type="text"
+                            placeholder="Имя"
+                        />
+                    </div>
+                    <div class="modalTel">
+                        <p class="modalTel--Title">Номер телефона</p>
+                        <input
+                            class="modalTel--Input"
+                            type="tel"
+                            placeholder="Номер телефона"
+                        />
+                    </div>
+                    <button class="modalButton buttonContent">Отправить</button>
+                </form>
+
+                <div class="modalClose" id="modalClose"></div>
+            </div>
+        </div>
+
+        <script type="module">
+            import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+            var swiperreviews = new Swiper(".swiperReviews", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+
+                grabCursor: true,
+
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    draggable: true,
+                },
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: "auto",
+                        spaceBetween: 20,
+                    },
+                    1100: {
+                        spaceBetween: 20,
+                    },
+                },
+            });
+
+            var swiperExamplesWork = new Swiper(".swiperExamplesWork", {
+                slidesPerView: "auto",
+                spaceBetween: 135,
+                slidesPerGroup: 1,
+
+                grabCursor: true,
+
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                breakpoints: {
+                    320: {
+                        slidesPerView: "auto",
+                        spaceBetween: 40,
+
+                        navigation: {
+                            enabled: false,
+                        },
+                    },
+                    1100: {
+                        spaceBetween: 135,
+
+                        navigation: {
+                            enabled: true,
+                        },
+                    },
+                },
+            });
+        </script>
+
+        <script src="./assets/scripts/servicesPage.js"></script>
+        <script src="./assets/scripts/modal.js"></script>
+    </body>
+</html>
