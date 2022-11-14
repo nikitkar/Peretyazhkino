@@ -227,7 +227,11 @@
 }
 @media (max-width: 1100px) {
   .mainBlockImage--img {
-    background-position: left;
+    background-position: right;
+    position: absolute;
+    right: 0;
+    width: 290px;
+    height: 306px;
   }
 }
 .mainBlockImage--img::before {
@@ -267,7 +271,7 @@
 @media (max-width: 1100px) {
   .mainBlockImage--img::before {
     background-position: left;
-    bottom: -300px;
+    bottom: -264px;
     max-height: 306px;
     z-index: -1;
   }
@@ -710,6 +714,7 @@
 }
 .main .servicesBlock {
   position: relative;
+  overflow: hidden;
 }
 .main .servicesBlockWrapper {
   width: 100%;
@@ -739,6 +744,9 @@
 }
 .main .servicesBlock--Title span {
   font-family: "Montserrat";
+}
+.main .servicesBlock--Button {
+  width: fit-content;
 }
 .main .servicesBlock--Button svg path,
 .main .servicesBlock--Button svg line {

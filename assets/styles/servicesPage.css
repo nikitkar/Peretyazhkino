@@ -1,8 +1,9 @@
 .mainTitle {
   height: 722px;
   width: 100%;
-  background: url(../images/services/backTitleServices.png) no-repeat;
-  background-position: left top;
+  background-image: url(../images/services/backTitleServices.png);
+  background-position: no-repeat;
+  background-position: center center;
   background-size: cover;
   position: relative;
 }
@@ -232,7 +233,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 27px;
-  margin-left: 31px;
+  margin-left: 50px;
 }
 @media (max-width: 1100px) {
   .main .InfoLeftLists {
@@ -317,9 +318,8 @@
   font-weight: 400;
   color: var(--Color__Black);
   position: absolute;
-  top: 15%;
+  top: 0;
   left: -49px;
-  transform: translateY(-50%);
 }
 @media (max-width: 1100px) {
   .main .InfoLeftItemContent::before {

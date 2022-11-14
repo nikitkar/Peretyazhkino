@@ -4,8 +4,9 @@
     &Title {
         height: 722px;
         width: 100%;
-        background: url(../images/services/backTitleServices.png) no-repeat;
-        background-position: left top;
+        background-image: url(../images/services/backTitleServices.png);
+        background-position: no-repeat;
+        background-position: center center;
         background-size: cover;
 
         position: relative;
@@ -84,9 +85,9 @@
             }
         }
 
-        &HR{
+        &HR {
             &Left,
-            &Right{
+            &Right {
                 position: absolute;
 
                 width: 100%;
@@ -96,23 +97,23 @@
 
                 z-index: 10;
             }
-            &Left{
+            &Left {
                 left: 0;
                 top: 257px;
-                
+
                 @media (max-width: 1100px) {
                     top: 115.5px;
                 }
             }
 
-            &Right{
+            &Right {
                 right: 0;
                 top: 255px;
 
                 @media (max-width: 1194px) {
                     top: 361.5px;
                 }
-                
+
                 @media (max-width: 1100px) {
                     top: 115.5px;
                 }
@@ -249,7 +250,7 @@
                     @include displayFlex(flex-start, flex-start, column);
                     gap: 27px;
 
-                    margin-left: 31px;
+                    margin-left: 50px;
 
                     @media (max-width: 1100px) {
                         gap: 30px;
@@ -331,9 +332,8 @@
                         color: var(--Color__Black);
 
                         position: absolute;
-                        top: 15%;
+                        top: 0;
                         left: -49px;
-                        transform: translateY(-50%);
 
                         @media (max-width: 1100px) {
                             font-size: 17px;
@@ -380,12 +380,12 @@
                 &--table {
                     width: 100%;
 
-                    & tbody{
+                    & tbody {
                         width: 100%;
-    
+
                         @include displayFlex(flex-start, flex-start, column);
                         gap: 10px;
-    
+
                         @media (max-width: 1100px) {
                             gap: 5px;
                         }
@@ -457,7 +457,6 @@
                     width: 100%;
 
                     text-align: left;
-                    
 
                     @media (max-width: 1100px) {
                         max-width: 80px;
@@ -480,15 +479,15 @@
 
                             width: 1px;
                             height: 57px;
-                            
-                            background-color: rgba(255, 255, 255, 0.3);;
+
+                            background-color: rgba(255, 255, 255, 0.3);
 
                             position: absolute;
                             top: 50%;
                             left: 0px;
 
                             transform: translateY(-50%);
-                            
+
                             @media (max-width: 1100px) {
                                 height: 35px;
                             }
@@ -520,22 +519,22 @@
         }
     }
 
-    .feedBack{
+    .feedBack {
         margin: 0 auto;
         max-width: 1413px;
 
-        &Wrapper{
+        &Wrapper {
             max-width: 905px;
             margin: 0 auto;
 
             text-align: center;
         }
 
-        &--Title{
+        &--Title {
             text-align: center;
         }
 
-        &List{
+        &List {
             width: 100%;
             justify-content: center;
         }
@@ -545,8 +544,8 @@
         }
     }
 
-    .examplesWork{
-        &Wrapper{
+    .examplesWork {
+        &Wrapper {
             padding-top: 134px;
 
             @media (max-width: 1100px) {
