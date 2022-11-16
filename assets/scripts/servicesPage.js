@@ -8,20 +8,61 @@ const containerWidthDeviton = 727;
 const differenceValue = containerWidth - mainTitleInfoTitle.clientWidth;
 const value1 = mainTitleInfoTitle.clientWidth - differenceValue;
 const value2 = mainTitleInfoTitle.clientWidth - containerWidthDeviton;
+const value2Modile = mainTitleInfoTitle.clientWidth - window.innerWidth / 2;
 
 mainTitleHRLeft.style.width = window.innerWidth / 2 - 702 + "px";
 mainTitleHRRight.style.width = window.innerWidth / 2 - value2 - 10 + "px";
 
-if (mainTitleInfoTitle.clientHeight > 106) {
-    const countElement = mainTitleInfoTitle.innerHTML.trim().split(" ");
+const countElement = mainTitleInfoTitle.innerHTML.trim().split(" ");
 
+function createDiv(innerHTML){
     const div = document.createElement("div");
     div.classList.add("mainTitleInfo--title");
-    mainTitleInfoTitle.append(div);
-    div.innerHTML = countElement[countElement.length - 1];
+
+    div.innerHTML = innerHTML;
     div.style.width = "fit-content";
+
+    mainTitleInfoTitle.append(div);
     const divWidth = div.clientWidth;
-    div.style.display = "none";
+    div.remove();
+
+    return divWidth;
+}
+
+if (window.innerWidth < 1445) mainTitleHRLeft.style.width = "30px";
+
+// в одну строчку текст
+if (window.innerWidth < 1380) mainTitleHRRight.style.width = value2Modile / 2 + 30 + "px";
+
+// в одну строчку текст
+if (window.innerWidth < 1194) {
+    mainTitleHRRight.style.width =
+        window.innerWidth - mainTitleInfoTitle.clientWidth - 10 + "px";
+}
+
+// в одну строчку текст
+if (window.innerWidth < 1100) {
+    mainTitleHRRight.style.width =
+        window.innerWidth - mainTitleInfoTitle.clientWidth - 10 + "px";
+}
+
+// мобильная версия + в две строки текст
+if (window.innerWidth < 400) {
+    const divWidth = createDiv(`${countElement[countElement.length - 1]}`);
+
+    mainTitleHRRight.style.width = window.innerWidth - divWidth - 15 + "px";
+
+    if (mainTitleInfoTitle.clientHeight < 37) {
+        mainTitleHRRight.style.top = "115.5px";
+
+        mainTitleHRRight.style.width =
+            window.innerWidth - mainTitleInfoTitle.clientWidth - 15 + "px";
+    }
+}
+
+// в две строчки текст
+if (mainTitleInfoTitle.clientHeight > 106) {
+    const divWidth = createDiv(`${countElement[countElement.length - 1]}`);
 
     mainTitleHRRight.style.top = "368px";
     mainTitleHRRight.style.width =
@@ -30,23 +71,19 @@ if (mainTitleInfoTitle.clientHeight > 106) {
         "px";
 }
 
-if (window.innerWidth < 1445) {
-    mainTitleHRLeft.style.width = "30px";
-}
-
-if (window.innerWidth < 1380) {
-    mainTitleHRRight.style.width =
-        window.innerWidth / 2 - 420 - (1380 - window.innerWidth) / 2 + "px";
+if (window.innerWidth < 400 && mainTitleInfoTitle.clientHeight > 60 && countElement.length != 2) {
+    let divWidth;
+    if(countElement.length == 4) divWidth = createDiv(`${countElement[countElement.length - 1]} ${countElement[countElement.length - 2]} ${countElement[countElement.length - 3]}`);
+    else divWidth = createDiv(`${countElement[countElement.length - 1]} ${countElement[countElement.length - 2]}`);
     
-        console.log(window.innerWidth / 2 - 420 - (1380 - window.innerWidth) / 2);
-}
+    mainTitleHRRight.style.width = window.innerWidth - divWidth - 15 + "px";
 
-if (window.innerWidth < 1194) {
-    mainTitleHRRight.style.width = window.innerWidth - 440 + "px";
-}
-
-if (window.innerWidth < 1100) {
-    mainTitleHRRight.style.width = window.innerWidth - mainTitleInfoTitle.clientWidth - 10 + "px";
+    if(window.innerWidth < 350){
+        const divWidth = createDiv(`${countElement[countElement.length - 1]}`);
+        
+        mainTitleHRRight.style.top = "188px";
+        mainTitleHRRight.style.width = window.innerWidth - divWidth - 15 + "px";
+    }
 }
 
 const reviewsHR = document.getElementById("reviewsHR");

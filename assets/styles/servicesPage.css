@@ -99,11 +99,6 @@
   right: 0;
   top: 255px;
 }
-@media (max-width: 1194px) {
-  .mainTitleHRRight {
-    top: 361.5px;
-  }
-}
 @media (max-width: 1100px) {
   .mainTitleHRRight {
     top: 115.5px;
