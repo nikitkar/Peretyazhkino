@@ -1,0 +1,190 @@
+<section class="reviews">
+    <div class="container1700">
+        <div class="reviewsWrapper">
+            <div class="reviews--TitleWrapper">
+                <div class="container">
+                    <h2 class="reviews--Title">Отзывы</h2>
+                </div>
+            </div>
+
+            <div class="reviewsSliderWrapper">
+                <div class="container">
+                    <div class="reviewsSlider swiperReviews swiper">
+                        <ul class="reviewsList swiper-wrapper">
+                            <li class="reviewsItem swiper-slide">
+                                <div class="reviewsItem--ImgBlock">
+                                    <img class="reviewsItem--Img" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/reviews/1/divan-posle-1.jpg" alt="Аватар пользователя" />
+                                    <div class="reviewsItem--ImgBlockAfter">+</div>
+                                </div>
+
+                                <div class="reviewsItem--Content">
+                                    <div class="reviewsItem--ContentTitle">
+                                        <h3 class="reviewsItem--Title">
+                                            Александр
+                                        </h3>
+                                        <p class="reviewsItem--SubTitle">
+                                            Благодарим коллектив компании за безупречную профессиональную работу:наш диван приобрел вторую жизнь. Работа была выполнена в кратчайшие сроки и на высоком профессиональном уровне. Особая благодарность Александру за его отзывчивость, доброжелательность и обязательность.
+                                        </p>
+                                    </div>
+
+                                    <div class="reviewsItem--Description">
+                                        <div class="reviewsItem--Rating">
+                                            <div class="reviewsItem--RatingStar">
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <p class="reviewsItem--RatingInfo">
+                                                <span>5</span> / 5
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviewsItem swiper-slide">
+                                <div class="reviewsItem--ImgBlock">
+                                    <img class="reviewsItem--Img" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/reviews/2/uglovoi-divan-posle-2.jpg" alt="Аватар пользователя" />
+                                    <div class="reviewsItem--ImgBlockAfter">+</div>
+                                </div>
+
+                                <div class="reviewsItem--Content">
+                                    <div class="reviewsItem--ContentTitle">
+                                        <h3 class="reviewsItem--Title">
+                                            Татьяна
+                                        </h3>
+                                        <p class="reviewsItem--SubTitle">
+                                            Большое спасибо Перетяжкину за обновление нашей мебели! Перетянули угловой диван. Очень удобно, что работа выполнялась на дому, для нас это было важно. Чехлы сшиты и нятянуты качественно. Мебель выглядит отлично. Рекомендую!
+                                        </p>
+                                    </div>
+
+                                    <div class="reviewsItem--Description">
+                                        <div class="reviewsItem--Rating">
+                                            <div class="reviewsItem--RatingStar">
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <p class="reviewsItem--RatingInfo">
+                                                <span>5</span> / 5
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="reviewsItem swiper-slide">
+                                <div class="reviewsItem--ImgBlock">
+                                    <img class="reviewsItem--Img" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/reviews/5/divan-posle-5.jpg" alt="Аватар пользователя" />
+                                    <div class="reviewsItem--ImgBlockAfter">+</div>
+                                </div>
+
+                                <div class="reviewsItem--Content">
+                                    <div class="reviewsItem--ContentTitle">
+                                        <h3 class="reviewsItem--Title">
+                                            Виталий
+                                        </h3>
+                                        <p class="reviewsItem--SubTitle">
+                                            Ребята просто красавцы👍 Забрали диван в понедельник, в четверг уже привезли! На фото что было и что стало! Цена была оговорена сразу. Подбивка не была оговорена, но была выполнена в процессе обивки. На стоимости это не отразилось. Оплата после получения заказа! Я очень доволен! Рекомендую!
+                                        </p>
+                                    </div>
+
+                                    <div class="reviewsItem--Description">
+                                        <div class="reviewsItem--Rating">
+                                            <div class="reviewsItem--RatingStar">
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                                <span>
+                                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.5238 0.111328L11.0066 9.26533L0.900391 10.7344L8.21211 17.8643L6.48467 27.9274L15.5238 23.1758L24.563 27.9227L22.8355 17.8595L30.1473 10.7344L20.041 9.26533L15.5238 0.111328Z" fill="white" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <p class="reviewsItem--RatingInfo">
+                                                <span>5</span> / 5
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviewsHR" id="reviewsHR"></div>
+
+    <div class="lightbox">
+        <div class="lightbox_wrapper">
+            <div class="lightbox_content">
+                <img src="" class="lightbox_img" alt="lightbox-img">
+            </div>
+        </div>
+        <div class="lightbox_close">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</section>
