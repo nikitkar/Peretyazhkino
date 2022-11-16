@@ -1,3 +1,5 @@
+<?php define("PATH_COMPONENT", $_SERVER['DOCUMENT_ROOT'] . "/assets/component"); ?>
+
 <section class="examplesWork">
     <a name="examplesWork"></a>
     <div class="container">
@@ -35,7 +37,7 @@
                                     кресла
                                 </h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
                                     Подробнее
 
                                     <span>
@@ -75,7 +77,7 @@
                                     кресла
                                 </h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/RepairChairs.php">
                                     Подробнее
 
                                     <span>
@@ -112,7 +114,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Перетяжка кресла</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
                                     Подробнее
 
                                     <span>
@@ -149,7 +151,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Перетяжка кресла</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
                                     Подробнее
 
                                     <span>
@@ -188,7 +190,7 @@
                                     Восстановление дивана
                                 </h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaRepair.php">
                                     Подробнее
 
                                     <span>
@@ -225,7 +227,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Перетяжка диванаы</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
                                     Подробнее
 
                                     <span>
@@ -262,7 +264,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Восстановление дивана</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaRepair.php">
                                     Подробнее
 
                                     <span>
@@ -299,7 +301,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Перетяжка дивана</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
                                     Подробнее
 
                                     <span>
@@ -336,7 +338,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Перетяжка дивана</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
                                     Подробнее
 
                                     <span>
@@ -373,7 +375,7 @@
                             <div class="examplesWorkItem--Content">
                                 <h3 class="examplesWorkItem--ContentTitle">Перетяжка дивана</h3>
 
-                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">
+                                <a class="examplesWorkItem--ContentLink" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
                                     Подробнее
 
                                     <span>
@@ -388,12 +390,14 @@
                     </li>
                 </ul>
 
-                <a class="examplesWork--allWorksButton buttonContent" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">Все работы</a>
+                <div class="">
+                    <!-- <a class="examplesWork--allWorksButton buttonContent" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>">Все работы</a> -->
 
-                <div class="examplesWorkPagination swiper-pagination"></div>
+                    <div class="examplesWorkPagination swiper-pagination"></div>
 
-                <div class="swiper-button-prev buttonContent buttonArrow"></div>
-                <div class="swiper-button-next buttonContent buttonArrow"></div>
+                    <div class="swiper-button-prev buttonContent buttonArrow"></div>
+                    <div class="swiper-button-next buttonContent buttonArrow"></div>
+                </div>
             </div>
         </div>
     </div>

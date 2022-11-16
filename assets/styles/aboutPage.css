@@ -216,11 +216,13 @@
 .main .italyLists {
   max-width: 701px;
   width: 100%;
+  padding-bottom: 20px;
 }
 @media (max-width: 1100px) {
   .main .italyLists {
     gap: 30px;
     max-width: none;
+    padding: 0;
   }
 }
 .main .italyListWrapper {

@@ -792,6 +792,7 @@
   backdrop-filter: blur(3.5px);
   z-index: 999;
   transition: transform linear 0.2s, bottom linear 0.2s;
+  text-align: center;
 }
 .main .servicesBlock--ItemContent:hover {
   transform: skewY(0);

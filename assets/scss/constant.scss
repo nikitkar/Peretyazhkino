@@ -604,7 +604,7 @@
 
     &Wrapper {
         @include displayFlex(center, center, column);
-        gap: 228px;
+        gap: 148px;
 
         padding-bottom: 55px;
 
@@ -716,6 +716,7 @@
         &--ImageBlock {
             @include displayFlex(flex-start, flex-start, column);
             gap: 30px;
+            padding: 0 15px;
 
             @media (max-width: 1100px) {
                 gap: 20px;
@@ -725,6 +726,8 @@
                 width: 100%;
 
                 text-align: left;
+
+                margin-left: -15px;
 
                 @include font(
                     var(--SizeText__ExamplesWorkItemPseudoElement),
@@ -744,6 +747,8 @@
 
                 &.right {
                     text-align: right;
+
+                    margin-left: 15px;
                 }
             }
 
@@ -765,6 +770,8 @@
                 width: 2px;
                 height: 100%;
                 background-color: var(--Color__White);
+
+                cursor: pointer;
 
                 &::after {
                     content: "";

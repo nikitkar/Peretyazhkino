@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Материалы</title>
-    
+
     <link rel="icon" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/icon/favicon.svg" type="image/svg" sizes="16x16">
 
     <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/styles/reset.css" />
@@ -35,7 +35,7 @@
                             натруальные материалы.
                         </p>
                     </div>
-                    <button class="mainTitle__title--button buttonContent">
+                    <a class="mainTitle__title--button buttonContent" href="#inviteDesigner">
                         Вызвать дизайнера
                         <span>
                             <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@
                                 <line x1="0.5" y1="7.5" x2="15.5" y2="7.5" stroke="white" stroke-linecap="round" />
                             </svg>
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -56,7 +56,7 @@
                             <div class="breadCrumbsWrapper">
                                 <a class="breadCrumbs--text" href="/">Главная</a>
                                 <span class="breadCrumbs--text breadCrumbs--text--active">/</span>
-                                <a class="breadCrumbs--text breadCrumbs--text--active" href="<?php $_SERVER['DOCUMENT_ROOT']?>/materials.php">Материалы</a>
+                                <a class="breadCrumbs--text breadCrumbs--text--active" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/materials.php">Материалы</a>
                             </div>
                         </div>
                     </div>
@@ -185,60 +185,42 @@
                                                         background: url(/assets/images/materials/upholstery/img1.png);
                                                     ">
                                                 <div class="fillerItem--back"></div>
-                                                <span class="fillerItem--imgContent">Пример</span>
+                                                <span class="fillerItem--imgContent">ватин</span>
                                             </div>
                                             <div class="fillerItem--img" style="
                                                         background: url(/assets/images/materials/upholstery/img2.png);
                                                     ">
                                                 <div class="fillerItem--back"></div>
-                                                <span class="fillerItem--imgContent">Пример</span>
+                                                <span class="fillerItem--imgContent">синтепух</span>
                                             </div>
                                             <div class="fillerItem--img" style="
                                                         background: url(/assets/images/materials/upholstery/img3.png);
                                                     ">
                                                 <div class="fillerItem--back"></div>
-                                                <span class="fillerItem--imgContent">Пример</span>
+                                                <span class="fillerItem--imgContent">синтепон</span>
                                             </div>
                                             <div class="fillerItem--img" style="
                                                         background: url(/assets/images/materials/upholstery/img4.png);
                                                     ">
                                                 <div class="fillerItem--back"></div>
-                                                <span class="fillerItem--imgContent">Пример</span>
+                                                <span class="fillerItem--imgContent">поролон</span>
                                             </div>
                                             <div class="fillerItem--img" style="
                                                         background: url(/assets/images/materials/upholstery/img5.png);
                                                     ">
                                                 <div class="fillerItem--back"></div>
-                                                <span class="fillerItem--imgContent">Пример</span>
+                                                <span class="fillerItem--imgContent">конский волос\кокос</span>
                                             </div>
                                             <div class="fillerItem--img" style="
                                                         background: url(/assets/images/materials/upholstery/img6.png);
                                                     ">
                                                 <div class="fillerItem--back"></div>
-                                                <span class="fillerItem--imgContent">Пример</span>
+                                                <span class="fillerItem--imgContent">ХоллоТек\ ПериоТек\ АэроПух \СтруттоФайбер</span>
                                             </div>
 
                                             <div class="fillerList--hidden" id="fillerList--hidden">
                                                 <div class="fillerItem--img" style="
                                                             background: url(/assets/images/materials/upholstery/img7.png);
-                                                        ">
-                                                    <div class="fillerItem--back"></div>
-                                                    <span class="fillerItem--imgContent">Поролон</span>
-                                                </div>
-                                                <div class="fillerItem--img" style="
-                                                            background: url(/assets/images/materials/upholstery/img8.png);
-                                                        ">
-                                                    <div class="fillerItem--back"></div>
-                                                    <span style="top: 45px; transform: translateX(-50%);" class="fillerItem--imgContent">ХоллоТек\ ПериоТек\ АэроПух\ СтруттоФайбер</span>
-                                                </div>
-                                                <div class="fillerItem--img" style="
-                                                            background: url(/assets/images/materials/upholstery/img9.png);
-                                                        ">
-                                                    <div class="fillerItem--back"></div>
-                                                    <span style="top: 40%" class="fillerItem--imgContent">конский волос\кокос</span>
-                                                </div>
-                                                <div class="fillerItem--img" style="
-                                                            background: url(/assets/images/materials/upholstery/img10.png);
                                                         ">
                                                     <div class="fillerItem--back"></div>
                                                     <span class="fillerItem--imgContent">Холлофайбер</span>

@@ -1,4 +1,5 @@
 <?php define("PATH_COMPONENT", $_SERVER['DOCUMENT_ROOT'] . "/assets/component"); ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PERETYAZHKINO</title>
-    
+
     <link rel="icon" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/icon/favicon.svg" type="image/svg" sizes="16x16">
 
     <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/styles/reset.css" />
@@ -189,7 +190,7 @@
                             бесплатный визит дизайнера и он предложит лучшие
                             варианты для вашей мебели.
                         </p>
-                        <a class="infoMaterials--Button buttonContent" href="./materials.html">Посмотреть образцы</a>
+                        <a class="infoMaterials--Button buttonContent" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/materials.php">Посмотреть образцы</a>
                     </div>
                 </div>
             </div>
@@ -203,54 +204,54 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 29px">
-                                <h3 class="servicesBlock--ItemContent__Title">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/FurnitureRestoration.php">
                                     Реставрация мягкой мебели
-                                </h3>
+                                </a>
                             </div>
                         </div>
                         <div class="div2 servicesBlock--Item">
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 44px">
-                                <h3 class="servicesBlock--ItemContent__Title">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
                                     Частичная перетяжка
-                                </h3>
+                                </a>
                             </div>
                         </div>
                         <div class="div3 servicesBlock--Item">
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 29px">
-                                <h3 class="servicesBlock--ItemContent__Title">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/RepairMechanism.php">
                                     Замена наполнителя, ремонт механизма
-                                </h3>
+                                </a>
                             </div>
                         </div>
                         <div class="div4 servicesBlock--Item">
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent">
-                                <h3 class="servicesBlock--ItemContent__Title">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
                                     Перетяжка кресел
-                                </h3>
+                                </a>
                             </div>
                         </div>
                         <div class="div5 servicesBlock--Item">
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent">
-                                <h3 class="servicesBlock--ItemContent__Title">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/TighteningLeatherSofas.php">
                                     Перетяжка натуральной кожей
-                                </h3>
+                                </a>
                             </div>
                         </div>
                         <div class="div6 servicesBlock--Item">
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 22px">
-                                <h3 class="servicesBlock--ItemContent__Title">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/ReplacementFoamRubber.php">
                                     Замена обивки
-                                </h3>
+                                </a>
                             </div>
                         </div>
                         <div class="div7 servicesBlock--Item">
@@ -259,8 +260,8 @@
                                 <br />РЕМОНТИРУЕМ<span>.</span>
                                 <br />ОБНОВЛЯЕМ<span>.</span>
                             </h2>
-                            <a href="allServices" class="servicesBlock--Button buttonContent">
-                                Все услуги
+                            <a href="#inviteDesigner" class="servicesBlock--Button buttonContent">
+                                Получить консультацию
                                 <span>
                                     <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M22 1L30 7.5L22 14" stroke="#259D8E" stroke-linecap="round" />
@@ -279,7 +280,7 @@
                                 <br />ОБНОВЛЯЕМ<span>.</span>
                             </h2>
                             <a href="allServices" class="servicesBlock--Button buttonContent">
-                                Все услуги
+                                Получить консультацию
                                 <span>
                                     <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M22 1L30 7.5L22 14" stroke="#259D8E" stroke-linecap="round" />
@@ -297,9 +298,9 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <h3 class="servicesBlockModile--ItemContent__Title">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/ReplacementFoamRubber.php">
                                             Замена обивки
-                                        </h3>
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="servicesBlockModile--Item swiper-slide">
@@ -308,9 +309,9 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <h3 class="servicesBlockModile--ItemContent__Title">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
                                             Частичная перетяжка
-                                        </h3>
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="servicesBlockModile--Item swiper-slide">
@@ -319,9 +320,9 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <h3 class="servicesBlockModile--ItemContent__Title">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/RepairMechanism.php">
                                             Замена наполнителя, ремонт
-                                            механизма
+                                          aмеханизма
                                         </h3>
                                     </div>
                                 </li>
@@ -331,9 +332,9 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <h3 class="servicesBlockModile--ItemContent__Title">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
                                             Перетяжка кресел
-                                        </h3>
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="servicesBlockModile--Item swiper-slide">
@@ -342,9 +343,9 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <h3 class="servicesBlockModile--ItemContent__Title">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/TighteningLeatherSofas.php">
                                             Перетяжка натуральной кожей
-                                        </h3>
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="servicesBlockModile--Item swiper-slide">
@@ -353,9 +354,9 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <h3 class="servicesBlockModile--ItemContent__Title">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/ReplacementFoamRubber.php">
                                             Замена обивки
-                                        </h3>
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
@@ -387,22 +388,22 @@
 
                                 <ul class="advantages--TitleList">
                                     <li class="advantages--TitleItem">
-                                        <a class="advantages--TitleItem__Title" href="/">Перетяжка кожаной мебели</a>
+                                        <a class="advantages--TitleItem__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/TighteningLeatherSofas.php">Перетяжка кожаной мебели</a>
                                     </li>
                                     <li class="advantages--TitleItem">
-                                        <a class="advantages--TitleItem__Title" href="/">Обивка мебели</a>
+                                        <a class="advantages--TitleItem__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SofaTightening.php">Обивка мебели</a>
                                     </li>
                                     <li class="advantages--TitleItem">
-                                        <a class="advantages--TitleItem__Title" href="/">Перетяжка диванов</a>
+                                        <a class="advantages--TitleItem__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SofaTightening.php">Перетяжка диванов</a>
                                     </li>
                                     <li class="advantages--TitleItem">
-                                        <a class="advantages--TitleItem__Title" href="/">Обивка мягкой мебели</a>
+                                        <a class="advantages--TitleItem__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SofaTightening.php">Обивка мягкой мебели</a>
                                     </li>
                                     <li class="advantages--TitleItem">
-                                        <a class="advantages--TitleItem__Title" href="/">Реставрация мягкой мебели</a>
+                                        <a class="advantages--TitleItem__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/FurnitureRestoration.php">Реставрация мягкой мебели</a>
                                     </li>
                                     <li class="advantages--TitleItem">
-                                        <a class="advantages--TitleItem__Title" href="/">Ремонт мягкой мебели</a>
+                                        <a class="advantages--TitleItem__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/FurnitureRepair.php">Ремонт мягкой мебели</a>
                                     </li>
                                 </ul>
                             </div>
@@ -563,7 +564,7 @@
                                         качество, а также осуществлять
                                         реставрацию антикварной мебели.
                                     </p>
-                                    <a href="inviteDesigner" class="advantages--Right__Button buttonContent">
+                                    <a href="#inviteDesigner" class="advantages--Right__Button buttonContent">
                                         Вызвать дизайнера
                                         <span>
                                             <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -591,7 +592,7 @@
     <script type="module">
         import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
-        var swiperreviews = new Swiper(".swiperReviews", {
+        var swiperReviews = new Swiper(".swiperReviews", {
             slidesPerView: "auto",
             spaceBetween: 20,
 
@@ -615,7 +616,7 @@
 
         var swiperExamplesWork = new Swiper(".swiperExamplesWork", {
             slidesPerView: "auto",
-            spaceBetween: 135,
+            spaceBetween: 150,
             slidesPerGroup: 1,
 
             allowTouchMove: false,
@@ -645,7 +646,7 @@
                     },
                 },
                 1100: {
-                    spaceBetween: 135,
+                    spaceBetween: 150,
 
                     navigation: {
                         enabled: true,

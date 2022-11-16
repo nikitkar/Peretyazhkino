@@ -319,7 +319,7 @@
   font-weight: 400;
   color: var(--Color__Black);
   position: absolute;
-  top: 0;
+  top: 5px;
   left: -49px;
 }
 @media (max-width: 1100px) {

@@ -143,10 +143,10 @@
                         <a href="/#examplesWork" class="menuDesktopItem--Title">Наши работы</a>
                     </li>
                     <li class="menuDesktopItem">
-                        <a href="./materials.php" class="menuDesktopItem--Title">Материалы</a>
+                        <a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/materials.php" class="menuDesktopItem--Title">Материалы</a>
                     </li>
                     <li class="menuDesktopItem">
-                        <a href="./about.php" class="menuDesktopItem--Title">О нас</a>
+                        <a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/about.php" class="menuDesktopItem--Title">О нас</a>
                     </li>
                     <li class="menuDesktopItem">
                         <a href="#contact" class="menuDesktopItem--Title">Контакты</a>

@@ -95,7 +95,7 @@
                     </div>
                     <div class="footerOtherInfo--Social__HR"></div>
                 </div>
-                <div class="footerOtherInfo--Creators">
+                <a class="footerOtherInfo--Creators" href="https://top-pro.by/" target="_black">
                     <p class="footerOtherInfo--Creators__legalInformation">
                         © 2022 Перетяжкино
                     </p>
@@ -112,7 +112,7 @@
                         </svg>
                         Разработка и продвижение
                     </span>
-                </div>
+                </a>
             </div>
         </div>
     </div>
