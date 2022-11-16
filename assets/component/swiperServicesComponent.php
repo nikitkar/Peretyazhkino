@@ -24,7 +24,7 @@
     });
 
     var swiperExamplesWork = new Swiper(".swiperExamplesWork", {
-        slidesPerView: "auto",
+        slidesPerView: 2,
         spaceBetween: 135,
         slidesPerGroup: 1,
 

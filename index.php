@@ -615,7 +615,7 @@
         });
 
         var swiperExamplesWork = new Swiper(".swiperExamplesWork", {
-            slidesPerView: "auto",
+            // slidesPerView: "auto",
             spaceBetween: 150,
             slidesPerGroup: 1,
 
@@ -646,6 +646,7 @@
                     },
                 },
                 1100: {
+                    slidesPerView: 2,
                     spaceBetween: 150,
 
                     navigation: {

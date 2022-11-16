@@ -568,7 +568,6 @@
   position: relative;
   max-width: 639px;
   min-width: 450px;
-  width: auto !important;
 }
 @media (max-width: 1100px) {
   .examplesWorkItem {
