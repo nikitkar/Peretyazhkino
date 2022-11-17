@@ -37,10 +37,10 @@
 
     padding: 5px;
 
-    transition: display linear .5s;
+    transition: display linear 0.5s;
 
     &--Img {
-        padding: 5px 8px;
+        padding: 7px 8px 4px 8px;
 
         background-color: var(--Color__Decor);
         box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.07),
@@ -1536,8 +1536,11 @@
         background-color: var(--Color__BGQuestionBlock);
 
         &[open] {
-            .questionsItem--Header::before {
-                background-image: url(../images/decor/plusQuestionsOpen.svg);
+            .questionsItem--Header__PlusOpen {
+                display: none;
+            }
+            .questionsItem--Header__PlusClose {
+                display: flex;
             }
         }
 
@@ -1555,32 +1558,6 @@
                 padding: 21px 12px;
             }
 
-            &::before {
-                content: "";
-
-                width: 27px;
-                height: 27px;
-
-                transition: all linear 0.2s;
-
-                background-image: url(../images/decor/plusQuestions.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-
-                position: absolute;
-                top: 50%;
-                right: 67px;
-                transform: translateY(-50%);
-
-                @media (max-width: 1100px) {
-                    width: 17px;
-                    height: 17px;
-
-                    right: 12px;
-                }
-            }
-
             &::marker {
                 display: none;
             }
@@ -1596,6 +1573,41 @@
                 @media (max-width: 1100px) {
                     font-size: var(--SizeText__ThinTextContent);
                     line-height: var(--LineHeight__ThinTextContent);
+                }
+            }
+
+            &__Plus {
+                &Open,
+                &Close {
+                    @include displayFlex(center, center, column);
+
+                    width: 27px;
+                    height: 27px;
+
+                    position: absolute;
+
+                    top: 50%;
+                    right: 67px;
+
+                    transform: translateY(-50%);
+
+                    & svg {
+                        width: 24px;
+                    }
+
+                    @media (max-width: 1100px) {
+                        width: 17px;
+                        height: 17px;
+                        right: 12px;
+                    }
+                }
+
+                &Open {
+                    display: flex;
+                }
+
+                &Close {
+                    display: none;
                 }
             }
         }
