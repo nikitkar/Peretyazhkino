@@ -15,6 +15,40 @@
     z-index: 9999;
 }
 
+.buttonScroll {
+    border: 1px solid var(--Color__Decor);
+
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.01),
+        inset 0px 4px 4px rgba(0, 0, 0, 0.23);
+    filter: drop-shadow(4px 4px 8px rgba(255, 255, 255, 0.07));
+
+    @include displayFlex(center, center, column);
+
+    display: none;
+
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+
+    z-index: 99999999999;
+
+    width: 55px;
+    height: 55px;
+
+    padding: 5px;
+
+    transition: display linear .5s;
+
+    &--Img {
+        padding: 5px 8px;
+
+        background-color: var(--Color__Decor);
+        box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.07),
+            inset 4px 4px 6px rgba(0, 0, 0, 0.01),
+            inset 0px 4px 4px rgba(0, 0, 0, 0.23);
+    }
+}
+
 .buttonContent {
     padding: 19px 64px 15px;
 
@@ -788,8 +822,10 @@
                     background-repeat: no-repeat;
                     background-size: auto;
 
-                    box-shadow: inset 4px 0px 4px rgba(255, 255, 255, 0.25), inset -2px -3px 4px rgba(44, 90, 84, 0.35), inset 0px 4px 4px rgba(44, 90, 84, 0.25);
-                    
+                    box-shadow: inset 4px 0px 4px rgba(255, 255, 255, 0.25),
+                        inset -2px -3px 4px rgba(44, 90, 84, 0.35),
+                        inset 0px 4px 4px rgba(44, 90, 84, 0.25);
+
                     transform: translate(-50%, -50%);
                 }
             }

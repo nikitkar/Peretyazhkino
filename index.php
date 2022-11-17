@@ -22,9 +22,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <script async src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script defer src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/sendEmail.js"></script>
 </head>
 
 <body>
+    <button class="buttonScroll" id="goTop" onclick="scrollTopBtn()">
+        <div class="buttonScroll--Img">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.0607 0.93934C12.4749 0.353553 11.5251 0.353553 10.9393 0.93934L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.93934ZM13.5 24L13.5 2L10.5 2L10.5 24L13.5 24Z" fill="white" />
+            </svg>
+        </div>
+    </button>
+
     <?php include_once(PATH_COMPONENT . "/header.php") ?>
     <main class="main">
         <section class="mainBlock">
@@ -204,7 +216,7 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 29px">
-                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/FurnitureRestoration.php">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/FurnitureRestoration.php">
                                     Реставрация мягкой мебели
                                 </a>
                             </div>
@@ -213,7 +225,7 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 44px">
-                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SofaTightening.php">
                                     Частичная перетяжка
                                 </a>
                             </div>
@@ -222,7 +234,7 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 29px">
-                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/RepairMechanism.php">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/RepairMechanism.php">
                                     Замена наполнителя, ремонт механизма
                                 </a>
                             </div>
@@ -231,7 +243,7 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent">
-                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SeatTightening.php">
                                     Перетяжка кресел
                                 </a>
                             </div>
@@ -240,7 +252,7 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent">
-                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/TighteningLeatherSofas.php">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/TighteningLeatherSofas.php">
                                     Перетяжка натуральной кожей
                                 </a>
                             </div>
@@ -249,7 +261,7 @@
                             <div class="servicesBlock--ItemBD"></div>
 
                             <div class="servicesBlock--ItemContent" style="bottom: 22px">
-                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/ReplacementFoamRubber.php">
+                                <a class="servicesBlock--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/ReplacementFoamRubber.php">
                                     Замена обивки
                                 </a>
                             </div>
@@ -298,7 +310,7 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/ReplacementFoamRubber.php">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/ReplacementFoamRubber.php">
                                             Замена обивки
                                         </a>
                                     </div>
@@ -309,7 +321,7 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SofaTightening.php">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SofaTightening.php">
                                             Частичная перетяжка
                                         </a>
                                     </div>
@@ -320,10 +332,10 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/RepairMechanism.php">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/RepairMechanism.php">
                                             Замена наполнителя, ремонт
-                                          aмеханизма
-                                        </h3>
+                                            aмеханизма
+                                            </h3>
                                     </div>
                                 </li>
                                 <li class="servicesBlockModile--Item swiper-slide">
@@ -332,7 +344,7 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/SeatTightening.php">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/SeatTightening.php">
                                             Перетяжка кресел
                                         </a>
                                     </div>
@@ -343,7 +355,7 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/TighteningLeatherSofas.php">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/TighteningLeatherSofas.php">
                                             Перетяжка натуральной кожей
                                         </a>
                                     </div>
@@ -354,7 +366,7 @@
                                             "></div>
 
                                     <div class="servicesBlockModile--ItemContent">
-                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT']?>/assets/servicesPages/ReplacementFoamRubber.php">
+                                        <a class="servicesBlockModile--ItemContent__Title" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/servicesPages/ReplacementFoamRubber.php">
                                             Замена обивки
                                         </a>
                                     </div>
@@ -681,6 +693,7 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/modal.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/openFullScreen.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/sliderBeforeAfter.js"></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/goTopButton.js"></script>
 </body>
 
 </html>
