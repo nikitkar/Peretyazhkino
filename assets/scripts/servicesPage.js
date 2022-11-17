@@ -29,7 +29,7 @@ function createDiv(innerHTML){
     return divWidth;
 }
 
-if (window.innerWidth < 1445) mainTitleHRLeft.style.width = "30px";
+if (window.innerWidth < 1445) mainTitleHRLeft.style.width = "25px";
 
 // в одну строчку текст
 if (window.innerWidth < 1380) mainTitleHRRight.style.width = value2Modile / 2 + 30 + "px";
