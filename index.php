@@ -291,7 +291,7 @@
                                 <br />РЕМОНТИРУЕМ<span>.</span>
                                 <br />ОБНОВЛЯЕМ<span>.</span>
                             </h2>
-                            <a href="allServices" class="servicesBlock--Button buttonContent">
+                            <a href="#inviteDesigner" class="servicesBlock--Button buttonContent">
                                 Получить консультацию
                                 <span>
                                     <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">

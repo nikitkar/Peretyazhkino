@@ -833,7 +833,6 @@
   align-items: center;
   justify-content: center;
   gap: 11px;
-  bottom: 70px !important;
 }
 .examplesWork .swiper-pagination-bullet {
   width: 11px;

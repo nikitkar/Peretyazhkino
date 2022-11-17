@@ -982,7 +982,6 @@
         &-pagination {
             @include displayFlex(center, center);
             gap: 11px;
-            bottom: 70px !important;
 
             &-bullet {
                 width: 11px;
