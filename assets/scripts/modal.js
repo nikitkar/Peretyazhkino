@@ -1,14 +1,19 @@
-const inviteDesignerButton = document.getElementById("inviteDesigner--Button");
+const inviteDesignerButton = document.querySelectorAll(
+    ".inviteDesignerClick"
+);
 const modal = document.getElementById("modal");
 const modalWrapper = document.querySelector(".modalWrapper");
 const modalClose = document.getElementById("modalClose");
 const page = document.getElementById("page");
 
-inviteDesignerButton.addEventListener("click", () => {
-    openModal();
 
-    modalWrapper.addEventListener("click", (event) => {
-        event.stopPropagation();
+inviteDesignerButton.forEach((item) => {
+    item.addEventListener("click", () => {
+        openModal();
+
+        modalWrapper.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
     });
 });
 
