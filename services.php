@@ -32,7 +32,7 @@
             </svg>
         </div>
     </button>
-    
+
     <div class="page" id="page"></div>
 
     <?php include_once(PATH_COMPONENT . "/header.php") ?>
@@ -309,6 +309,7 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/openFullScreen.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/sliderBeforeAfter.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/goTopButton.js"></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/header.js"></script>
 </body>
 
 </html>

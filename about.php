@@ -27,7 +27,9 @@
             </svg>
         </div>
     </button>
-    
+
+    <div class="page"></div>
+
     <?php include_once(PATH_COMPONENT . "/header.php") ?>
     <main class="main">
         <section class="mainTitle">
@@ -231,6 +233,7 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/main.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/modal.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/goTopButton.js"></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/header.js"></script>
 </body>
 
 </html>

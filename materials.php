@@ -27,7 +27,9 @@
             </svg>
         </div>
     </button>
-    
+
+    <div class="page"></div>
+
     <?php include_once(PATH_COMPONENT . "/header.php") ?>
     <main class="main">
         <section class="mainTitle">
@@ -43,7 +45,7 @@
                             натруальные материалы.
                         </p>
                     </div>
-                    <a class="mainTitle__title--button buttonContent" href="#inviteDesigner">
+                    <a class="mainTitle__title--button buttonContent  inviteDesignerClick">
                         Вызвать дизайнера
                         <span>
                             <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,6 +259,7 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/materialsPage.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/modal.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/goTopButton.js"></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/header.js"></script>
 </body>
 
 </html>

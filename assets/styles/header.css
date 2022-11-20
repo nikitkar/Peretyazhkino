@@ -2,6 +2,8 @@
   background: #ffffff;
   box-shadow: 0px 4px 17px 3px rgba(0, 0, 0, 0.08);
   width: 100%;
+  position: relative;
+  z-index: 999999;
 }
 .headerWrapper {
   display: flex;
@@ -53,18 +55,18 @@
   width: 9.5px;
   bottom: 0;
 }
-.header .burger:hover .navModile {
+.header .burger.activeBurger .navModile {
   display: flex;
 }
-.header .burger:hover.burger span::before, .header .burger:hover.burger span::after {
+.header .burger.activeBurger.burger span::before, .header .burger.activeBurger.burger span::after {
   top: 50%;
   transform: translateY(-50%);
 }
-.header .burger:hover.burger span::before {
+.header .burger.activeBurger.burger span::before {
   rotate: 45deg;
   right: 1px;
 }
-.header .burger:hover.burger span::after {
+.header .burger.activeBurger.burger span::after {
   width: 19px;
   rotate: -45deg;
   bottom: auto;

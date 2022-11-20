@@ -6,6 +6,9 @@
 
     width: 100%;
 
+    position: relative;
+    z-index: 999999;
+
     &Wrapper {
         @include displayFlex(center, space-between);
         gap: 60px;
@@ -63,7 +66,7 @@
             bottom: 0;
         }
 
-        &:hover {
+        &.activeBurger {
             & .navModile {
                 display: flex;
             }

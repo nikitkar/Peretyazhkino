@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <script async src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script defer src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/sendEmail.js"></script>
@@ -36,6 +36,8 @@
             </svg>
         </div>
     </button>
+
+    <div class="page"></div>
 
     <?php include_once(PATH_COMPONENT . "/header.php") ?>
     <main class="main">
@@ -576,7 +578,7 @@
                                         качество, а также осуществлять
                                         реставрацию антикварной мебели.
                                     </p>
-                                    <a href="#inviteDesigner" class="advantages--Right__Button buttonContent">
+                                    <a class="advantages--Right__Button buttonContent  inviteDesignerClick">
                                         Вызвать дизайнера
                                         <span>
                                             <svg width="31" height="15" viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -646,7 +648,19 @@
 
             breakpoints: {
                 320: {
-                    slidesPerView: "auto",
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+
+                    navigation: {
+                        enabled: false,
+                    },
+
+                    pagination: {
+                        enabled: true,
+                    },
+                },
+                640: {
+                    slidesPerView: 2,
                     spaceBetween: 40,
 
                     navigation: {
@@ -694,6 +708,7 @@
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/openFullScreen.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/sliderBeforeAfter.js"></script>
     <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/goTopButton.js"></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/assets/scripts/header.js"></script>
 </body>
 
 </html>

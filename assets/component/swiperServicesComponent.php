@@ -1,11 +1,11 @@
 <script type="module">
     import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
-    var swiperreviews = new Swiper(".swiperReviews", {
+    var swiperReviews = new Swiper(".swiperReviews", {
         slidesPerView: "auto",
         spaceBetween: 20,
 
-        grabCursor: true,
+        grabCursor: false,
 
         scrollbar: {
             el: ".swiper-scrollbar",
@@ -24,8 +24,8 @@
     });
 
     var swiperExamplesWork = new Swiper(".swiperExamplesWork", {
-        slidesPerView: 2,
-        spaceBetween: 135,
+        // slidesPerView: "auto",
+        spaceBetween: 150,
         slidesPerGroup: 1,
 
         allowTouchMove: false,
@@ -43,7 +43,19 @@
 
         breakpoints: {
             320: {
-                slidesPerView: "auto",
+                slidesPerView: 1,
+                spaceBetween: 40,
+
+                navigation: {
+                    enabled: false,
+                },
+
+                pagination: {
+                    enabled: true,
+                },
+            },
+            640: {
+                slidesPerView: 2,
                 spaceBetween: 40,
 
                 navigation: {
@@ -55,7 +67,8 @@
                 },
             },
             1100: {
-                spaceBetween: 135,
+                slidesPerView: 2,
+                spaceBetween: 150,
 
                 navigation: {
                     enabled: true,
