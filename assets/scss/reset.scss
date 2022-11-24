@@ -361,9 +361,9 @@ textarea {
 
 /* Убираем стандартный маркер Chrome */
 details summary::-webkit-details-marker {
-    display: none
+    display: none;
 }
-  /* Убираем стандартный маркер Firefox */
+/* Убираем стандартный маркер Firefox */
 details > summary {
     list-style: none;
 }
@@ -412,6 +412,24 @@ hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible;
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #18aaaa;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
 }
 
 :root {

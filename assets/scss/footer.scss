@@ -216,6 +216,8 @@
                 @include displayFlex(center, center, column);
                 gap: 23px;
 
+                z-index: 555;
+
                 @media (max-width: 1100px) {
                     gap: 30px;
                 }

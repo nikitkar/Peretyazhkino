@@ -12,7 +12,7 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <div class="numbersListModile--Img"></div>
+                <span class="numbersListModile--Img"></span>
 
                 <ul class="numbersList numbersListModile">
                     <a class="numbersItem numbersItemModile" href="tel:+375447995995">

@@ -319,8 +319,9 @@
   font-weight: 400;
   color: var(--Color__Black);
   position: absolute;
-  top: 5px;
+  top: 50%;
   left: -49px;
+  transform: translateY(-50%);
 }
 @media (max-width: 1100px) {
   .main .InfoLeftItemContent::before {

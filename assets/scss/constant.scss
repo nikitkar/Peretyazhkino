@@ -741,7 +741,7 @@
         }
 
         &--Box {
-            @include displayFlex(flex-start, flex-start, column);
+            @include displayFlex(center, flex-start, column);
 
             max-width: 639px;
             width: 100%;

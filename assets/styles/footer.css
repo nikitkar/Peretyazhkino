@@ -209,6 +209,7 @@
   align-items: center;
   justify-content: center;
   gap: 23px;
+  z-index: 555;
 }
 @media (max-width: 1100px) {
   .footerOtherInfo--SocialInner {

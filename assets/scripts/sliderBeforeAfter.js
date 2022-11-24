@@ -32,41 +32,40 @@ change.forEach((item, index) => {
     item.addEventListener("mousedown", () => {
         isActive = true;
         indexItem = index;
-        console.log("change");
     });
 });
 body.addEventListener("mouseup", () => (isActive = false));
 body.addEventListener("mouseleave", () => (isActive = false));
-body.addEventListener("mousemove", (e) => {
+body.addEventListener("mousemove", function(event) {
     if (!isActive) return;
 
-    let x = e.pageX;
+    let x = event.pageX;
 
     x -= slider[indexItem].getBoundingClientRect().left;
 
     beforeAfterSlider(x);
-    pauseEvents(e);
-});
+    pauseEvents(event);
+}, {passive:false});
 
-change.forEach((item) => {
+change.forEach((item, index) => {
     item.addEventListener("touchstart", () => {
         isActive = true;
         indexItem = index;
-        console.log("change");
     });
 });
 body.addEventListener("touchend", () => (isActive = false));
 body.addEventListener("touchcancel", () => (isActive = false));
-body.addEventListener("touchmove", (e) => {
+body.addEventListener("touchmove", function(event) {
     if (!isActive) return;
 
     let x;
     let i;
 
-    for (i = 0; i < e.changedTouches.length; i++) x = e.changedTouches[i].pageX;
+    for (i = 0; i < event.changedTouches.length; i++)
+        x = event.changedTouches[i].pageX;
 
     x -= slider[indexItem].getBoundingClientRect().left;
 
     beforeAfterSlider(x);
-    pauseEvents(e);
-});
+    pauseEvents(event);
+}, {passive:false});
